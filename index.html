@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>משחק תרגול — הנדסת תוכנה</title>
+<link rel="stylesheet" href="styles.css?v=1">
+<script>
+  // Apply saved theme before first paint to avoid a flash of the wrong theme.
+  (function(){ try{ var t=localStorage.getItem("seq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand" id="brandHome" role="button" tabindex="0" title="לדף הבית" aria-label="חזרה לדף הבית">
+    <span class="logo">🛠️</span>
+    <div>
+      <h1>תרגול להנדסת תוכנה</h1>
+      <p class="sub">בנק שאלות ממבחני הקורס, מעורבב ומסודר לפי נושא</p>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="topstats" id="topStats"></div>
+    <button id="learnEntry" class="btn ghost learn-entry" type="button">📖 מצב לימוד</button>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="החלפת מצב תצוגה (בהיר/כהה)" title="מצב בהיר/כהה"></button>
+  </div>
+</header>
+
+<main id="app">
+  <!-- START -->
+  <section id="screen-start" class="screen">
+    <div class="card">
+      <h2>בחירת אופן תרגול</h2>
+
+      <div class="modes">
+        <label class="mode-card">
+          <input type="radio" name="mode" value="practice" checked>
+          <div class="mode-body">
+            <span class="mode-title">תרגול חופשי</span>
+            <span class="mode-desc">שאלה־שאלה, משוב מיידי והסבר אחרי כל תשובה. ללא הגבלת זמן.</span>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="mode" value="exam">
+          <div class="mode-body">
+            <span class="mode-title">מבחנים שלמים</span>
+            <span class="mode-desc">סימולציה בזמן קצוב — אקראי או מבחן ספציפי מלא. ציון ופירוט בסוף.</span>
+          </div>
+        </label>
+      </div>
+
+      <h3>נושא</h3>
+      <div id="topicGrid" class="topic-grid"></div>
+
+      <div class="options-row">
+        <label class="chk"><input type="checkbox" id="officialOnly"> שאלות עם מחוון רשמי בלבד</label>
+        <label class="chk"><input type="checkbox" id="mistakesOnly"> רק שאלות שטעיתי בהן</label>
+      </div>
+
+      <div id="examOpts" class="exam-opts hidden">
+        <label>מבחן
+          <select id="examPick"><option value="">אקראי (כל המאגר)</option></select>
+        </label>
+        <label id="examCountWrap">מספר שאלות
+          <select id="examCount"><option>10</option><option selected>25</option><option>40</option></select>
+        </label>
+        <label>זמן (דקות)
+          <select id="examMinutes"><option>15</option><option>30</option><option selected>60</option><option>120</option></select>
+        </label>
+      </div>
+
+      <button id="startBtn" class="btn primary big">התחל ▶</button>
+      <p id="poolInfo" class="poolinfo"></p>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen hidden">
+    <div class="quizbar">
+      <button id="quitBtn" class="btn ghost">⟵ יציאה</button>
+      <div class="progress"><div id="progressFill" class="progress-fill"></div></div>
+      <div id="quizMeta" class="quiz-meta"></div>
+    </div>
+
+    <div class="card question-card">
+      <div class="q-head">
+        <span id="qTopic" class="chip"></span>
+        <span id="qSource" class="chip soft"></span>
+        <span id="qBadge" class="chip"></span>
+      </div>
+      <div id="questionText" class="question-text"></div>
+      <div id="qExtras" class="q-extras"></div>
+      <div id="optionsList" class="options-list"></div>
+      <div id="feedback" class="feedback hidden"></div>
+    </div>
+
+    <div class="quizfoot">
+      <div id="streakBox" class="streak"></div>
+      <button id="prevBtn" class="btn ghost hidden">⟶ הקודמת</button>
+      <button id="nextBtn" class="btn primary">הבאה ⟵</button>
+      <button id="submitExamBtn" class="btn primary hidden">סיום והגשה</button>
+    </div>
+  </section>
+
+  <!-- LEARN -->
+  <section id="screen-learn" class="screen hidden">
+    <div class="learn-bar">
+      <button id="learnBackBtn" class="btn ghost">⟵ חזרה לתרגול</button>
+      <div class="learn-progress" aria-hidden="true"><div id="learnProgressFill"></div></div>
+      <button id="learnTocToggle" class="btn ghost learn-toc-toggle" type="button" aria-expanded="false">☰ פרקים</button>
+    </div>
+    <div class="learn-layout">
+      <nav id="learnToc" class="learn-toc" aria-label="ניווט פרקים"></nav>
+      <article id="learnContent" class="card learn-content" tabindex="-1"></article>
+    </div>
+    <div id="learnBackdrop" class="learn-backdrop hidden"></div>
+    <div class="learn-foot">
+      <button id="learnPrev" class="btn ghost">⟶ הקודם</button>
+      <span id="learnPos" class="learn-pos"></span>
+      <button id="learnNext" class="btn primary">הבא ⟵</button>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="screen-results" class="screen hidden">
+    <div class="card">
+      <h2>תוצאות המבחן</h2>
+      <div id="resultsSummary" class="results-summary"></div>
+      <h3>פירוט לפי נושא</h3>
+      <div id="resultsByTopic" class="bytopic"></div>
+      <h3>סקירת תשובות</h3>
+      <div id="resultsReview" class="review"></div>
+      <div class="quizfoot">
+        <button id="backHomeBtn" class="btn primary">חזרה למסך הראשי</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="תצוגת תמונה מוגדלת">
+  <button id="lightboxClose" class="lightbox-close" type="button" aria-label="סגירה">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<footer class="appfoot">
+  <span id="datasetInfo"></span> ·
+  <button id="resetProgress" class="linkbtn">איפוס התקדמות</button>
+  <span class="disclaimer">תשובות המסומנות "לא רשמי" נגזרו מחומר הקורס — מומלץ לאמת מול המקור.</span>
+</footer>
+
+<script src="questions.js?v=1"></script>
+<script src="learn.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

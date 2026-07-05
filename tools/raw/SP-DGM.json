@@ -1,0 +1,327 @@
+[
+  {
+    "num": 1,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "testing",
+    "question": "למה לא משמשת סיפריית ה–Junit",
+    "options": [
+      "בדיקות יחידה",
+      "בדיקות ביצועים",
+      "בדיקות זמן ריצה ומקום",
+      "בדיקות מערכת"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "JUnit היא ספרייה לבדיקות יחידה (ולבדיקות ברמות גבוהות יותר), אך אינה מיועדת למדידת זמן ריצה או צריכת מקום/זיכרון.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 2,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "uml",
+    "question": "לאיזה מודל שייך ה- sequence diagram",
+    "options": [
+      "interaction model",
+      "structure model",
+      "Behavior model",
+      "למודל אחר"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "תרשים רצף (sequence diagram) מתאר את חילופי ההודעות בין אובייקטים לאורך זמן ולכן שייך למודל האינטראקציה (interaction model).",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 3,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "intro",
+    "question": "סדר השלבים השונים במודל מפל המים",
+    "options": [
+      "חשוב שיתבצעו בסדר המוגדר ללא שום שינויים",
+      "יכולים להתבצע בכל סדר שהוא",
+      "השלב הראשון חשוב שיתבצע. השלבים שלאחריו פחות חשובים",
+      "חשוב לבצע בדיקות יחידה לפני בדיקות מערכת. השאר לא חשוב."
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מודל מפל המים (waterfall) הוא מודל סדרתי שבו כל שלב מתחיל רק לאחר סיום השלב הקודם, ולכן חשוב שהשלבים יתבצעו בסדר המוגדר.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 4,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "testing",
+    "question": "@Test annotation משמש את סיפריות ה – Junit ל",
+    "options": [
+      "לתיעוד המטודה",
+      "להרצת המטודה כ- Test Case",
+      "@Test annotation משמש את סיפריות ה – JAVA למטרת בדיקות",
+      "תשובות א' ו – ב' נכונות"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "האנוטציה @Test מסמנת ל-JUnit שהמתודה היא מקרה בדיקה (Test Case) שיש להריץ כחלק ממערך הבדיקות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 5,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "uml",
+    "question": "לאיזה מודל שייך ה - UML",
+    "options": [
+      "interaction model",
+      "structure model",
+      "Behavior model",
+      "אף אחת מהתשובות איננה נכונה"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "UML אינו משתייך למודל בודד — זו שפת מידול הכוללת תרשימים מכל שלושת סוגי המודלים (מבנה, התנהגות ואינטראקציה), ולכן אף תשובה בודדת אינה נכונה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 6,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "intro",
+    "question": "מערכת תוכנה לפי כללי הנדסת תוכנה:",
+    "options": [
+      "עובדת ביעילות מקסימלית",
+      "כתובה בזמן מהיר ביותר האפשרי",
+      "מבצעת את כל המשימות הנדרשות ממנה לאורך זמן ובאופן עקבי",
+      "עלות פיתוח נמוכה ביותר"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "מטרת הנדסת תוכנה היא מערכת אמינה שמבצעת את כל הדרישות באופן עקבי לאורך זמן, ולא בהכרח המהירה, הזולה או היעילה ביותר.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 7,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "testing",
+    "question": "למה משמש ה – mockup בשלב כתיבת הבדיקות",
+    "options": [
+      "תכנון הבדיקות",
+      "סימון המטודה בטסט בכדי ליצור setup תקין להרצת המטודה",
+      "בניית חלקי דמה בקוד בכדי לבצע בדיקות יחידה בצורה טובה יותר",
+      "Mockups הם לא חלק שלב כתיבת הבדיקות"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "אובייקט mock/mockup הוא חלק דמה שמחליף תלויות חיצוניות כדי לבודד את היחידה הנבדקת ולבצע בדיקות יחידה בצורה טובה יותר.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 8,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "intro",
+    "question": "שלב חקר ישימות (feasibility study)",
+    "options": [
+      "קודם לשלב הגדרת הדרישות",
+      "נעשה לאחר שלב הגדרת הדרישות",
+      "נעשה לאחר שלב התיכון",
+      "נעשה לאחר שלב בדיקות יחידה"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "חקר ישימות נעשה בתחילת התהליך כדי לבדוק אם הפרויקט בכלל ישים ומצדיק השקעה, ולכן הוא קודם לשלב הגדרת הדרישות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 9,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "requirements",
+    "question": "בעלי ענין במערכת כוללים",
+    "options": [
+      "כל אדם או אירגון שיש לו עניין במערכת המפותחת",
+      "משתמשים צפויים במערכת המפותחת",
+      "גורמים שממנים את הפיתוח.",
+      "גורמים חיצוניים שמושפעים ישירות מהמערכת המפותחת"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "בעלי עניין (stakeholders) הם כל אדם או ארגון שיש לו עניין במערכת — המשתמשים, המממנים והגורמים המושפעים כלולים כולם בהגדרה הרחבה הזו.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 10,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "agile",
+    "question": "יתרונות של פיתוח אגילי על פני פיתוח מבוסס מפל מים",
+    "options": [
+      "פיתוח אגילי מהיר במיוחד",
+      "פיתוח אגילי יותר מתאים יותר לתוכנה שדורשת אמינות גבוהה מאד",
+      "פיתוח אגילי יותר מתאים לצרכי הלקוחות משתנים",
+      "פיתוח תוכנה אגילי מתאים יותר ללקוחות שדורשים עמידה במפרטים ידועים מראש"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "פיתוח אגילי בנוי על איטרציות קצרות ומשוב תדיר מהלקוח, ולכן מתאים במיוחד לפרויקטים שבהם הדרישות והצרכים משתנים לאורך הפיתוח.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 11,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "requirements",
+    "question": "דרישות רגולטריות/אתיות הינן בדרך כלל",
+    "options": [
+      "דרישות פונקציונליות",
+      "דרישות לא פונקציונליות",
+      "תשובות א ו – ב נכונות",
+      "דרישות קלות למימוש"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "דרישות רגולטוריות ואתיות מגדירות אילוצים ותכונות על המערכת (כמו פרטיות, תאימות לחוק) ולא פונקציונליות ספציפית, ולכן הן דרישות לא פונקציונליות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 12,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "requirements",
+    "question": "דרישה \"על המערכת להיות קלה לתיפעול\"",
+    "options": [
+      "הינה דרישה עמומה ולכן לא טובה",
+      "הינה דרישה לא חוקית",
+      "הינה דרישה מורכבת למימוש שדורשת התאמה של מספר רכיבים רב",
+      "הינה דרישה שקל לבדוק אותה"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "\"קלה לתפעול\" אינה מדידה או ניתנת לאימות אובייקטיבי, ולכן זו דרישה עמומה (ambiguous) ולא טובה כפי שהיא מנוסחת.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 13,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "uml",
+    "question": "איזה משפט נכון לגבי תרשים ה - use case",
+    "options": [
+      "בכל תרשים מוצג use case יחיד",
+      "בכל תרשים מוצגים לכל היותר שלושה use cases",
+      "כאשר ישנם מספר רב של use cases הם יכולים להיות מוצגים במספר תרשימים",
+      "כל ה use-cases של מערכת אחת מוצגים בתרשים אחד"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "אין הגבלה על מספר ה-use cases בתרשים, וכאשר ישנם רבים מהם ניתן ורצוי לפצל אותם לכמה תרשימים לשם בהירות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 14,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "config",
+    "question": "זה עתה סיימתי לכתוב מחלקה חדשה בפרויקט ואני מתכוון לבצע פעולת check-in איזה מהתסריטים הבאים אפשרי",
+    "options": [
+      "ייתכן שיהיה conflict ואתמודד איתו בצורה ידנית",
+      "ייתכן שיהיה conflict וה – VCS יתמודד איתו בצורה אוטומטית",
+      "ייתכן שיהיה conflict ופעולת revert פשוט תפטור את הבעיה",
+      "פעולת check-in במקרה זה לעולם לא תגרום ל- conflict"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "מכיוון שמדובר במחלקה חדשה (קובץ חדש שאינו קיים במאגר), אף מפתח אחר לא שינה אותה, ולכן ה-check-in לא יכול לגרום ל-conflict.",
+    "hasImage": false,
+    "confidence": "high",
+    "flag": "התשובה המסומנת (ד) נכונה בהנחה שמחלקה חדשה = קובץ חדש; זהו ההיגיון שמאחורי הפתרון הרשמי."
+  },
+  {
+    "num": 15,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "patterns",
+    "question": "במודל ה MVC - ישנן שלוש שכבות שהדרך בה זורם המידע בין שכבות אלו היא",
+    "options": [
+      "view <-- controller <-- model   &   model <-- controller <-- view",
+      "controller <-- view <-- model   &   model <-- view <-- controller",
+      "view <-- model <-- controller   &   controller <-- model <-- view",
+      "Driver <-- view <-- model   &   model <-- view < - Driver"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-MVC ה-Controller מתווך בין ה-View ל-Model בשני הכיוונים: view -> controller -> model בעת קלט משתמש, ו-model -> controller -> view בעת עדכון התצוגה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 16,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "config",
+    "question": "איזו בעיה, בא לפתור ה – VCS:",
+    "options": [
+      "בעיית החור באוזון",
+      "בעיות של יעילות",
+      "ניהול גירסאות",
+      "יש שני סוגים של VCS, כל אחד מהם פותר בעיה שונה"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "VCS (Version Control System) נועד לנהל גרסאות של קוד — מעקב אחר שינויים, שיתוף פעולה בין מפתחים ושחזור גרסאות קודמות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 17,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "intro",
+    "question": "מהם היסודות העקריים בהנדסת התוכנה",
+    "options": [
+      "Specification",
+      "Development",
+      "Validation",
+      "כל התשובות נכונות"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "הפעילויות היסודיות בהנדסת תוכנה הן אפיון (Specification), פיתוח (Development), אימות (Validation) ואבולוציה — ולכן כל התשובות נכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 18,
+    "examCode": "SP-DGM",
+    "year": null,
+    "topic": "patterns",
+    "question": "על איזו צורך\\בעיה עונה ה - Singleton",
+    "options": [
+      "Loosely decouple",
+      "עקרון ה – open close",
+      "שימוש במופע יחיד",
+      "מקביליות"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "תבנית Singleton מבטיחה שקיים מופע יחיד בלבד של מחלקה מסוימת לאורך כל ריצת התוכנית, ומספקת נקודת גישה גלובלית אליו.",
+    "hasImage": false,
+    "confidence": "high"
+  }
+]

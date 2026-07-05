@@ -1,0 +1,185 @@
+[
+  {
+    "num": 1,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "uml",
+    "question": "בדיאגרמת מחלקות, המחלקה Company מחוברת בקשר composition (מעוין מלא בצד Company) למחלקות Department ו-Office, עם ריבוי 1..* לכל אחת. קשרי ההכלה מראים כי:",
+    "options": [
+      "Department, Office מוכלות במבני נתונים דינמיים במחלקה Company",
+      "Department, Office מכילות במבני נתונים דינמיים את המחלקה Company",
+      "Department, Office מוכלות במבני נתונים קבועים במחלקה Company",
+      "Department, Office מכילות במבני נתונים קבועים את המחלקה Company"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "המעוין המלא (composition) בצד Company מסמן ש-Company הוא ה'שלם', ולכן Department ו-Office מוכלות בתוך Company. הריבוי 1..* אומר שמספרן משתנה, ולכן הן נשמרות במבנה נתונים דינמי (רשימה).",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 2,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "agile",
+    "question": "כיצד הסעיף במנשר האג'ילי שאומר \"שיתוף פעולה עם לקוחות על פני חוזים ומשא ומתן\" מתבצע בפועל בשיטה האג'ילית?",
+    "options": [
+      "בעל מוצר (Product Owner) שעובד בשיתוף פעולה מלא עם הלקוחות",
+      "צוותים מעורבים (scrums) שפועלים במקביל",
+      "זמני פיתוח קצרים והצגות (DEMOS)",
+      "כל התשובות נכונות"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ה-Product Owner מייצג את הלקוח ועובד עמו בשיתוף פעולה שוטף לאורך הפרויקט, וזהו המימוש הישיר של ערך 'שיתוף פעולה עם לקוחות'. צוותים מקבילים נוגעים להתארגנות ולא לשיתוף עם הלקוח.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "נגזר ללא מפתח; גם (ג) הצגות/DEMOS הן נקודת שיתוף עם הלקוח — אם המרצה ראה את שתיהן כנכונות ייתכן שהתשובה 'כל התשובות נכונות'."
+  },
+  {
+    "num": 3,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "requirements",
+    "question": "אלו מהבאים הינן שיטות לגילוי דרישות (Requirements elicitation)?",
+    "options": [
+      "תרחישי שימוש",
+      "ראיונות ותצפיות על סביבת העבודה",
+      "כל התשובות נכונות",
+      "למידת מערכות קיימות"
+    ],
+    "correctIndex": 2,
+    "official": false,
+    "explanation": "תרחישי שימוש, ראיונות ותצפיות, ולמידת מערכות קיימות הן כולן טכניקות מקובלות לגילוי דרישות (elicitation), ולכן כל התשובות נכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 4,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "intro",
+    "question": "עקרון ה-reuse כולל 4 רמות, אחת מהן היא הרמה האבסטרקטית (Abstraction level), ובה:",
+    "options": [
+      "עושים שימוש חוזר בידע משותף, כגון design pattern",
+      "עושים שימוש חוזר בכלים וטכנולוגיות מוכרות, כגון web services",
+      "עושים שימוש חוזר במתודולוגיות פיתוח, כגון agile",
+      "אין תשובה נכונה"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ברמת האבסטרקציה של שימוש-חוזר משתמשים בידע/עקרונות מופשטים ולא בקוד — כגון תבניות עיצוב (design patterns), המהוות פתרונות גנריים לבעיות עיצוב חוזרות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 5,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "testing",
+    "question": "בפיתוח מודל ה-V, בכל שלבי הפיתוח:",
+    "options": [
+      "מתכננים בדיקות",
+      "מבצעים בדיקות",
+      "מבצעים ומתכננים בדיקות",
+      "בדיקות לא מתבצעות כלל"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "במודל ה-V כל שלב פיתוח (בזרוע השמאלית) מקושר לשלב בדיקה מקביל: כבר בשלבי הפיתוח מתכננים את הבדיקות המתאימות, וההרצה עצמה מתבצעת בזרוע הימנית.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "נגזר ללא מפתח; יש הקוראים את מודל ה-V כ'גם מתכננים וגם מבצעים' (ג). הדגש הקלאסי הוא תכנון הבדיקות במקביל לפיתוח."
+  },
+  {
+    "num": 6,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "intro",
+    "question": "חברת Microsoft החליטה לבצע שינוי ושיפור של מוצרי ה-Office לטובת לקוח פרימיום שלה. מה מבין הבאים הוא הגדרה נכונה למהלך זה?",
+    "options": [
+      "שינוי המוצר מ-Generic products ל-Customized products",
+      "שינוי המוצר מ-Customized products ל-Very Customize products",
+      "שינוי המוצר מ-Customized products ל-Generic products",
+      "אין תשובה נכונה"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "Office הוא מוצר גנרי (Generic) המיועד לשוק רחב. התאמה ושיפור עבור לקוח פרימיום ספציפי הופכים אותו למוצר מותאם (Customized), כלומר מעבר Generic → Customized.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 7,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "testing",
+    "question": "ספריית ה-JUnit ברוב המקרים אינה מאפשרת בדיקות:",
+    "options": [
+      "Inspection Test",
+      "Unit test",
+      "Sub System Test",
+      "System Test"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "JUnit היא מסגרת לבדיקות דינמיות אוטומטיות (יחידה ומעלה). Inspection Test היא בדיקה סטטית/ידנית של סקירת קוד — אותה ספריית JUnit אינה מבצעת.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 8,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "agile",
+    "question": "בפגישת סקירת ספרינט (Sprint Review) מתבצע בדרך כלל Demo. מהי מטרתו?",
+    "options": [
+      "הצגת תוצרי הספרינט הנוכחי",
+      "הצגת המוצר כולו בפני הלקוח לפני השקתו",
+      "הצגת הקוד והארכיטקטורה בספרינט הנוכחי",
+      "הצגת החלקים שיפותחו בספרינט הבא כדי שהלקוח יאשר"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "ה-Demo ב-Sprint Review נועד להציג לבעלי העניין את התוצרים (increment) שהושלמו בספרינט הנוכחי ולקבל עליהם משוב.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 9,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "intro",
+    "question": "חלק מבעיות הפיתוח והיישום היא בעיית ה-Host Target. מהי הבעיה?",
+    "options": [
+      "תשובות ב' ו-ג' נכונות",
+      "סביבת הפיתוח לא תואמת לסביבת הלקוח",
+      "סביבת הפיתוח לא תואמת לסביבת הבדיקות",
+      "התכנון והארכיטקטורה ברוב המקרים אינם מבוצעים בצורה מדוייקת בפיתוח"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "בבעיית Host–Target התוכנה מפותחת על סביבה אחת (host) אך רצה על אחרת (target). מכאן שסביבת הפיתוח אינה תואמת לסביבת הלקוח (ב') וגם אינה תואמת לסביבת הבדיקות/הרצה (ג'), ולכן שתי הטענות נכונות.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "נגזר ללא מפתח; ההגדרה המדויקת ביותר היא (ב) host≠לקוח. סומן 'ב+ג' כי שתי הטענות מתארות את פער ה-host/target."
+  },
+  {
+    "num": 10,
+    "examCode": "21-B",
+    "year": 2021,
+    "topic": "intro",
+    "question": "דוגמה למערכות עיבוד שפה (Language processing systems) יכולה להיות:",
+    "options": [
+      "מהדרים (compilers)",
+      "סימולטורים (simulators)",
+      "שרתים (servers)",
+      "דפדפנים (browsers)"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "מערכת עיבוד שפה מקבלת קלט בשפה אחת ומתרגמת/מעבדת אותו — הדוגמה הקלאסית (Sommerville) היא מהדר (compiler) שמתרגם קוד מקור לקוד יעד.",
+    "hasImage": false,
+    "confidence": "high"
+  }
+]

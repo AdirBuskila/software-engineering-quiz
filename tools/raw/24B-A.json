@@ -1,0 +1,499 @@
+[
+  {
+    "num": 1,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "agile",
+    "question": "מה הם סוגי הפגישות בשיטת פיתוח SCRUM?",
+    "options": [
+      "יומית ודו-שבועית",
+      "יומית בלבד",
+      "דו-שנתית בלבד",
+      "אין פגישות בשיטת SCRUM",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-SCRUM יש פגישות בתדירויות שונות (למשל פגישה יומית ואירועים ברמת הספרינט), ולכן התשובה הכוללת יותר מסוג פגישה אחד היא הנכונה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 2,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "agile",
+    "question": "מה המטרה של Sprint Review ?",
+    "options": [
+      "לדון בעבודה שהושלמה במהלך הספרינט ולעדכן את ה-Backlog",
+      "להפסיק את הספרינט במשך חודש",
+      "לתכנן את המשימות של הספרינט הבא",
+      "לעדכן את ה-Futurelog",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "Sprint Review נועד להציג ולדון בעבודה שהושלמה בספרינט ולעדכן בהתאם את ה-Backlog של המוצר.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 3,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "agile",
+    "question": "מה התפקיד העיקרי של Scrum Master?",
+    "options": [
+      "לנהל את תהליך ה-Scrum",
+      "כל התשובות האחרות שגויות",
+      "להפסיק את ה-Scrum בעת תקלה חמורה",
+      "לא קיים תפקיד כזה",
+      "להגדיר את חזון המוצר"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ה-Scrum Master אחראי על ניהול ותקינות תהליך ה-Scrum ועל הסרת חסמים לצוות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 4,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "agile",
+    "question": "מה התפקידים העיקריים של Product Owner ?",
+    "options": [
+      "להגדיר את חזון המוצר ולנהל Backlog",
+      "לנהל את תהליכי ה-Scrum",
+      "אין לו תפקידים כלל",
+      "לנהל את עובדי המפעל",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ה-Product Owner מגדיר את חזון המוצר, מתעדף ומנהל את ה-Product Backlog.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 5,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "agile",
+    "question": "איך לבצע שיערוך עלויות של משימות?",
+    "options": [
+      "בדיון על User Story Points",
+      "אין אפשרות לשערך עלויות של משימות",
+      "אך ורק על ידי פיצול User Stories ארוכים מדי",
+      "בדיוק באמצע ה-Sprint",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "שיערוך עלות/מאמץ של משימות ב-Agile נעשה בדיון צוותי המשתמש ב-User Story Points.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 6,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "agile",
+    "question": "בשיטת הפיתוח Agile Scrum פגישה יומית :",
+    "options": [
+      "נמשכת בין 10 ל–20 דקות בתחילת היום לעדכון לגבי המשימות ליום הנוכחי",
+      "נמשכת בין 10 ל–20 דקות בסוף היום לעדכון לגבי המשימות שנעשו באותו יום",
+      "מעדכנים לגבי המשימות שנעשו מתחילת הספרינט",
+      "מתכננים את הספרינט",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ה-Daily Standup היא פגישה קצרה (כ-10–20 דקות) בתחילת היום שבה מתאמים את המשימות ליום הנוכחי.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 7,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "patterns",
+    "question": "בתבנית Command למי יש תפקיד של Invoker:",
+    "options": [
+      "כפתורים ותפריטים",
+      "כפתורים ורוכסן",
+      "מסמך שנערך ב-Word",
+      "הלקוח",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-Command ה-Invoker הוא רכיב הממשק שמפעיל את הפקודה, כגון כפתורים ותפריטים.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 8,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "patterns",
+    "question": "בתבנית Command למי יש תפקיד של Receiver:",
+    "options": [
+      "המסמך שעובדים עליו",
+      "תפריטים",
+      "כל התשובות האחרות שגויות",
+      "הלקוח",
+      "הפקודה שנבחרה"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ה-Receiver הוא האובייקט שעליו מבוצעת הפעולה בפועל, כלומר המסמך שעובדים עליו.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 9,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "patterns",
+    "question": "בתבנית Observer תפקיד ה-Subject הינו:",
+    "options": [
+      "כל ה-Observers משתנים בהתאם לשינוים של ה-Subject",
+      "כל ה-Subjects משתנים בהתאם לשינוים של ה-Observer",
+      "אין תפקיד Subject בתבנית Observer",
+      "אין תפקיד Observer בתבנית Subject",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ה-Subject הוא הנושא שכל ה-Observers מנויים אליו ומתעדכנים בהתאם לשינויים בו.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 10,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "patterns",
+    "question": "בתבנית Observer המשמעות של פקודת Detach היא:",
+    "options": [
+      "לנתק observer מסויים מן ה-Subject",
+      "לנתק subject מסויים מן ה-Observer",
+      "לנתק גם subject וגם Observer מן ה-Command",
+      "להוסיף observer מסויים אל ה-Subject",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "Detach מסיר/מבטל מנוי של Observer מסוים מן ה-Subject כך שלא יקבל יותר עדכונים.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 11,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "patterns",
+    "question": "בתבנית Observer כיצד מתקבלים עדכונים?",
+    "options": [
+      "על ידי קבלת הודעת עדכון כאשר ה-Subject משתנה",
+      "מבדיקת מסד נתונים משותף ל-Observers",
+      "מבדיקת מסד נתונים משותף ל-Subjects",
+      "לא קיימים עדכונים בתבנית Observer",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-Observer ה-Subject מודיע (notify) לכל המנויים כאשר מצבו משתנה, וכך הם מקבלים עדכון.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 12,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "patterns",
+    "question": "תבנית העיצוב Factory Method יוצרת את המופע הרלוונטי בהתאם לבקשת המשתמש. כיצד היא עושה זאת ?",
+    "options": [
+      "מטודה אחת שבחתימתה מוחזר interface, מה שמאפשר לייצר אוביקטים שונים ולאחזר אותם",
+      "תלוי איך התוכניתן יישם את התבנית",
+      "חתימה שונה של פונקציה לכל מופע כך המשתמש יכול לבחור להפעיל את המטודה הרלוונטית",
+      "עקרון ה – reuse",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-Factory Method מטודה יחידה מחזירה טיפוס מופשט/interface, כך שניתן ליצור מופעים שונים דרך אותה חתימה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 13,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "תרשים מחלקות הוא סוג של תרשים:",
+    "options": [
+      "מבנה",
+      "התפתחות בציר הזמן",
+      "התנהגות במעבר בין מצבים",
+      "מבנה וגם התפתחות בציר הזמן",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "תרשים מחלקות (Class Diagram) הוא תרשים מבנה (structure diagram) שמתאר מחלקות והקשרים ביניהן, ללא ציר זמן.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 14,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "לתרשים מחלקות של תבנית Observer:",
+    "options": [
+      "יש שתי רמות של מחלקות abstract ו-concrete",
+      "יש שתי רמות של מחלקות ממשי ודימיוני",
+      "יש רק מחלקות מופשטות (abstract)",
+      "יש רק מחלקות מוחשיות (concrete)",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "בתרשים Observer קיימות שתי רמות: מחלקות מופשטות (Subject/Observer) והמחלקות המוחשיות שיורשות אותן.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 15,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "בתרשים מחלקות של התבנית Singleton מספר המחלקות הוא:",
+    "options": [
+      "אחד",
+      "שניים",
+      "ארבעה",
+      "שלושה",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "בתבנית Singleton יש מחלקה אחת בלבד שמנהלת מופע יחיד של עצמה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 16,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "בתרשים Sequence (סידרה בזמן) קיימים:",
+    "options": [
+      "עצמים, ציר הזמן, מסרים",
+      "עצמים בלבד",
+      "מסרים, מחלקות וציר הזמן",
+      "מסרים בלבד",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "תרשים Sequence מציג עצמים (משתתפים), ציר זמן (קווי חיים) ומסרים המועברים ביניהם.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 17,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "בתרשים מחלקות של התבנית Observer חץ הורשה מופיע בין:",
+    "options": [
+      "מחלקה מופשטת (abstract) למחלקה מוחשית (concrete)",
+      "בין זוג מחלקות מוחשיות (concrete)",
+      "בין זוג מחלקות מופשטות (abstract)",
+      "אין חץ הורשה בכלל",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "חץ ההורשה מחבר בין המחלקה המופשטת (Subject/Observer) למחלקה המוחשית שממשת אותה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 18,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "ב-sequence diagram מה תפקידו של סרגל הפעלה (activation bar) על קו החיים ?",
+    "options": [
+      "פרק הזמן שבו משתתף (participant) מבצע פעולה ומחכה לתשובה",
+      "פרק הזמן שבו משתתף (participant) אינו פעיל",
+      "נקודות ההתחלה והסיום הכללית של פעולת המשתתף (participant)",
+      "פרק הזמן שבו ה-actor התחיל את האינטרקציה בפעם הראשונה",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ה-activation bar מסמן את פרק הזמן שבו המשתתף פעיל ומבצע פעולה (או ממתין לתשובה) לאורך קו החיים.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 19,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "testing",
+    "question": "מהי המשמעות של AssertTrue?",
+    "options": [
+      "לבצע בדיקת נכונות של משתנה בוליאני",
+      "לבצע בדיקת חוסר נכונות של משתנה בוליאני",
+      "לבצע בדיקת נכונות שמשתנה אינו ריק",
+      "לדעת שמשתנה נכון בלי לבצע בדיקה",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "assertTrue בודקת שתנאי/משתנה בוליאני הוא true, ומכשילה את הבדיקה אחרת.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 20,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "testing",
+    "question": "מהי המשמעות של בדיקת יחידה (Unit Test)?",
+    "options": [
+      "בדיקה של יחידת תוכנה קטנה",
+      "לבצע בדיקה פעם אחת בלבד",
+      "לבצע בדיקה של יחידה אחת של מוסד אקדמי",
+      "לבצע בו-זמנית שתי בדיקות בפעם יחידה",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "Unit Test בודקת יחידת תוכנה קטנה ומבודדת (למשל מתודה או מחלקה) בנפרד משאר המערכת.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 21,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "testing",
+    "question": "מה משמעות המשפט \"אין אף פעם הבטחה של אפס שגיאות\"?",
+    "options": [
+      "משתדלים לכסות את כל השגיאות האפשריות, אבל אין הבטחה מלאה",
+      "מערכות תוכנה נבנות תמיד עם אפס שגיאות",
+      "רק מערכות חומרה נבנות תמיד עם אפס שגיאות",
+      "רק למערכות נכונות יש אפס שגיאות",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "בדיקות יכולות להראות נוכחות שגיאות אך לא את היעדרן המוחלט, ולכן שואפים לכיסוי מרבי אך ללא הבטחה לאפס שגיאות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 22,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "testing",
+    "question": "מה ההיגיון של TDD (Test Driven Development)?",
+    "options": [
+      "להתקדם בפיתוח תוכנה רק כאשר בדיקות קודמות הצליחו",
+      "להתקדם כמו בנהיגה (\"Driven\")",
+      "יש לבצע מספר מירבי של בדיקות",
+      "אין הגיון בשיטת TDD",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-TDD כותבים בדיקות תחילה ומתקדמים בפיתוח רק כאשר הבדיקות הקודמות עוברות בהצלחה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 23,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "testing",
+    "question": "אילו בדיקות, ברוב המקרים, יבוצעו קודם מבחינת ציר הזמן של הפיתוח:",
+    "options": [
+      "Inspection Test",
+      "Sub System Test",
+      "System Test",
+      "Unit test",
+      "Acceptance test"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "בדיקות Inspection הן בדיקה סטטית (סקירת קוד/מסמכים) שמתבצעת מוקדם בתהליך, עוד לפני הרצת בדיקות דינמיות כמו Unit ו-System.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "טופס 0 מסמן א (Inspection Test). על הדירוג הכרונולוגי: בדיקה סטטית קודמת לדינמית, אך יש שיטענו ל-Unit Test (ד) כבדיקה הדינמית הראשונה — לוודא מול פתרון רשמי."
+  },
+  {
+    "num": 24,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "intro",
+    "question": "איזה מהמשפטים הבאים מבדיל בצורה הטובה ביותר בין הנדסת תוכנה למדעי המחשב?",
+    "options": [
+      "הנדסת תוכנה מיישמת עקרונות הנדסיים לפיתוח תוכנה, תוך שימת דגש על עיצוב, בדיקה ותחזוקה, בעוד שמדעי המחשב מתמקדים בהיבטים התיאורטיים של חישוב ואלגוריתמים.",
+      "הנדסת תוכנה מתמקדת ביסודות תיאורטיים ובאלגוריתמים, בעוד שמדעי המחשב עוסקים ביישומים מעשיים.",
+      "הנדסת תוכנה עוסקת בתכנון ופיתוח חומרה, בעוד שמדעי המחשב עוסקים בפיתוח ותחזוקה של תוכנה.",
+      "הנדסת תוכנה ומדעי המחשב הם תחומים זהים ללא הבדלים משמעותיים.",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "הנדסת תוכנה מיישמת עקרונות הנדסיים (עיצוב, בדיקה, תחזוקה) לפיתוח תוכנה, בעוד מדעי המחשב עוסקים בהיבטים התיאורטיים של חישוב ואלגוריתמים.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 25,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "intro",
+    "question": "כיצד השפיע האינטרנט על תהליכי פיתוח תוכנה ?",
+    "options": [
+      "באפליקציות רשת (Web Application) התקנת צד השרת זולה יותר מהתקנות מקומיות במחשבי הלקוח",
+      "באפליקציות רשת (Web Application) פיתוח צד הלקוח פשוט וקל בשל השימוש בדפדפן",
+      "לא השפיע כלל על תהליכי הפיתוח",
+      "אינטרנט לא רלוונטי כלל לתהליכי פיתוח",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "באפליקציות רשת ההתקנה והתחזוקה מרוכזות בצד השרת, וזול יותר מהתקנה ותחזוקה מקומית בכל מחשבי הלקוחות.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "טופס 0 מסמן א, אך גם תשובה ב (פיתוח צד לקוח קל בזכות הדפדפן) היא טענה סבירה על השפעת האינטרנט — ייתכן שתיים נכונות לכאורה."
+  },
+  {
+    "num": 26,
+    "examCode": "24B-A",
+    "year": 2024,
+    "topic": "uml",
+    "question": "תחת ההנחה שהיישויות בדיאגרמה הן היישויות היחידות, מהם הסימונים שחסרים בדיאגרמה ? (דיאגרמת Sequence עם user, Server ו-myDB: user שולח save data ל-Server, ו-Server שולח save data ל-myDB)",
+    "options": [
+      "יש להוסיף סימון, לקבלת תשובות לפי הסדר הבא: ממסד הנתונים לשרת מהשרת למשתמש",
+      "יש להוסיף סימון לקבלת תשובות, לפי הסדר הבא: מהשרת למשתמש וממסד הנתונים לשרת",
+      "להוסיף סימון של activate של Server - ל לאחר קבלת האינטרקציה מהמשתמש",
+      "יש להוסיף סימון לקבלת שאלות לכל כיוון",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "חסרים חצי החזרה (תשובות); בסדר נכון הם חוזרים במסלול ההפוך — ממסד הנתונים לשרת ואז מהשרת למשתמש.",
+    "hasImage": true,
+    "confidence": "med",
+    "flag": "השאלה תלויה בדיאגרמת Sequence המצורפת (user → Server → myDB) ואינה נענית מטקסט בלבד."
+  }
+]

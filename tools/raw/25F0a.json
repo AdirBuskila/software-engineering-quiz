@@ -1,0 +1,383 @@
+[
+  {
+    "num": 1,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "intro",
+    "question": "איזה מהתחומים הבאים אינו תחום עיסוק בדסיפלינה הנדסת תוכנה?",
+    "options": [
+      "פיתוח מודלים מתמטיים ללמידת מכונה",
+      "דרישות משתמש",
+      "תכנון ועיצוב תוכנה",
+      "דרישות פונקציונליות",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "דרישות (משתמש/פונקציונליות) ותכנון ועיצוב הם תחומי ליבה בהנדסת תוכנה, ואילו פיתוח מודלים מתמטיים ללמידת מכונה שייך לתחום נפרד (מדע הנתונים/ML) ואינו תחום עיסוק של הדיסציפלינה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 2,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "intro",
+    "question": "כיצד חברות תוכנה מאפשרות למוצרי תוכנה שלהם מסוג תוכנה גנרית (Generic Product) להפוך למוצרי תוכנה מותאמות אישית (Customize Product)?",
+    "options": [
+      "החברות בונות את המוצר הגנרי שלהם עם אפשרות להוסיף למוצר קוד ע\"י פיתוח עצמי",
+      "מוצר גנרי בנוי תמיד גם לאפשרות התאמה אישית, לכן הוא גנרי",
+      "שימוש בתבנית ארכיטקטונית מתאימה",
+      "לא ניתן להפוך מוצר תוכנה גנרי (Generic Product) למוצר מותאם אישית (Customize Product)",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מוצר גנרי הופך למותאם אישית באמצעות מנגנוני הרחבה (הוספת קוד/פיתוח עצמי, תוספים, קונפיגורציה) שהיצרן מספק, ולכן חברות בונות את המוצר עם אפשרות להוסיף אליו קוד בפיתוח עצמי.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 3,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "requirements",
+    "question": "הדרישה הבאה \"דף הבית של האתר חייב להיטען בפחות משתי שניות עבור 95% מכלל ביקורי המשתמשים.\" כחלק מ\"מסמך דרישות מוצר\" (PRD):",
+    "options": [
+      "הינה דרישה לא פונקציונלית",
+      "איננה דרישה טובה משום שהיא מתיחסת לאופן מימוש המערכת ואין מקומה בשלב של הכנת דרישות המוצר",
+      "הינה דרישה פונקציונלית",
+      "הינה דרישה שכדאי להוסיף בשלבים מאוחרים יותר כשיש הבנה טכנולוגית שהדבר אפשרי",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "דרישת ביצועים (זמן טעינה) מגדירה איך המערכת מתפקדת ולא מה היא עושה, ולכן היא דרישה לא פונקציונלית (non-functional) שמקומה במסמך דרישות המוצר.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 4,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "intro",
+    "question": "איזה מהבאים מתאר בצורה הטובה ביותר את ההבדל העיקרי בין מודל V למודל Waterfall?",
+    "options": [
+      "מודל V מקשר במפורש כל שלב פיתוח לשלב בדיקה תואם, בעוד שמודל Waterfall בדרך כלל מקבץ את כל הבדיקות לשלב אחד בסוף.",
+      "מודל Waterfall מיועד לפרויקטים עם דרישות לא יציבות, בעוד שמודל V מתאים רק לפרויקטים עם דרישות יציבות.",
+      "מודל V הוא גישה גמישה וזריזה יותר, בעוד שמודל Waterfall הוא גישה מונחית תכנון.",
+      "מודל Waterfall הוא גישה גמישה וזריזה יותר, בעוד שמודל V הוא גישה מונחית תכנון.",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מודל V הוא הרחבה של Waterfall שבה כל שלב פיתוח מקושר מפורשות לשלב בדיקה תואם (יחידה, אינטגרציה, מערכת, קבלה), בעוד ש-Waterfall דוחה את הבדיקות לשלב יחיד לקראת הסוף.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 5,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "intro",
+    "question": "מהו המשפט הנכון בהשוואה של פיתוח אגילי אל מול פיתוח מבוסס מפל מים",
+    "options": [
+      "בפיתוח מבוסס מפל מים ניהול שלבי הפיתוח קל יותר",
+      "כל התשובות האחרות שגויות",
+      "בפיתוח אגילי ניתן לחזות יותר טוב את משך ותקציב הפרויקט",
+      "בפיתוח מסוג מפל מים יש קשר טוב יותר בין חברי צוות הפרויקט",
+      "פיתוח אגילי תמיד מהיר יותר"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מפל המים הוא מודל סדרתי עם שלבים מוגדרים ומופרדים, ולכן קל יותר לנהל ולתכנן את השלבים מראש. יתר התשובות שגויות: אגילי אינו תמיד מהיר יותר וחיזוי לוח הזמנים/תקציב דווקא קשה יותר בו.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 6,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "testing",
+    "question": "במודל V, איזה שלב בדיקה יבוצע ראשון?",
+    "options": [
+      "בדיקות יחידה (Unit test)",
+      "כל הבדיקות יבוצעו במקביל, זאת מהות השיטה",
+      "בדיקות מערכת (System test)",
+      "בדיקות קבלה (Acceptance test)",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "רמת הבדיקה הנמוכה ביותר במודל V היא בדיקות יחידה, שמבוצעות ראשונות ומעלה לכיוון אינטגרציה, מערכת וקבלה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 7,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "agile",
+    "question": "הקשר בין \"מלאי ספרינט\" (Sprint Backlog) לבין ביצוע ספרינט הוא",
+    "options": [
+      "במהלך הספרינט יש כוונה לממש את כל הפריטים (PBI) במלאי הספרינט",
+      "מלאי הספרינט מבוצע במהלך מספר ספרינטים שנקבעים מראש",
+      "אין קשר בין שני המושגים",
+      "תלוי במבנה קבוצת הפיתוח או במסטר של הסקראם (Scrum Master)",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מלאי הספרינט הוא אוסף הפריטים (PBI) שהצוות התחייב עליהם, והכוונה היא לממש את כולם במהלך אותו ספרינט יחיד.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 8,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "patterns",
+    "question": "עלינו לתכנן מערכת שמבצעת תהליך של ניתוח טקסט (text parsing) ע\"פ עדיפות הלקוח ופורמט הקובץ שהוא מעביר ולכן צריך ליצור סוגים שונים של אובייקטים שמבצעים את הניתוח, כגון `JSONParser`, `XMLParser` ו-`CSVParser`. באיזו תבנית עיצוב יש להשתמש ואיך?",
+    "options": [
+      "תבנית Factory, כך שהאוביקטים ישמשו כ – Products ויוחזרו ע\"פ בחירת הלקוח",
+      "תבנית Observer, כך שהאוביקטים ישמשו כ – Observers ובחירת הלקוח כ - Subject",
+      "תבנית Command, כך שהאוביקטים ישמשו כ – Commands ובחירת הלקוח כ - Invoker",
+      "תבנית Singleton",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "יצירת אובייקט מסוג משתנה (Parser קונקרטי) לפי קלט/פורמט היא בדיוק תפקידה של תבנית Factory: הפרסרים הם ה-Products שהמפעל מחזיר בהתאם לבחירת הלקוח.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 9,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "architecture",
+    "question": "כחלק מסוגי האפליקציות שלמדנו, באיזו ממשפחת האפליקציות שלהלן, ככל הנראה לא יעשה שימוש בארכיטקטורת Client Server",
+    "options": [
+      "Stand-alone applications",
+      "Entertainment systems",
+      "Data collection systems",
+      "Interactive transaction-based applications",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "אפליקציות עצמאיות (Stand-alone) רצות במלואן על מכונה בודדת ללא הפרדת לקוח/שרת, ולכן הן המשפחה שבה לא נעשה שימוש בארכיטקטורת Client-Server.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 10,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "patterns",
+    "question": "באפליקציה פיננסית, אובייקט מרכזי בשם `StockPriceTracker` אחראי על עדכון מחיר המניה. רכיבים מרובים, כגון `TraderDashboard` ו-`AutomatedTradingBot`, צריכים לקבל הודעה אוטומטית בכל פעם שמחיר המניה משתנה כדי שיוכלו להגיב בהתאם. `StockPriceTracker` אמור להיות מסוגל לתפקד מבלי לדעת את הפרטים הספציפיים של הרכיבים המעוניינים בעדכוני המחיר שלו. באיזה תבנית תשתמש ומה תפקיד האובייקטים הנ\"ל בתבנית זאת?",
+    "options": [
+      "תבנית Observer כך שה-`StockPriceTracker` הוא ה-Subject, וה-TraderDashboard / AutomatedTradingBot הם ה-Observers",
+      "תבנית Factory כך שה-`StockPriceTracker` הוא ה-ConcreteFactory, וה-TraderDashboard / AutomatedTradingBot הם ה-Products",
+      "תבנית Observer כך שה-`StockPriceTracker` הוא ה-Observer, וה-TraderDashboard / AutomatedTradingBot הם ה-Subjects",
+      "תבנית Factory כך שה-`StockPriceTracker` הוא ה-Product, וה-TraderDashboard / AutomatedTradingBot הם ה-ConcreteFactories",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "עדכון אוטומטי של מנויים מרובים בעת שינוי מצב, ללא צימוד ידע על הרכיבים, הוא תבנית Observer: ה-StockPriceTracker הוא ה-Subject והרכיבים המעוניינים הם ה-Observers.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 11,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "uml",
+    "question": "במסגרת פרויקט מוקד טלפוני (Call Center) מבוסס מודלי AI: שרת המחובר למרכזיה מקבל קבצי שמע (Voice Files) ופונה לשירותי ענן. שרת האפליקציה יודע לבצע ולידציה על קבצי השמע, לשמור נתוני לקוחות ולבצע פעולות בסיסיות לאחר ניתוח הטקסט. דיאגרמת מחלקות (Class Diagram) המתארת את שרת האפליקציה תכיל ככל הנראה את המחלקות הבאות:",
+    "options": [
+      "מחלקת ולידציה, מחלקה לחיבור לשירותי ענן, מחלקת לשמירת מידע ל - DB",
+      "מחלקה לתרגום טקסט לשמע (Text to Speech), מחלקה לחיבור לשירותי ענן, מחלקת ולידציה",
+      "מחלקת לשמירת מידע ל - DB, מחלקת ניתוח טקסט (LLM), מחלקת שירות ענן",
+      "מחלקה לחיבור לשירותי ענן, מחלקת לתרגום שמע לטקסט (Speech to Text), מחלקת ולידציה",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "לפי תיאור המערכת, שרת האפליקציה אחראי על ולידציה של קבצי שמע, חיבור לשירותי הענן ושמירת נתונים ל-DB. פעולות התרגום והניתוח (TTS/STT/LLM) מבוצעות בשירותי הענן ואינן מחלקות בשרת עצמו.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 12,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "architecture",
+    "question": "אבי ונועה סטודנטים בקורס, רוצים לעצב את ארכיטקטורת המערכת אילו 4 היבטים ארכיטקטוניים (Architectural views) למדנו שעליהם להתייחס?",
+    "options": [
+      "היבט לוגי (logical view), היבט פיזי (physical view), היבט פיתוחי (development view), היבט תהליכי (process view)",
+      "היבט טכנולוגי (view technological), היבט לקוחי (customer view), היבט תהליכי (process view), היבט תחזוקה (maintenance view)",
+      "היבט לוגי (logical view), היבט לקוחי (customer view), היבט ענן (cloud view), היבט תהליכי (process view)",
+      "ע\"פ היבטי תבניות העיצוב שלמדנו: Factory, command, Singleton, Observer",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ארבעת ההיבטים הארכיטקטוניים (מודל 4+1) הם היבט לוגי, פיזי, פיתוחי ותהליכי (logical, physical, development, process).",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 13,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "patterns",
+    "question": "אבי ונועה סטודנטים בקורס, החליטו לעצב את המערכת בארכיטקטורה MVC, אילו מהמשפטים הבאים נכון ביחס לארכיטקטורה זו?",
+    "options": [
+      "ניתן בקלות להחליף את שכבת התצוגה (View), בשל עקרון הפרדת השכבות",
+      "השכבות בארכיטקטורה זו תלויות אחת בשניה ולכן יש לחשוב היטב כיצד ליישם כל שכבה",
+      "שירותי הענן בהם עושים שימוש ישמשו כשכבת ה – Controller בשל הלוגיקה שקיימת בהם",
+      "ארכיטקטורת ה - MVC לא מתאימה ע\"פ תיאור המערכת",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "MVC מבוססת על הפרדת אחריות בין Model, View ו-Controller, ולכן ניתן להחליף בקלות את שכבת התצוגה (View) מבלי לפגוע בשאר השכבות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 14,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "uml",
+    "question": "בתרשים Sequence Diagram, אילו קשרים למדנו שיכולים להיות בין היישויות?",
+    "options": [
+      "אין קשרים בין היישויות ב - Sequence Diagram",
+      "כל התשובות האחרות שגויות",
+      "Include, Extends",
+      "Extends, Exclude",
+      "Include, Exclude"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "הקשרים Include/Extends שייכים לתרשים Use-Case ולא ל-Sequence Diagram, שבו היישויות מחליפות הודעות (messages) לאורך זמן ואין ביניהן קשרים מבניים מסוג זה.",
+    "hasImage": false,
+    "confidence": "med"
+  },
+  {
+    "num": 15,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "uml",
+    "question": "לאיזה מודל (model) שייך תרשים הפעולות (activity diagram):",
+    "options": [
+      "context model",
+      "interaction model",
+      "structure model",
+      "requirements",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "לפי הסיווג של Sommerville, תרשימי פעולות (activity diagram) משמשים במודל ההקשר (context model) לתיאור תהליכים עסקיים והזרימה שבה המערכת פועלת.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "activity diagram מופיע ב-Sommerville גם בהקשר של behavioral models; התשובה context model נכונה כי בפרק Context Models משתמשים בו לתיאור תהליכים עסקיים."
+  },
+  {
+    "num": 16,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "patterns",
+    "question": "בתרשים מחלקות של תבנית Observer חץ הורשה מופיע בין:",
+    "options": [
+      "מחלקה מופשטת (abstract) למחלקה מוחשית (concrete)",
+      "בין זוג מחלקות מוחשיות (concrete)",
+      "בין זוג מחלקות מופשטות (abstract)",
+      "אין חץ הורשה בכלל",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "בתבנית Observer מחלקות ה-ConcreteObserver וה-ConcreteSubject יורשות ממחלקות/ממשקים מופשטים (Observer/Subject), ולכן חץ ההורשה הוא ממחלקה מופשטת למחלקה מוחשית.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 17,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "patterns",
+    "question": "בתרשים מחלקות של התבנית Singleton מספר המחלקות הוא:",
+    "options": [
+      "כל התשובות האחרות שגויות",
+      "שניים",
+      "ארבעה",
+      "שלושה",
+      "תלוי בסוג ה - Singleton"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "תבנית Singleton בנויה ממחלקה אחת בלבד. מכיוון שאף אחת מהתשובות (שניים/שלושה/ארבעה/תלוי) אינה נכונה, התשובה הנכונה היא שכל התשובות האחרות שגויות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 18,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "testing",
+    "question": "כחלק מבדיקות יחידה ושימוש ב – Mock:",
+    "options": [
+      "כל התשובות האחרות שגויות",
+      "אין שימוש ב – Mock בבדיקות יחידה",
+      "האובייקט שנבדק (Unit) מכיל את ה – Mock שהוא פונקציה",
+      "האובייקט Mock שמופעל מכיל את היחידה (Unit) שנבדקת",
+      "הפונקציה Mock שמופעלת מפעילה את היחידה (Unit) שנבדקת"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "Mock מחליף את התלויות של היחידה הנבדקת כדי לבודד אותה; אף אחת מהטענות ב-ב עד ה אינה מתארת זאת נכון, ולכן התשובה הנכונה היא שכל התשובות האחרות שגויות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 19,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "testing",
+    "question": "בדיקות תת מערכת נקראות גם בדיקות אינטגרציה, מה הסיבה לכך?",
+    "options": [
+      "תת מערכת בנויה מיותר מיחידה אחת ולכן הבדיקות הם גם אינטגרציה",
+      "תת מערכת בנויה מיותר מפונקציה אחת ולכן הבדיקות הם גם אינטגרציה",
+      "תת מערכת בנויה מתבניות עיצוב (Design Pattern) ולכן הבדיקות הם גם אינטגרציה",
+      "תת מערכת דורשת בהכרח חיבור למערכות חיצוניות ולכן הבדיקות הם גם אינטגרציה",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "תת-מערכת מורכבת ממספר יחידות שעובדות יחד, ולכן בדיקתה בודקת גם את השילוב (אינטגרציה) ביניהן ומכאן השם בדיקות אינטגרציה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 20,
+    "examCode": "25F0a",
+    "year": 2025,
+    "topic": "config",
+    "question": "מהי המטרה העיקרית של תהליכי ה – CI\\CD בפיתוח תוכנה?",
+    "options": [
+      "תהליכים אוטומטים החל משלב ה-commit של הקוד ועד לפריסה, מה שמוביל לגירסאות תוכנה מהירות, תכופות ואמינות יותר.",
+      "לבצע את כל בדיקות התוכנה באופן ידני על מנת להבטיח את האיכות.",
+      "לחבר את חברי צוות ה – scrum בשיטת ה – agile בהודעות אוטומטיות.",
+      "לייצר קוד בצורה אוטומטית באמצעות כלי AI",
+      "כל התשובות האחרות שגויות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מטרת CI/CD היא אוטומציה של התהליך מרגע ה-commit ועד הפריסה (build, test, deploy), שמאפשרת גרסאות תוכנה מהירות, תכופות ואמינות יותר.",
+    "hasImage": false,
+    "confidence": "high"
+  }
+]

@@ -1,0 +1,178 @@
+[
+ {
+  "code": "19B-B",
+  "form": "?",
+  "exam": "סמסטר ב מועד ב 5.8.19_.docx",
+  "sol": "סמסטר ב מועד ב 5.8.19 פתרונות.docx",
+  "pages": 7,
+  "sol_pages": 8
+ },
+ {
+  "code": "19B-C",
+  "form": "?",
+  "exam": "סמסטר ב מועד ג 11.9.19.pdf",
+  "sol": "סמסטר ב מועד ג 11.9.19 פתרונות.pdf",
+  "pages": 7,
+  "sol_pages": 8
+ },
+ {
+  "code": "20-A",
+  "form": "?",
+  "exam": "מבחן - מועד א.pdf",
+  "sol": "מבחן - מועד א - פתרון חלקי.pdf",
+  "pages": 10,
+  "sol_pages": 14
+ },
+ {
+  "code": "20-B",
+  "form": "?",
+  "exam": "מבחן - מועד ב.pdf",
+  "sol": null,
+  "pages": 10,
+  "sol_pages": 0
+ },
+ {
+  "code": "21S-A",
+  "form": "?",
+  "exam": "סמסטר קיץ מועד א 2021.pdf",
+  "sol": null,
+  "pages": 8,
+  "sol_pages": 0
+ },
+ {
+  "code": "21S-B",
+  "form": "?",
+  "exam": "סמסטר קיץ מועד ב 2021.pdf",
+  "sol": "סמסטר קיץ מועד ב 2021 פתרונות.docx",
+  "pages": 9,
+  "sol_pages": 14
+ },
+ {
+  "code": "22B-A",
+  "form": "?",
+  "exam": "סמסטר ב מועד א 14.6.22.docx",
+  "sol": "סמסטר ב מועד א פתרונות 14.6.22.pdf",
+  "pages": 11,
+  "sol_pages": 11
+ },
+ {
+  "code": "22S-A",
+  "form": "?",
+  "exam": "סמסטר קיץ מועד א 15.9.22.pdf",
+  "sol": null,
+  "pages": 10,
+  "sol_pages": 0
+ },
+ {
+  "code": "23-EX",
+  "form": "?",
+  "exam": "מבחן לדוגמה סמסטר ב 2023 אקסמן.pdf",
+  "sol": null,
+  "pages": 3,
+  "sol_pages": 0
+ },
+ {
+  "code": "23S-A",
+  "form": "?",
+  "exam": "סמסטר קיץ מועד א 21.9.23.pdf",
+  "sol": null,
+  "pages": 9,
+  "sol_pages": 0
+ },
+ {
+  "code": "24B-A",
+  "form": "0",
+  "exam": "סמסטר ב מועד א 18.7.24 טופס 0.pdf",
+  "sol": null,
+  "pages": 6,
+  "sol_pages": 0
+ },
+ {
+  "code": "24B-B",
+  "form": "0",
+  "exam": "סמסטר ב מועד ב 11.8.24 טופס 0.pdf",
+  "sol": null,
+  "pages": 7,
+  "sol_pages": 0
+ },
+ {
+  "code": "24S-A",
+  "form": "0",
+  "exam": "סמסטר קיץ מועד א 15.10.24 טופס 0.pdf",
+  "sol": null,
+  "pages": 6,
+  "sol_pages": 0
+ },
+ {
+  "code": "25F0a",
+  "form": "0",
+  "exam": "14.8.2025 טופס אפס.pdf",
+  "sol": null,
+  "pages": 6,
+  "sol_pages": 0
+ },
+ {
+  "code": "25F0b",
+  "form": "0",
+  "exam": "9219_form0_63301_09112025_0.pdf",
+  "sol": null,
+  "pages": 6,
+  "sol_pages": 0
+ },
+ {
+  "code": "25S-A",
+  "form": "A",
+  "exam": "טופס א    מועד א קיץ 2025.pdf",
+  "sol": null,
+  "pages": 6,
+  "sol_pages": 0
+ },
+ {
+  "code": "25B-N",
+  "form": "?",
+  "exam": "סמסטר ב מועד א 17.7.25 ניסים ברמי.pdf",
+  "sol": null,
+  "pages": 8,
+  "sol_pages": 0
+ },
+ {
+  "code": "25-EX",
+  "form": "?",
+  "exam": "מבחן לדוגמה אקסמן 2025.pdf",
+  "sol": null,
+  "pages": 5,
+  "sol_pages": 0
+ },
+ {
+  "code": "SP-SPC",
+  "form": "?",
+  "exam": "מבחן - מועד מיוחד.pdf",
+  "sol": "מועד מיוחד עם פתרון.pdf",
+  "pages": 11,
+  "sol_pages": 11
+ },
+ {
+  "code": "SP-DGM",
+  "form": "?",
+  "exam": "מבחן דוגמא.pdf",
+  "sol": "מבחן דוגמא פתרון.pdf",
+  "pages": 6,
+  "sol_pages": 9
+ },
+ {
+  "code": "SP-AMR",
+  "form": "?",
+  "exam": "מועד א אמריקאי.docx",
+  "sol": "מועד א אמריקאי פתרון.docx",
+  "pages": 6,
+  "sol_pages": 6
+ },
+ {
+  "code": "SP-MDA",
+  "form": "?",
+  "exam": "מבחן - מועד א_.docx",
+  "sol": null,
+  "pages": 14,
+  "sol_pages": 0
+ }
+]

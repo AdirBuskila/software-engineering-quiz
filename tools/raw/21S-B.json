@@ -1,0 +1,183 @@
+[
+  {
+    "num": 1,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "uml",
+    "question": "בדיאגרמת המחלקות הבאה, קשרי ההכלה מראים כי:",
+    "options": [
+      "המחלקות Department, office מוכלות במבני נתונים דינמיים במחלקה Company",
+      "המחלקות Department, office מכילות במבני נתונים דינמיים את המחלקה Company",
+      "המחלקות Department, office מוכלות במבני נתונים קבועים במחלקה Company",
+      "המחלקות Department, office מכילות במבני נתונים קבועים את המחלקה Company"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "היהלום המלא מסמן קומפוזיציה כאשר Company היא ה\"שלם\", וריבוי 1..* מציין מבני נתונים דינמיים; לכן Department ו-Office מוכלות במבני נתונים דינמיים בתוך Company.",
+    "hasImage": true,
+    "confidence": "high"
+  },
+  {
+    "num": 2,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "agile",
+    "question": "כיצד הסעיף במנשר האג'ילי שאומר את הדבר הבא: \"שיתוף פעולה עם לקוחות על פני חוזים ומשא ומתן\" מתבצע בפועל בשיטה האג'ילית:",
+    "options": [
+      "צוותים מעורבים (scrums) שפועלים במקביל",
+      "בעל מוצר (Product Owner) שעובד בשיתוף פעולה מלא עם הלקוחות",
+      "זמני פיתוח קצרים והצגות (DEMOS)",
+      "כל התשובות נכונות"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "כל האפשרויות מממשות את עקרון שיתוף הפעולה עם הלקוח: צוותי סקראם מעורבים, בעל מוצר שעובד מול הלקוח, ומחזורי פיתוח קצרים עם הצגות (DEMO) לקבלת משוב; לכן כל התשובות נכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 3,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "requirements",
+    "question": "אלו מהבאים הינן שיטות לגילוי דרישות (Requirements elicitation).",
+    "options": [
+      "תרחישי שימוש",
+      "ראיונות ותצפיות על סביבת העבודה",
+      "כל התשובות נכונות",
+      "למידת מערכות קיימות"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "תרחישי שימוש, ראיונות ותצפיות על סביבת העבודה, ולמידת מערכות קיימות הן כולן שיטות מוכרות לגילוי/איתור דרישות; לכן כל התשובות נכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 4,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "architecture",
+    "question": "עקרון ה – reuse כולל 4 רמות, אחת מהן היא הרמה האבסטרקטית (Abstraction level) ובה:",
+    "options": [
+      "עושים שימוש חוזר בידע משותף, כגון: design pattern",
+      "עושים שימוש חוזר בכלים וטכנולוגיות מוכרות כגון: web services",
+      "עושים שימוש חוזר במטודולוגיות פיתוח, כגון: agile",
+      "אין תשובה נכונה"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ברמת האבסטרקציה של השימוש החוזר עושים שימוש חוזר בידע ובמבנים תיאורטיים/אבסטרקטיים, כגון design patterns המתארים פתרונות כלליים לבעיות עיצוב.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 5,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "testing",
+    "question": "בפיתוח מודל ה – V בכל שלבי הפיתוח",
+    "options": [
+      "מבצעים בדיקות",
+      "מתכננים בדיקות",
+      "מבצעים ומתכננים בדיקות",
+      "בדיקות לא מתבצעות כלל"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "במודל ה-V כל שלב פיתוח משויך לשלב בדיקה מקביל; בשלב הפיתוח מתכננים את הבדיקה שתתבצע בשלב הבדיקה המקביל, ובשלב הבדיקה מבצעים אותה, כך שבכל השלבים גם מתכננים וגם מבצעים בדיקות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 6,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "intro",
+    "question": "חברת Microsoft החליטה לבצע שינוי ושיפור של מוצרי ה – Office לטובת לקוח פרימיום שלה, מה מהבאים הוא הגדרה נכונה למהלך זה:",
+    "options": [
+      "שינוי המוצר מ- Generic products ל- Customized products",
+      "שינוי המוצר מ- Customized products ל – Very Customize products",
+      "שינוי המוצר מ- Customized products ל- Generic products",
+      "אין תשובה נכונה"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "מוצר גנרי (Generic) מפותח לשוק רחב של לקוחות, ואילו מוצר מותאם (Customized) מותאם לדרישות לקוח מסוים; התאמת Office ללקוח פרימיום היא מעבר ממוצר גנרי למוצר מותאם אישית.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 7,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "testing",
+    "question": "ספריית ה- jUnit ברוב המקרים אינה מאפשרת בדיקות:",
+    "options": [
+      "Unit test",
+      "Sub System Test",
+      "Inspection Test",
+      "System Test"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "JUnit היא כלי לבדיקות אוטומטיות מבוססות הרצת קוד (יחידה/רכיב/מערכת), ואילו Inspection היא סקירת קוד סטטית ידנית שאינה מתבצעת ע\"י ריצת קוד ולכן אינה נתמכת ב-JUnit.",
+    "hasImage": false,
+    "confidence": "high",
+    "flag": "בדף הפתרון סעיף ד' מופיע כ-Integration Test במקום System Test שבדף הבחינה; אינו משפיע על התשובה הנכונה (ג)."
+  },
+  {
+    "num": 8,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "agile",
+    "question": "בפגישת סקירת ספרינט מתבצע בדר\"כ Demo מהי מטרתו?",
+    "options": [
+      "הצגת המוצר כולו בפני הלקוח לפני השקתו",
+      "הצגת הקוד והארכיטקטורה בספרינט הנוכחי",
+      "הצגת החלקים שיפותחו בספרינט הבא כדי שהלקוח יאשר",
+      "הצגת תוצרי הספרינט הנוכחי"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "בסקירת הספרינט (Sprint Review) הצוות מציג ללקוח את התוצרים שפותחו והושלמו בספרינט הנוכחי לקבלת משוב, ולא את כל המוצר או את הקוד/הארכיטקטורה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 9,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "config",
+    "question": "חלק מבעיות הפיתוח והיישום היא בעיית ה – Host Target, מהי הבעיה?",
+    "options": [
+      "התכנון והארכיטקטורה ברוב המקרים אינם מבוצעים בצורה מדוייקת בפיתוח",
+      "סביבת הפיתוח לא תואמת לסביבת הלקוח",
+      "סביבת הפיתוח לא תואמת לסביבת הבדיקות",
+      "תשובות ב' ו – ג' נכונות"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "בעיית ה-Host-Target היא שסביבת הפיתוח (Host) אינה תואמת לסביבת היעד/ההרצה, כלומר לא לסביבת הלקוח ולא לסביבת הבדיקות; לכן שתי התשובות ב' ו-ג' נכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 10,
+    "examCode": "21S-B",
+    "year": 2021,
+    "topic": "intro",
+    "question": "דוגמה למערכות עיבוד שפה (Language processing systems) יכולה להיות:",
+    "options": [
+      "סימולטורים (simulators)",
+      "מהדרים (compilers)",
+      "שרתים (servers)",
+      "דפדנים (browsers)"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "מערכות עיבוד שפה (Language processing systems) מקבלות שפה כקלט ומתרגמות אותה לייצוג אחר; מהדר (compiler) המתרגם קוד מקור לקוד הרצה הוא דוגמה מובהקת לכך.",
+    "hasImage": false,
+    "confidence": "high"
+  }
+]

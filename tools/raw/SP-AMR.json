@@ -1,0 +1,329 @@
+[
+  {
+    "num": 1,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "intro",
+    "question": "מהו השוני בין Software Development ל – Professional Software Development",
+    "options": [
+      "אין הבדל",
+      "השני נעשה בדר\"כ בצוותים ולא ביחידים",
+      "בשני חובה לספק תיעוד, קונפיגורציה ודברים נוספים על מנת להשיג את המטרה.",
+      "סעיפים ב' ו – ג' נכונים"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "בפיתוח תוכנה מקצועי העבודה נעשית בדרך כלל בצוותים ומחייבת אספקת תיעוד, קונפיגורציה ותוצרים נוספים - לכן גם ב' וגם ג' נכונים.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 2,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "uml",
+    "question": "לאיזה שלב שייך ה - class diagram",
+    "options": [
+      "שלב ה - interaction model",
+      "שלב ה - structure model",
+      "שלב ה – design & development",
+      "שלב ה – architecture"
+    ],
+    "correctIndex": 1,
+    "official": false,
+    "explanation": "ה-class diagram מתאר את המבנה הסטטי של המערכת (מחלקות והיחסים ביניהן) ולכן שייך לשלב ה-structure model.",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "בדף הפתרון הודגשו כל ארבעת הסעיפים (א-ד) יחד ולא סעיף יחיד - התשובה נגזרה לפי ידע ולכן official=false. לבדוק מול מפתח רשמי."
+  },
+  {
+    "num": 3,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "intro",
+    "question": "מדוע השוני בין Software Generic Product ל – Software Customize Product הולך ונעלם ?",
+    "options": [
+      "כיוון שהטכנולוגיה מאפשרת זאת",
+      "בשל הצורך העסקי של חברות לבצע התאמה לצרכי הלקוחות שלהם",
+      "כיוון שלא ניתן כיום לפתח Software Customize Product ללא שימוש ב- Software Generic Product",
+      "כיוון שלא ניתן כיום לפתח Software Generic Product ללא שימוש ב- Software Customize Product"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "השוני נעלם בשל הצורך העסקי של חברות להתאים מוצרים גנריים לצרכים הספציפיים של הלקוחות שלהן.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 4,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "testing",
+    "question": "@Before annotation על גבי מטודת set-up מבצע במהלך הטסט",
+    "options": [
+      "הרצת המטודה פעם אחת לפני כל טסט",
+      "הרצת המטודה פעם אחת אחרי כל טסט",
+      "הרצת המטודה פעם אחת לפני הרצת כל הטסטים",
+      "הרצת המטודה פעם אחת אחרי הרצת כל הטסטים"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-JUnit האנוטציה @Before גורמת למטודת ה-set-up לרוץ פעם אחת לפני כל טסט (test method).",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 5,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "agile",
+    "question": "מהו המשפט הנכון בהשוואה של פיתוח אגילי אל מול פיתוח מבוסס מפל מים",
+    "options": [
+      "פיתוח אגילי תמיד מהיר יותר",
+      "פיתוח אגילי תמיד מייצר מוצר אמין פחות מפיתוח מבוסס מפל מים",
+      "שלבי הפרויקט קלים יותר לניהול במודל מפל המים",
+      "ישנם יותר שלבי פיתוח במודל מפל המים לעומת הפיתוח האגילי"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "במודל מפל המים השלבים סדרתיים ומוגדרים היטב ולכן קלים יותר לניהול; הטענות על מהירות או אמינות מוחלטת של פיתוח אגילי שגויות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 6,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "testing",
+    "question": "כיצד השיטה האגילית עושה שימוש ב - TDD",
+    "options": [
+      "מקביליות של פיתוח ובדיקות",
+      "ה – TDD גמיש ביכולות שלו",
+      "אין קשר בין השניים",
+      "תשובות א' ו – ב' נכונות"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-TDD הבדיקות נכתבות לפני/במקביל לקוד, כך שפיתוח ובדיקות מתקדמים יחד (מקביליות של פיתוח ובדיקות).",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 7,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "patterns",
+    "question": "באיזה עקרון תוכנה עושה שימוש תבנית העיצוב Command",
+    "options": [
+      "Loosely decouple",
+      "עקרון ה – open close",
+      "שימוש במופע יחיד",
+      "מקביליות"
+    ],
+    "correctIndex": 0,
+    "official": false,
+    "explanation": "תבנית Command עוטפת בקשה כאובייקט ובכך מנתקת בין מפעיל הבקשה למבצע אותה - כלומר צימוד רופף (Loosely decouple).",
+    "hasImage": false,
+    "confidence": "med",
+    "flag": "בדף הפתרון הודגשו כל ארבעת הסעיפים (א-ד) יחד ולא סעיף יחיד - התשובה נגזרה לפי ידע ולכן official=false. לבדוק מול מפתח רשמי."
+  },
+  {
+    "num": 8,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "uml",
+    "question": "מהו ציר הזמן שיש לקרוא\\לכתוב את ה – sequence diagram",
+    "options": [
+      "top to bottom",
+      "bottom to top",
+      "left to right",
+      "right to left"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "ב-sequence diagram ציר הזמן זורם מלמעלה למטה (top to bottom).",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 9,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "intro",
+    "question": "ההבדל המרכזי בין פיתוח מערכת שדורשת התקנה באתר הלקוח לבין מערכת שעובדת ברשת האינטרנט באמצעות דפדפן",
+    "options": [
+      "שימוש בטכנולוגיות תיכנות מתקדמות עבור מערכות ברשת",
+      "עלויות תחזוקה יותר נמוכות במערכת המותקנת ישירות באתר הלקוח",
+      "למערכות ברשת האינטרנט יש יכולת תגובה מהירה לדרישות לשינויים",
+      "למערכות שעובדות באינטרנט יש בדרך כלל זמן תגובה יותר מהיר"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "מערכות web מותקנות ומעודכנות מרכזית, ולכן ניתן להגיב במהירות לשינויי דרישות ולהפיץ עדכונים מיד לכל המשתמשים.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 10,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "requirements",
+    "question": "דרישה שבכל מסך יופיע בחלק העליון לוגו של החברה",
+    "options": [
+      "הינו דרישה פונקציונלית",
+      "הינו דרישה לא פונקציונלית",
+      "הינו דרישה לא חוקית",
+      "איננו דרישה בכלל"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "הצגת לוגו החברה בכל מסך היא התנהגות קונקרטית שהמערכת נדרשת לבצע ולכן היא דרישה פונקציונלית.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 11,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "requirements",
+    "question": "אלו מהבאים הינן שיטות לגילוי דרישות (Requirements elicitation).",
+    "options": [
+      "תרחישי שימוש",
+      "ראיונות ותצפיות על סביבת העבודה",
+      "כל התשובות נכונות",
+      "למידת מערכות קיימות"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "תרחישי שימוש, ראיונות ותצפיות על סביבת העבודה ולמידת מערכות קיימות הן כולן שיטות מקובלות לגילוי דרישות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 12,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "architecture",
+    "question": "בארכיטקטורה Client Server נכונה",
+    "options": [
+      "כל שרת משרת מספר מוגבל של לקוחות",
+      "כל שרת מעניק מספר רב של שירותים",
+      "כל שרת ומה שירוץ עליו תלוי בכמות הלקוחות",
+      "כל שרת מעניק שירות אחד"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "בארכיטקטורת Client-Server כל שרת אחראי על מתן שירות אחד מוגדר.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 13,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "intro",
+    "question": "החלטתי לכתוב את אפליקצית ה – web שלי בשפת JAVA ועשיתי שימוש בספריה חיצונית ששייכת לחברת google , האם אני בהכרח",
+    "options": [
+      "גונב זכויות יוצרים",
+      "עושה שימוש בגישה מקובלת לכתיבת קוד שנקראת – Reuse",
+      "לא גונב זכויות יוצרים",
+      "תשובות ב' ו – ג' נכונות"
+    ],
+    "correctIndex": 1,
+    "official": true,
+    "explanation": "שימוש בספריה חיצונית הוא בהכרח שימוש חוזר בקוד (Reuse); שאלת גניבת זכויות היוצרים תלויה ברישיון ולכן איננה נכונה בהכרח.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 14,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "architecture",
+    "question": "מהו החיסרון העקרי בארכיטקטורת ה - Repository",
+    "options": [
+      "לא ניתן להשתמש בה ב – web",
+      "מסובכת מאוד למימוש",
+      "קשה להפצה על גבי מספר מכונות",
+      "כיוון שלא ניתן לחלק לשכבות קשה להרחיב מערכות שכתובות כך"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "בארכיטקטורת Repository כל הנתונים מרוכזים במאגר משותף יחיד, ולכן קשה להפיץ אותה על גבי מספר מכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 15,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "requirements",
+    "question": "תכונות שחשובות לדרישות טובות",
+    "options": [
+      "יחודיות, שלמות, תאימות פנימית, בדיקתיות",
+      "ניתנות למימוש בקלות, ניתנות להעברה בקלות לתיכון, מכסות את כל האפשרויות",
+      "ניתנות לעידכון, אינן קשורות ישירות לצרכים עסקיים",
+      "כל דרישה קשורה לבעל עניין אחד, מנוסחות באופן מצומצם ככל האפשר"
+    ],
+    "correctIndex": 0,
+    "official": true,
+    "explanation": "דרישות טובות מאופיינות ביחודיות, שלמות, תאימות (עקביות) פנימית ובדיקתיות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 16,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "config",
+    "question": "אם אני מחליט להעלות את קוד המקור שלי ל – GitHub כ – Open source, היתרונות שלי הם",
+    "options": [
+      "בפיתוח",
+      "בבדיקות",
+      "בפרסום",
+      "כל התשובות נכונות"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "העלאת קוד המקור כקוד פתוח ל-GitHub מסייעת בפיתוח (תרומות הקהילה), בבדיקות (איתור באגים ע\"י אחרים) ובפרסום - ולכן כל התשובות נכונות.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 17,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "patterns",
+    "question": "תבנית העיצוב Factory Method יוצרת את המופע הרלוונטי בהתאם לבקשת המשתמש. כיצד היא עושה זאת ?",
+    "options": [
+      "חתימה שונה לכל מופע כך המשתמש יכול לבחור להפעיל את המטודה הרלוונטית",
+      "תלוי איך התוכניתן כתב את התבנית",
+      "עקרון ה - Open Close",
+      "בחתימת המטודה היא מחזירה interface שממנו יורשים ה – Concrete Classes"
+    ],
+    "correctIndex": 3,
+    "official": true,
+    "explanation": "ב-Factory Method המטודה מחזירה בחתימתה טיפוס/interface מופשט שממנו יורשות ה-Concrete Classes, כך שהמופע הקונקרטי נקבע בזמן ריצה.",
+    "hasImage": false,
+    "confidence": "high"
+  },
+  {
+    "num": 18,
+    "examCode": "SP-AMR",
+    "year": null,
+    "topic": "config",
+    "question": "בתרשים המתואר אילו מהמשפטים הבאים הוא הנכון ?",
+    "options": [
+      "A ו B הם Branches ו – C הוא master",
+      "A הוא Branch ו – C הוא master",
+      "A הוא Branch ו – B הוא master",
+      "לא ניתן לדעת"
+    ],
+    "correctIndex": 2,
+    "official": true,
+    "explanation": "לפי מבנה ההסתעפויות והמיזוגים בתרשים ה-Git, A הוא ענף (branch) שיצא מהקו הראשי ו-B נמצא על הקו הראשי (master).",
+    "hasImage": true,
+    "confidence": "high",
+    "flag": "השאלה תלויה בתרשים הסתעפויות (Git branches) שאינו ניתן לתמלול מלא; correctIndex נלקח מהסימון המודגש בפתרון (ג)."
+  }
+]

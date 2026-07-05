@@ -1,0 +1,5 @@
+tools/node_modules/
+tools/raw/pages/
+tools/raw/_pdf/
+*.pyc
+__pycache__/

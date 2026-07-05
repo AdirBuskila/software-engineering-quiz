@@ -1,0 +1,16 @@
+{
+  "name": "se-quiz-tools",
+  "version": "1.0.0",
+  "description": "Build/verify tooling for the Software-Engineering quiz",
+  "main": "smoke.js",
+  "scripts": {
+    "smoke": "node smoke.js",
+    "verify:ui": "node verify_ui.js",
+    "verify:theme": "node verify_theme.js",
+    "verify:learn": "node verify_learn.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer-core": "^23.11.1"
+  }
+}

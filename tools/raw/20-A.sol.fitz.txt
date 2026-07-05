@@ -1,0 +1,654 @@
+
+----PAGE 1----
+ 
+ 
+ 
+ 
+ 
+ 
+                   
+ הנדסת תכנה–
+ 
+63301
+   
+ גיליוןA
+ 
+                     
+ 
+   
+ :מרצים ,תמיר קשני 
+ דוד אלגרבלי וניסים ברמי 
+ 
+       
+    
+ 'מועד א 
+ 
+ :הוראות לנבחן 
+1
+. 
+ משך הבחינה2.5
+ 
+ שעות 
+2
+. 
+ חומר עזר –
+ 
+ אין 
+3
+. 
+ בכל אחת מהשאלות להלן עליך
+ל כתוב על גבי הדף 
+ את התשובה
+הנכונה ביותר ,
+ 
+4
+. 
+ במקרה של טבלאות
+אין צורך להעתיק 
+ את הטבלאות 
+5
+. 
+ יש
+ל
+סרוק \
+ לצלם 
+ את הדפים
+ולהעלות 
+ אותם לתיבה הייעודית, דף שלא ייסרק
+ויועלה ! , לא יבדק 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+----PAGE 2----
+ 
+ 
+ 
+ 
+( חלק א40
+ 
+ :)נקודות 
+ 
+ 
+1
+.
+ 
+ לאיזה
+שלב שייך 
+ ה- 
+class diagram
+ 
+ 
+ 
+(א ) 
+ שלב ה- 
+interaction model
+ 
+(ב ) 
+ שלב ה- 
+structure model
+ 
+(ג) 
+ שלב ה–
+ 
+design & development
+ 
+(ד) 
+ שלב ה–
+ 
+requirements
+ 
+ 
+ יש לשים לב שנשאל לגבי
+השלב 
+ (מודגש) ולא לגבי ה- 
+Model
+ 
+ 
+2
+.
+ 
+   ? בתרשים המתואר אילו מהמשפטים הבאים יכול להיות נכון 
+ 
+(א )  
+ ענףB
+ מכיל את ה
+התקדמות של 
+ ענףA
+ בלבד  
+ 
+(ב )  
+ ענףB
+ 
+ מכיל את ההתקדמות של ענףA
+ 
+ ו–
+ 
+C
+ 
+  בלבד 
+(ג) 
+ ענףC
+ 
+ מכיל גם ההתקדמות של ענףA
+ 
+ 
+(ד)  אף אחת מהתשובות אינה נכונה 
+ 
+ יש לשים לב שענףB
+ 
+ מתקדם גם עצמאית, ז"א שיש התקדמות של הגירסה גם בענף זה ולכן יש
+ .מבחינת ניהול גירסאות זו גירסה מקדמת לכל דבר ועניין 
+ 
+ 
+A
+B 
+C 
+
+----PAGE 3----
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3
+.
+ 
+ מה המשמעות של
+הקוים 
+ המקווקוים בדיאגרמת
+הsequence 
+ 
+ :הבאה 
+ 
+ 
+ 
+א.
+ 
+ בקשה מ–
+ 
+B 
+ 
+ ל–
+ 
+A
+ 
+ 
+ב.
+ 
+ תשובה מ–
+ 
+B
+ 
+ ל- 
+A
+ 
+ג.
+ 
+ ציר הזמן 
+ד.
+ 
+ יש יותר מתשובה אחת
+נכונה 
+ מודגש
+הקוים המקווקוים בדיאגרמה 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+----PAGE 4----
+ 
+ 
+ 
+ 
+חלק ב (
+60
+ 
+)נקודות 
+ בחלק זה עליכם לבחור2
+ 
+ שאלות מבין  ה–
+ 
+3
+ 
+ :הנתונות 
+1
+.
+ 
+ 
+(א ) רשום חמישה מאפיינים 
+[ עיקריים של שיטות זריזות לפיתוח תוכנהsoftware 
+development methods
+ 
+agile
+ ]המבדילים 
+ בין שיטות זריזות לגישות המבוססות 
+ מודלV
+ 
+ לכל אחד מהמאפיינים  תן הסבר קצר של המאפיין ותסביר מדוע הוא אמור
+ להוות שיפור לטובת
+תהליך הפיתוח הזריז.
+ 
+ 
+ 
+ 
+ הסבר קצר של המאפיין 
+ הסבר מדוע הוא אמור להוות שיפור לתהליך
+ הפיתוח 
+1
+.
+Incremental delivery 
+The software is developed in increments with 
+the customer specifying the requirements to 
+be included in each increment. 
+ 
+2
+.
+Customer involvement  
+ 
+Customers should be closely involved 
+throughout the development process. Their 
+role is provide and prioritize new system 
+requirements and to evaluate the iterations of 
+the system. 
+ 
+3
+.
+Mixed teams (architect, developer, QA 
+etc..) 
+Specification, design, implementation and 
+testing are inter-leaved and the outputs from 
+the development process are decided through 
+a process of negotiation during the software 
+development process. 
+ 
+
+----PAGE 5----
+ 
+ 
+ 
+ 
+4
+.
+Parallel Work (Such TDD) 
+Design, Development and Testing can be 
+executed in parallel as part of the development 
+process. 
+5
+.
+Responding to change 
+There is an opportunity to constantly refine 
+and reprioritize the overall product backlog. 
+New or changed backlog items can be 
+planned for the next iteration, providing the 
+opportunity to introduce changes within a few 
+weeks. 
+ 
+ 
+ 
+(ב ) 
+ הבא דוגמא למאפיין שבו יש יתרון לפיתוח 
+ לגישות המבוססות מודלV
+ 
+ על פני שיטות
+ זריזות לפיתוח 
+ 
+קל ל ניהול שקיפות מלאה
+ביחס למטרות שיושגו תוך משך זמן מסוים .
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+----PAGE 6----
+ 
+ 
+ 
+ 
+ 
+2
+.
+ נתונה דיאגרמת מחלקות הבאה ,העתיקו אותה לדף (אין צורך במשתני המחלקה והמ
+ת)ודות 
+ 
+ 
+ 
+(א ) 
+ תאר במילים, בצורה מדויקת, את היחסים בין המחלקות 
+(ב ) 
+ השלם את החוסרים )'(סימונים, משתנים של המחלקה פונקציות וכו שקיימים בדיאגרמת
+ המחלקות 
+ 
+ 
+ 
+ 
+
+----PAGE 7----
+ 
+ 
+ 
+ 
+ 
+(ג )
+ 
+ בכדי לבנות מערכת תקינה של הזמנת מוצרים יש להוסיף מחלקות נוספות לדיאגרמת
+ ,המחלקות ע"פ התיאור הבא 
+ :)(הקפידו על עקרונות תכנות מונחה עצמים 
+ 
+ כל הזמנה (
+Order
+ )
+ צריכה להיות משולמת באחת מדרכי התשלום הבאות ,
+ כל אחת מהן היא
+מחלקה בפני עצמה , הקפידו להוסיף ,למחלקות אלו את התכונות שרלוונטיות להן (חשבון בנק
+ )'מספר כרטיס וכו 
+•
+ 
+( תשלוםPayment
+ )
+ 
+•
+ 
+( תשלום בכרטיס אשראיCredit
+ )
+ 
+•
+ 
+ תשלום במזומן 
+•
+ 
+ תשלום בשיק 
+•
+ 
+ העברה בנקאית 
+ 
+•
+ 
+ מחלקה לניהול ההזמנות 
+OrderMng
+ ,
+ הוסיפו למחלקה זו את התכונות שרלוונטיות לה וכמו כן
+היכול
+ו ת
+הבאות 
+ )(חתימות בלבד :
+ 
+ 
+•
+ 
+ .לאחזר הזמנה ע"פ לקוח 
+•
+ 
+.לעדכן תנאי תשלום להזמנה 
+•
+ 
+ .לשנות את סטטוס ההזמנה 
+ 
+א .
+ 
+ המחלקה לקוח מכילה את המחלקה הזמנה ביחס של אפס לרבים 
+ המחלקה הזמנה מכילה את ה–
+ 
+enum
+ סטטוס הזמנה 
+המחלקה הזמנה מכילה פירוט הזמנה ביחס של אחד לרבים 
+ המחלקה פריט מכילה פירוט הזמנה ביחס של אחד לרבים 
+ 
+ב .
+ 
+ מופיע בדיאגרמה 
+ג .
+ 
+ מופיע בדיאגרמה 
+ 
+ 
+ 
+ 
+ 
+ 
+
+----PAGE 8----
+ 
+ 
+ 
+ 
+ 
+ד .
+ 
+ 
+ 
+ 
+
+----PAGE 9----
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+----PAGE 10----
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+----PAGE 11----
+ 
+ 
+ 
+ 
+ 
+3
+.
+ 
+ 
+(א ) 
+ בטבלה שלהלן (להעתיק לדף )
+ עליך לרשום שלושה תבניות עיצוב ולכל אחד לתאר את הבעיה
+ שהוא( פותר במילים והתרשים שלוblock diagram
+ :)
+ 
+  
+Name of Design 
+Pattern
+ 
+Description of the Design 
+Pattern
+ 
+Block Diagram
+ 
+Observer
+ 
+Description: 
+Separates the display 
+of the state of an 
+object from the 
+object itself and 
+allows alternative 
+displays to be 
+provided. When the 
+object state changes, 
+all displays are 
+automatically 
+notified and updated 
+to reflect the change.
+Problem 
+description: This 
+involves two abstract 
+objects, Subject and 
+Observer, and two 
+concrete objects, 
+ConcreteSubject and 
+ConcreteObject, 
+which inherit the 
+attributes of the 
+related abstract 
+objects. The abstract 
+objects include 
+ 
+
+----PAGE 12----
+ 
+ 
+ 
+ 
+general operations 
+that are applicable in 
+all situations. The 
+state to be displayed 
+is maintained in 
+ConcreteSubject, 
+which inherits 
+operations from 
+Subject allowing it to 
+add and remove 
+Observers (each 
+observer corresponds 
+to a display) and to 
+issue a notification 
+when the state has 
+changed.
+ 
+Factory
+ 
+Define an interface 
+for creating an 
+object, but let 
+subclasses decide 
+which class to 
+instantiate. Factory 
+Method lets a class 
+defer instantiation to 
+subclasses.
+Factory methods 
+eliminate the need to 
+bind application-
+specific classes into 
+your code. The code 
+only deals with the 
+Product interface; 
+therefore it can work 
+ 
+
+----PAGE 13----
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+with any user-defined 
+ConcreteProduct 
+classes
+Adapter
+ 
+Convert the interface 
+of a class into 
+another interface 
+clients expect.
+Adapter lets classes 
+work together that 
+couldn’t otherwise of 
+incompatible 
+interfaces.
+ 
+
+----PAGE 14----
+ 
+ 
+ 
+ 
+(ב ) מקובל לתאר 
+[ ארכיטקטורת תוכנה בעזרת כמה היבטיםVIEWPOINTS
+ .]
+ 
+ רשום
+שלושה היבטים [
+VIEWPOINTS
+ ] המשמשים לתיאור ארכיטקטורת תוכנה והסבר מה כלול
+ .בכל היבטים    
+ 
+ 
+  היבט -
+  
+VIEWPOINT
+ 
+ הסבר 
+1
+ .  
+A logical view 
+• 
+Shows the key abstractions in the system as 
+objects or object classes. It should be possible to 
+relate the system requirements to entities in this 
+logical view 
+ 
+2
+ .  
+A process view 
+• 
+Shows how, at run-time (it was necessary to explain 
+the meaning of system run time) , the system is 
+composed of interacting processes.  
+Useful for making judgments about nonfunctional 
+system characteristics such as performance and 
+availability 
+ 
+3
+ .  
+A development view 
+• 
+Shows how the software is decomposed for 
+development, that is, it shows the breakdown of the 
+software into components that are implemented by a 
+single developer or development team. Useful for 
+software managers and programmers 
+ 
+ 
+Physical view 
+• 
+Shows the system hardware and software aspects. 
+How software components are distributed across the 
+machine platforms (processors, memory etc…) in the 
+system .  
+Useful for systems engineers planning a system 
+deployment. 
+ 
