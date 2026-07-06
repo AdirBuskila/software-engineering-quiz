@@ -17,7 +17,7 @@
     "explanation": "גם Singleton וגם Flyweight יוצרים עצם חדש רק אם הוא טרם נוצר — Singleton יוצר מופע יחיד רק אם אינו קיים, ו-Flyweight יוצר עצם משותף רק אם אינו קיים כבר במאגר.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "Singleton תבנית יצירה ו-Flyweight תבנית מבנה; המשותף הוא לוגיקת היצירה המותנית — נבחר לפי המשמעות ובאלימינציה."
+    "verified": true
   },
   {
     "num": 2,
@@ -37,7 +37,7 @@
     "explanation": "לשתי התבניות מבנה תרשים מחלקות דומה — עצם מרכזי (Mediator/Subject) המקושר לריבוי עצמים היקפיים (Colleagues/Observers).",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נבחר תרשים מחלקות כדמיון המבני; תרשימי הסידרה שלהם שונים."
+    "verified": true
   },
   {
     "num": 3,
@@ -76,7 +76,8 @@
     "official": false,
     "explanation": "בית-חרושת (factory) בתבניות תיכון הוא מחלקה שתפקידה ליצור עצמים של מחלקה אחרת.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -95,7 +96,8 @@
     "official": false,
     "explanation": "בתבנית שרשרת האחריות הבקשה עוברת לאורך שרשרת המטפלים, והמטפל הראשון שמסוגל לטפל בה מבצע את פעולתו — בשונה מ-pipeline שבו כל שלב מעביר תמיד לשלב הבא.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -114,7 +116,8 @@
     "official": false,
     "explanation": "ירושה ב-UML מיוצגת בקו עם ראש חץ משולש (חלול) המצביע אל מחלקת-העל.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -129,11 +132,12 @@
       "חץ אשר בקצה אחד קיים מעוין כפול",
       "כל התשובות האחרות שגויות"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "official": false,
-    "explanation": "קישור (association) יכול להיות מיוצג בחץ חד-כיווני (חץ פתוח) המציין ניווטיות מכיוון אחד.",
+    "explanation": "An association is a solid line with multiplicity at its ends; three asterisks (ג) and a double diamond (ד) are non-UML nonsense, and a plain line rules out ה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 8,
@@ -152,7 +156,8 @@
     "official": false,
     "explanation": "הרכבה מיוצגת ב-UML ע\"י מעוין (רומבוס) מלא בקצה המכולה — סימון שאינו מופיע באפשרויות א'-ד', ולכן כל התשובות האחרות שגויות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 9,
@@ -171,7 +176,8 @@
     "official": false,
     "explanation": "באופן אידיאלי תרשים מחלקות אמור להיות בלתי-תלוי בשפת התכנות, אף שבמציאות הוא לרוב מושפע ממאפייני השפה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 10,
@@ -190,7 +196,8 @@
     "official": false,
     "explanation": "תרשים מחלקות הוא תרשים מבנה (structural) המתאר את המבנה הסטטי של המערכת.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 11,
@@ -209,7 +216,8 @@
     "official": false,
     "explanation": "שיקוף (Reflection) נועד לפעול בזמן ריצה, שבו ניתן לבחון ולתפעל טיפוסים ועצמים באופן דינמי.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 12,
@@ -228,7 +236,8 @@
     "official": false,
     "explanation": "המידע הדרוש לשיקוף מצוי במטה-דאטה (metadata) של הטיפוסים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 13,
@@ -247,7 +256,8 @@
     "official": false,
     "explanation": "בעיית היעילות של שיקוף נובעת בעיקר מיצירת עצמים רבים (כגון עצמי Class/Method) הצורכים את זיכרון העבודה (RAM) ומעומס בזמן ריצה; שאר האפשרויות מפנות בטעות לדיסק הקשיח.",
     "hasImage": false,
-    "confidence": "med"
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 14,
@@ -266,7 +276,8 @@
     "official": false,
     "explanation": "הפעולה הראשונה בשיקוף היא השגת העצם המייצג את המחלקה של העצם הרלוונטי (עצם Class), וממנו ניתן לקבל שיטות, פרמטרים, שדות וכו'.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 15,
@@ -285,7 +296,8 @@
     "official": false,
     "explanation": "שני המרכיבים הם מידע במטה-דאטה, וספריית פונקציות (API) לגישה אל אותו מידע בזמן ריצה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 16,
@@ -300,11 +312,12 @@
       "שאינו שומר מצב",
       "כל התשובות האחרות שגויות"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "official": false,
-    "explanation": "תרשים מיצוב (Statechart של Harel) מרחיב את מכונת המצבים באמצעות מקבול (מצבים אורתוגונליים/מקביליים), היררכיה והיסטוריה.",
+    "explanation": "'תרשים מיצוב' (positioning/structural diagram) has positions (מיצובים) rather than states — the wordplay contrast with a state machine's מצבים; term is ambiguous so low confidence.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": false
   },
   {
     "num": 17,
@@ -323,7 +336,8 @@
     "official": false,
     "explanation": "תרשים מיצוב כולל מצבים, מעברים ומצב ברירת מחדל, אך אינו כולל מסרים — מסרים שייכים לתרשים סידרה/תקשורת.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 18,
@@ -342,7 +356,8 @@
     "official": false,
     "explanation": "תרשים מיצוב יכול לכלול מצבים, תנאי (guard), סימון היסטוריה ומעברים — ולכן כל התשובות נכונות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 19,
@@ -361,7 +376,8 @@
     "official": false,
     "explanation": "תרשים מיצוב מתאר מצבים (ביחסי XOR ו-AND) אך אינו מיועד לתאר תרחיש — תרחיש מתואר בתרשים סידרה או במקרה-שימוש.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 20,
@@ -380,6 +396,7 @@
     "official": false,
     "explanation": "תרשים מיצוב מיועד בעיקר לתאר את כלל המצבים האפשריים של המערכת והמעברים ביניהם.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

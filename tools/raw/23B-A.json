@@ -15,7 +15,8 @@
     "official": false,
     "explanation": "ה-MRD (Market Requirements) נכתב תחילה ומגדיר את צורכי הלקוח/השוק; ממנו נגזר ומורחב ה-PRD (Product Requirements) ע\"י מחלקת המוצר לכדי מפרט מוצר מפורט.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -33,7 +34,8 @@
     "official": false,
     "explanation": "מגבלת זיכרון מקסימלית היא אילוץ איכות/משאבים על המערכת כולה — דרישה לא-פונקציונלית. שאר הדרישות מתארות התנהגות/פלט של המערכת (פונקציונליות).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 3,
@@ -51,7 +53,8 @@
     "official": false,
     "explanation": "אפליקציות מבוססות טרנזקציות אינטראקטיביות (כמו מערכות בנקאות/הזמנות) מבצעות פעולות קריטיות מול מסד הנתונים תוך שמירה על עקביות הטרנזקציה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 4,
@@ -69,7 +72,8 @@
     "official": false,
     "explanation": "תבניות עיצוב הן שימוש חוזר בידע/עקרונות מופשטים (לא בקוד קונקרטי), ולכן שייכות לרמת האבסטרקציה (Abstract level) בנוף השימוש-החוזר.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -87,7 +91,8 @@
     "official": false,
     "explanation": "ההכנה (חיבור לשרת) שייכת ל-setup (@BeforeEach), הבדיקה עצמה (החישובים) ל-@Test, והניקוי (ניתוק החיבור) ל-tearDown (@AfterEach).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -105,7 +110,8 @@
     "official": false,
     "explanation": "הנדסת תוכנה מכסה את כל שלבי חיי התוכנה — מהגדרת הדרישות והתיעוד ועד לתחזוקה שלאחר האספקה. האפשרויות האחרות עוצרות בבדיקות ומשמיטות את התחזוקה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -123,7 +129,8 @@
     "official": false,
     "explanation": "ב-Sprint Planning הצוות מתכנן את יעדי ומשימות הספרינט הקרוב. הצגת תוצרים לבעל המוצר שייכת ל-Sprint Review.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 8,
@@ -141,7 +148,8 @@
     "official": false,
     "explanation": "תרשים מחלקות מתאר את המבנה הסטטי — יחסים (ירושה/הכלה) בין מחלקות ואת התכונות והפעולות שלהן. סדר קריאות בזמן שייך לתרשים sequence.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 9,
@@ -159,7 +167,8 @@
     "official": false,
     "explanation": "תרשים use-case מתאר אילו שחקנים משתמשים באילו use-cases — אין בו ציר זמן. סדר כרונולוגי מתואר בתרשים sequence.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 10,
@@ -178,7 +187,7 @@
     "explanation": "Verification בודקת שהמערכת נבנתה נכון מול המפרט — כלומר מקרים לוגיים (ב') ופונקציונליות בפעולה תקינה (ג'). מקרי קצה/קלטים לא-סבירים (א') שייכים יותר לבדיקות עמידות/validation.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; הגבול בין verification ל-validation ומיקום 'מקרי הקצה' עשוי להתפרש אחרת. סימון התלמיד תמך ב-ד."
+    "verified": true
   },
   {
     "num": 11,
@@ -196,7 +205,8 @@
     "official": false,
     "explanation": "דרישות משתמש מתארות מה המערכת צריכה לעשות, לא כיצד לממש. 'שימוש בתבניות תיכון' הוא החלטת מימוש/עיצוב ולכן אינו שייך ל-URD.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 12,
@@ -215,7 +225,7 @@
     "explanation": "בארכיטקטורת שכבות מיושמת היטב, כל שכבה פונה לשכבה שמתחתיה דרך ה-API שלה. אם משמרים את ה-API של שכבה 4 ומחליפים רק את המימוש (DB אחר), אף שכבה אחרת אינה מושפעת.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; חלופה סבירה היא (ב) — עדכון הפניית שכבה 3 בלבד. הבחירה ב(ד) נשענת על עקרון ה-API היציב בשכבות (עקבי עם 22S-A)."
+    "verified": true
   },
   {
     "num": 13,
@@ -233,7 +243,8 @@
     "official": false,
     "explanation": "ה-development view מתאר את מבנה היחידות/המודולים של המערכת, וממנו נגזרות ההתמחויות שצוותי הפיתוח צריכים. האפשרויות האחרות ממפות תיאורים ל-views שגויים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 14,
@@ -251,6 +262,7 @@
     "official": false,
     "explanation": "ה-Daily Scrum (Stand-up) היא פגישה קצרה של כ-15 דקות, בעמידה, בתחילת כל יום, לעדכון קצר על התקדמות וחסמים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

@@ -11,11 +11,12 @@
       "השלב - design & development",
       "השלב - requirements"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "official": false,
-    "explanation": "השאלה מתייחסת לשלב בתהליך הפיתוח ולא לסוג המודל. תרשים מחלקות אמנם משתייך ל-structure model כמודל, אך כשלב בתהליך הוא נוצר בשלב ה-design & development.",
+    "explanation": "Sommerville classifies class diagrams under Structural models (structure model), alongside interaction, context and behavioral models.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,

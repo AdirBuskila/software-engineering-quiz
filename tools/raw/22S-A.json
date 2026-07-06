@@ -16,7 +16,7 @@
     "explanation": "הנדסת תוכנה נועדה לתמוך בפיתוח תוכנה מקצועי (בניגוד לתכנות יחיד/חובבני), ולכן היא מסייעת לכל צוות מקצועי של פיתוח תוכנה.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "בין ב לג; ג ('מכל סוג') סותר את העיקרון שאין קבוצת טכניקות אחת שמתאימה לכל סוגי התוכנה, לכן ב עדיף."
+    "verified": true
   },
   {
     "num": 2,
@@ -34,7 +34,8 @@
     "official": false,
     "explanation": "ההכנה (קריאת הקובץ) נעשית ב-setUp שרץ לפני הבדיקה, ההפעלה של ()f והאסרשן הם גוף ה-@Test, והניקוי (סגירת הקובץ) נעשה ב-tearDown שרץ אחרי הבדיקה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 3,
@@ -52,7 +53,8 @@
     "official": false,
     "explanation": "מגבלת זיכרון מקסימלית היא אילוץ על אופן פעולת המערכת (דרישה לא-פונקציונלית), ולא תיאור של מה שהמערכת עושה בתגובה לקלט.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 4,
@@ -70,7 +72,8 @@
     "official": false,
     "explanation": "בארכיטקטורת שכבות שיושמה היטב כל שכבה תלויה רק בממשק של השכבה שמתחתיה; אם השכבה החדשה חושפת את אותו API, אין צורך לשנות את שאר השכבות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -88,7 +91,8 @@
     "official": false,
     "explanation": "האפליקציה פותחה במקור בהזמנה אישית עבור בנק אחד (Customized), וההפיכה למוצר שישרת בנקים רבים היא מעבר למוצר גנרי (Generic) הנמכר ללקוחות רבים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -106,7 +110,8 @@
     "official": false,
     "explanation": "ה-Sprint Planning מוקדשת לתכנון יעדי הספרינט הקרוב ובחירת פריטי ה-Backlog לביצוע; הצגת התוצרים וסקירתם שייכות ל-Sprint Review.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -125,7 +130,7 @@
     "explanation": "ה-MRD (הראשון) מגדיר את צרכי השוק/הלקוח, וה-PRD (השני) הוא הרחבה שלו על ידי מחלקת המוצר כדי לתרגם צרכים אלו לדרישות מוצר לפיתוח.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "ד גם מזכיר שהמסמך הראשון נכתב ע\"י המחלקה העסקית, אך שגוי בכך שה-PRD נכתב ע\"י הפיתוח לצרכים טכניים; ב מדויק יותר."
+    "verified": true
   },
   {
     "num": 8,
@@ -143,7 +148,8 @@
     "official": false,
     "explanation": "Stand-alone applications פועלות מקומית על מחשב יחיד ואינן נדרשות לחיבור לרשת בזמן פעולתן, בשונה משאר הסוגים המבוססים על תקשורת/שירותים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 9,
@@ -157,12 +163,12 @@
       "ב-Distributed Version Control יש יכולת חזרה לאחור כיוון שיש ניהול גירסאות בכל מחשב מקומי לעומת ה-Centralized Version Control ששם לא ניתן",
       "יש יותר מתשובה אחת נכונה"
     ],
-    "correctIndex": 3,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "גם א (Centralized קל יותר לניהול, מקור אמת יחיד) וגם ג (ב-Distributed יש היסטוריית גרסאות מקומית מלאה המאפשרת חזרה לאחור מקומית) הם משפטים נכונים, ולכן יש יותר מתשובה אחת נכונה. ב שגוי כי ב-Distributed ניתן לבצע commit מקומי גם כשה-remote נפל.",
+    "explanation": "Only א is true (centralized = single repo, easy to manage); ב false (DVC allows local commits when remote is down), ג false (centralized DOES allow rollback), so ד fails.",
     "hasImage": false,
-    "confidence": "med",
-    "flag": "אם המרצה ראה את ג כלא-מדויק (בCentralized אפשר לבצע rollback מול השרת) אזי רק א נכון והתשובה 0; בחרתי ד כי א וג שניהם משפטים נכונים על ארכיטקטורות VC."
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 10,
@@ -181,7 +187,7 @@
     "explanation": "האינטרנט אפשר גם פריסה מרכזית של אפליקציות בשרתי החברה שמוזילה שדרוג ותחזוקה (א) וגם שימוש חוזר בשירותי רשת המקצר שלבי פיתוח (ג), ולכן שני הסעיפים נכונים.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "ב (הדפדפן קיצר את פיתוח ה-UI) שנוי במחלוקת; ההצדקה לד נשענת על נכונות א וג."
+    "verified": true
   },
   {
     "num": 11,
@@ -199,7 +205,8 @@
     "official": false,
     "explanation": "תרשים מחלקות מציג את המחלקות, תכונותיהן והקשרים ביניהן כולל יחסי היררכיה/ירושה; סדר זמנים של קריאות שייך לתרשים רצף ולא לתרשים מחלקות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 12,
@@ -218,7 +225,7 @@
     "explanation": "בדיקות וריפיקציה בודקות שהמערכת תואמת למפרט ופועלת נכון בתרחישים הלוגיים והתקינים המוגדרים (ב+ג); מקרי קצה ותסריטים לא סבירים (א) שייכים יותר לבדיקות עמידות/ולידציה.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "האבחנה verification מול validation ומיקום 'מקרי הקצה' עשויים להתפרש אחרת; בחרתי ד (מקרים לוגיים ותקינים)."
+    "verified": true
   },
   {
     "num": 13,
@@ -254,6 +261,7 @@
     "official": false,
     "explanation": "לתרשים Use Case אין ציר זמן (בשונה מתרשים רצף); הוא מתאר את הפונקציונליות והשחקנים ללא סדר כרונולוגי.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

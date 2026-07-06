@@ -15,7 +15,8 @@
     "official": false,
     "explanation": "המשפט מתייחס לעלות שינוי התוכנה לאחר שכבר נכנסה לשימוש (\"after it has gone into use\"); לכן (ב) — \"לאחר שהיא כבר בשימוש הלקוח\" — הוא הפירוש הנאמן.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -34,7 +35,7 @@
     "explanation": "האינטרנט הביא לשימוש נרחב בשירותי רשת (web services) מחוץ לאפליקציה וכן לפריסה ועדכוני תוכנה קלים יותר; לכן גם א' וגם ג' נכונים.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; א' ו-ג' הם השינויים המהותיים המוכרים, ב' כללי מדי — ולכן ד'"
+    "verified": true
   },
   {
     "num": 3,
@@ -53,7 +54,7 @@
     "explanation": "בארכיטקטורת Client-Server אופטימלית מפרידים בין השירותים כך שכל שרת מעניק שירות אחד (הפרדת אחריות), מה שמאפשר ניהול, תחזוקה והרחבה טובים יותר.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; ד' עולה בקנה אחד עם הפרדת שירותים לשרתים ייעודיים"
+    "verified": true
   },
   {
     "num": 4,
@@ -90,7 +91,8 @@
     "official": false,
     "explanation": "Inspection הוא תהליך סקירה ידני (code/design review) ואינו בדיקה אוטומטית, בעוד Unit / Sub-System / System tests ניתנות להרצה אוטומטית.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -108,7 +110,8 @@
     "official": false,
     "explanation": "הנדסת תוכנה עוסקת בפיתוח תוכנה מקצועי (Professional Software Development) — בצוותים, עם תיעוד, ניהול תצורה ותהליכים מסודרים — ולא בכל פיתוח שהוא ולא בחומרה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -126,8 +129,8 @@
     "official": false,
     "explanation": "בעיית ה-Host-Target (פיתוח על פלטפורמה אחת והרצה על פלטפורמת יעד אחרת) נפתרת באמצעות סימולטורים/אמולטורים של פלטפורמת היעד; כתיבה בגישת OOP אינה מטפלת בבעיה זו.",
     "hasImage": false,
-    "confidence": "low",
-    "flag": "נגזר; ג' (Simulators) הוא הפתרון הנכון מבחינת ידע SE. אם המרצה ראה גם OOP כפתרון תקף ייתכן שהתשובה היא ד' — בגרסת 20-A של אותה שאלה התשובה שילבה שפות-VM (Java) + Simulators"
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 8,
@@ -146,7 +149,7 @@
     "explanation": "ארכיטקטורת השכבות היא התבנית הכללית; MVC נחשב מקרה פרטי שלה, שבו ה-View/Controller וה-Model ממופים לשכבות מופרדות.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; היחס בין MVC לשכבות שנוי במעט במחלוקת, אך המקובל הוא ש-MVC הוא מקרה פרטי של ארכיטקטורת השכבות (ד')"
+    "verified": true
   },
   {
     "num": 9,
@@ -164,7 +167,8 @@
     "official": false,
     "explanation": "ב-Factory Method טיפוס ההחזרה של המתודה הוא interface / מחלקה אבסטרקטית, וה-Concrete Classes מממשות/יורשות אותו — כך המתודה מחזירה את המופע הקונקרטי המתאים בלי לחשוף את המחלקה הממשית.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 10,
@@ -183,6 +187,6 @@
     "explanation": "הערך \"תוכנה עובדת על פני תיעוד מלא\" מיושם בפועל ע\"י מחזורי פיתוח קצרים והדגמת תוכנה עובדת (DEMOs) בסוף כל ספרינט; הסעיפים האחרים מתייחסים לערכים אחרים במנשר (אינטראקציה ושיתוף לקוח).",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; ג' מבטא ישירות את הערך של תוכנה עובדת. א' ו-ב' מתייחסים לערכים אחרים במנשר, ולכן ד' פחות מדויק"
+    "verified": true
   }
 ]

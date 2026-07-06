@@ -4,7 +4,7 @@
 - Excluded: **1**  ({'image-missing': 1})
 - Cross-exam duplicates (kept whole; app dedups practice pool): **27**
 - **Final questions: 371**
-- Answer key: **201** official · **170** derived (unofficial)
+- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **12** derived (still uncertain)
 
 ## By topic
 

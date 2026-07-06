@@ -43,7 +43,9 @@ for(const q of QS){ if(seen.has(q.dedupKey)) dups++; else seen.add(q.dedupKey); 
 
 console.log("total questions:",QS.length);
 console.log("by topic:",topics);
-console.log("official:",QS.filter(q=>q.official).length,"· derived:",QS.filter(q=>!q.official).length);
+console.log("tiers — official:",QS.filter(q=>q.official).length,
+  "· verified:",QS.filter(q=>q.verified).length,
+  "· derived:",QS.filter(q=>!q.official&&!q.verified).length);
 console.log("integrity problems:",bad);
 console.log("cross-exam duplicates (hidden in practice pool):",dups);
 console.log("STORED correctIndex distribution (5-opt, should be ~20% each — proves build-time shuffle):",

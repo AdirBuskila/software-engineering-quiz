@@ -15,7 +15,8 @@
     "official": false,
     "explanation": "תרשים מחלקות (class diagram) הוא תרשים מבני המתאר את המבנה הסטטי של המערכת, ולכן שייך למודל המבנה (structure model).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -33,8 +34,8 @@
     "official": false,
     "explanation": "היתרון המרכזי של מודל השכבות הוא הפרדת אחריות: כל עוד הממשק נשמר, שינוי בשכבה גורם להשפעה מינימלית בלבד על יתר השכבות.",
     "hasImage": false,
-    "confidence": "low",
-    "flag": "אין פתרון רשמי. ההבחנה בין (א) 'ללא פגיעה' ל-(ב) 'שינוי מינימלי' עדינה, וההשוואה ל-MVC/'שכבה עצמאית' אינה מדויקת. (ג) פיתוח מקבילי ו-(ד) 'יותר מתשובה נכונה' אפשריים גם. לאמת מול מפתח הקורס."
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 3,
@@ -52,7 +53,8 @@
     "official": false,
     "explanation": "בתרשים רצף (sequence diagram) ציר הזמן אנכי, וההודעות/האינטראקציות נקראות ונכתבות מלמעלה למטה (top to bottom).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 4,
@@ -70,7 +72,8 @@
     "official": false,
     "explanation": "האנוטציה @BeforeEach (JUnit 5) / @Before (JUnit 4) גורמת להרצת מתודת ה-setup פעם אחת לפני כל מתודת טסט בנפרד (בניגוד ל-@BeforeAll/@BeforeClass שרצה פעם אחת לפני כל הטסטים).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -107,7 +110,8 @@
     "official": false,
     "explanation": "תרשים מחלקות מתאר את המבנה הסטטי: יחסים היררכיים בין מחלקות ואובייקטים ותכונות (שדות) של מחלקות. סדר זמנים של קריאות שייך לתרשים רצף ולא לתרשים מחלקות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -145,6 +149,6 @@
     "explanation": "דרישת זמן תגובה (לחיצה שתגיב תוך שנייה לכל היותר) היא דרישת ביצועים (performance) — דרישה לא-פונקציונלית קלאסית, המתארת איכות של המערכת ולא פונקציה שהיא מבצעת.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "(ד) התאמה למכשירי Android היא גם דרישה לא-פונקציונלית (ניידות/תאימות), ולכן השאלה עמומה בין (ב) ל-(ד). נבחרה (ב) כדרישת הביצועים הברורה והקאנונית ביותר."
+    "verified": true
   }
 ]

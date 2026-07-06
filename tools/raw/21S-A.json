@@ -15,7 +15,8 @@
     "official": false,
     "explanation": "האמירה מדברת על עלות שינוי התוכנה לאחר שהיא כבר נכנסה לשימוש (in use); תשובה ב' היא התרגום הנאמן ביותר, ללא ההוספות השגויות של \"והרס אותה\" או צוות הבדיקות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -33,7 +34,8 @@
     "official": false,
     "explanation": "האינטרנט הביא לשימוש בשירותי רשת (web services) חיצוניים לאפליקציה ולפריסה ועדכוני תוכנה קלים יותר (SaaS); שני אלה נכונים, ולכן ד'.",
     "hasImage": false,
-    "confidence": "med"
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 3,
@@ -51,7 +53,8 @@
     "official": false,
     "explanation": "בתבנית client-server אופטימלית המערכת מאורגנת כאוסף שירותים כאשר כל שרת מספק שירות בודד ומוגדר היטב, מה שמאפשר שכפול והתאמת עומסים בנפרד.",
     "hasImage": false,
-    "confidence": "med"
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 4,
@@ -88,7 +91,8 @@
     "official": false,
     "explanation": "Inspection היא טכניקת סקירה סטטית ידנית (בדיקת קוד/מסמכים ע\"י אנשים) ואינה מריצה את התוכנה, ולכן אינה מבוצעת באופן אוטומטי בניגוד לבדיקות יחידה, תת-מערכת ומערכת.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -106,7 +110,8 @@
     "official": false,
     "explanation": "הנדסת תוכנה עוסקת בתמיכה בפיתוח תוכנה מקצועי (professional software development) ולא בפיתוח חובבני, ניהולי בלבד או חומרה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -120,12 +125,12 @@
       "Simulators",
       "תשובות א' ו – ג' נכונות"
     ],
-    "correctIndex": 3,
+    "correctIndex": 2,
     "official": false,
-    "explanation": "בעיית ה-Host/Target (פיתוח על פלטפורמה אחת והרצה על אחרת) נפתרת ע\"י סימולטורים/אמולטורים של פלטפורמת היעד, וכן ע\"י שפות OOP מנוהלות ועצמאיות-פלטפורמה (כמו Java/JVM) המאפשרות ניידות.",
+    "explanation": "Host-Target problem (dev on host, run on target, e.g. embedded) is handled with simulators/emulators of the target; OOP and Design Patterns are irrelevant, so ד is wrong.",
     "hasImage": false,
-    "confidence": "low",
-    "flag": "Simulators (ג) בבירור נכון. תלוי בחומר הקורס: אם לימדו שפתרון OOP לניידות תקף – התשובה ד'; אם לא – התשובה היא ג' בלבד (index 2)."
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 8,
@@ -143,7 +148,8 @@
     "official": false,
     "explanation": "ארכיטקטורת השכבות היא תבנית כללית לחלוקה לשכבות, ו-MVC היא מקרה פרטי/מימוש ספציפי שלה (View=שכבת הצגה, Controller ו-Model=שכבות לוגיקה/נתונים).",
     "hasImage": false,
-    "confidence": "med"
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 9,
@@ -161,7 +167,8 @@
     "official": false,
     "explanation": "מטודת ה-Factory מחזירה טיפוס מופשט/interface, וה-Concrete Classes מממשים/יורשים אותו; הקוד הקורא עובד מול הממשק וה-factory מחליטה איזה מחלקה קונקרטית לייצר.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 10,
@@ -180,6 +187,6 @@
     "explanation": "העיקרון \"תוכנה עובדת על פני תיעוד\" מתממש ע\"י ספרינטים קצרים המפיקים אינקרמנט עובד שמוצג ב-DEMO (Sprint Review); בעל מוצר ושיתוף לקוחות שייכים לעיקרון אחר (customer collaboration).",
     "hasImage": false,
     "confidence": "med",
-    "flag": "ייתכן שהכוונה ל-ד' (כל התשובות) אם ראו את כל הפרקטיקות כמימוש העיקרון; הבחירה הישירה ביותר לעיקרון 'תוכנה עובדת' היא ג' (זמני פיתוח קצרים ו-DEMOS)."
+    "verified": true
   }
 ]

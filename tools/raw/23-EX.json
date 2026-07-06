@@ -16,7 +16,8 @@
     "official": false,
     "explanation": "שיקוף (Reflection) הוא מנגנון זמן-ריצה: הוא מאפשר לבחון ולתמרן טיפוסים, שיטות ושדות של עצמים בזמן ריצה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -35,7 +36,8 @@
     "official": false,
     "explanation": "שיקוף מסתמך על מטה-דאטה (metadata) — התיאור העצמי של המחלקות והשיטות שהשפה שומרת, ודרכו ניתן לגלות מבנה ולהפעיל קוד בזמן ריצה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 3,
@@ -55,7 +57,7 @@
     "explanation": "שימוש בשיקוף יוצר בזמן ריצה עצמים מתווכים רבים (Class, Method, Field וכו') הצורכים את זיכרון העבודה (RAM) ומאטים את הביצוע.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "ניסוח 'בעיית יעילות' עמום; בחירה בין ה (עצמים ב-RAM) לבין ד (מטה-דאטה בדיסק) — נבחר ה לפי מסגור הקורס"
+    "verified": true
   },
   {
     "num": 4,
@@ -74,7 +76,8 @@
     "official": false,
     "explanation": "השלב הראשון בשיקוף הוא השגת עצם המחלקה (Class object / metaclass) המייצג את מחלקת העצם; רק ממנו ניתן אחר כך לקבל שיטות ופרמטרים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -93,7 +96,8 @@
     "official": false,
     "explanation": "שיקוף דורש שני מרכיבים: תיאור עצמי במטה-דאטה, וממשק/ספריית פונקציות המאפשרת גישה אל אותו מידע בזמן ריצה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -112,7 +116,8 @@
     "official": false,
     "explanation": "בשתי התבניות בקרת יצירה מונעת שכפול: העצם נוצר רק אם אינו קיים עדיין — Singleton יוצר מופע יחיד, ו-Flyweight יוצר מופע משותף רק אם טרם נוצר.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -131,7 +136,8 @@
     "official": false,
     "explanation": "בשתי התבניות תרשים המחלקות דומה: מחלקה מרכזית (Mediator/Subject) המחזיקה קשר של אחד-לרבים אל מחלקות היקפיות (Colleagues/Observers).",
     "hasImage": false,
-    "confidence": "med"
+    "confidence": "med",
+    "verified": true
   },
   {
     "num": 8,
@@ -151,7 +157,7 @@
     "explanation": "כל הניסוחים הספציפיים שגויים: התבניות אינן מגבילות מספר עצמים, וב-Observer התלות היא של רבים (המשקיפים) במצב של אחד (הנושא) ולא ההפך; לכן 'כל התשובות האחרות שגויות'.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "שאלת היפוך ניסוחים; אפשרות ה מנוסחת הפוך ולכן שגויה — נבחר א ('האחרות שגויות')"
+    "verified": true
   },
   {
     "num": 9,
@@ -170,7 +176,8 @@
     "official": false,
     "explanation": "Abstract Factory יוצרת משפחות של מוצרים קשורים; הדוגמה הקלאסית היא ערכת רכיבי חלונות (GUI) המותאמת למערכות הפעלה שונות מבלי לקשור לקוד למחלקות קונקרטיות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 10,
@@ -189,7 +196,8 @@
     "official": false,
     "explanation": "ב-Chain of Responsibility הבקשה עוברת לאורך השרשרת עד שהמטפל הראשון המסוגל לטפל בה מבצע את פעולתו ועוצר; זה שונה מ-pipeline שבו כל שלב מטפל ומעביר הלאה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 11,
@@ -208,7 +216,8 @@
     "official": false,
     "explanation": "ב-UML ירושה/הכללה (generalization) מיוצגת בחץ עם ראש משולש חלול המצביע אל מחלקת-העל.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 12,
@@ -228,7 +237,7 @@
     "explanation": "קישור הוא היחס הכללי ב-UML: הוא יכול להופיע כקו פשוט ללא ראש, כחץ ניווט חד-כיווני, עם ריבוי (כוכבית), או כאגרגציה עם מעוין — כולם צורות של association.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "תלוי בפרשנות אם אגרגציה (מעוין) נחשבת association; אם לא — התשובה תהיה שונה. נבחר ב ('כל התשובות נכונות')"
+    "verified": true
   },
   {
     "num": 13,
@@ -247,7 +256,8 @@
     "official": false,
     "explanation": "הרכבה ב-UML מיוצגת במעוין מלא (מָלֵא) בצד ה'שלם'; אף אחת מהחלופות אינה נכונה (משולש הוא ירושה, תנאי על מעבר שייך לתרשים מצבים), לכן 'כל התשובות האחרות שגויות'.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 14,
@@ -266,7 +276,8 @@
     "official": false,
     "explanation": "תרשים מחלקות הוא תוצר תכן ברמת מודל, ולכן רצוי באופן אידיאלי שיהיה בלתי-תלוי בשפת תכנות; בפועל עדיין עלול להיות מושפע מן השפה, ולכן א מדויק יותר מ-ב.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 15,
@@ -285,7 +296,8 @@
     "official": false,
     "explanation": "תרשים מחלקות הוא תרשים מבנה (structural diagram) המתאר את המחלקות והקשרים הסטטיים ביניהן, בניגוד לתרשימי התנהגות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 16,
@@ -323,7 +335,8 @@
     "official": false,
     "explanation": "תרשים מיצוב כולל מצבים, מעברים ומצב התחלתי (ברירת מחדל), אך אינו כולל מסרים — מסרים שייכים לתרשים סדרה/תקשורת.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 18,
@@ -342,7 +355,8 @@
     "official": false,
     "explanation": "תרשים מיצוב יכול לכלול מצבים, מעברים, תנאים (guards) וסימון היסטוריה — לכן כל התשובות נכונות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 19,
@@ -361,7 +375,8 @@
     "official": false,
     "explanation": "תרשים מיצוב מתאר מצבים (יחסי XOR למצבים בלעדיים ו-AND למצבים אורתוגונליים), אך תרחיש (scenario) מתואר בתרשים סדרה ולא בתרשים מיצוב.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 20,
@@ -380,6 +395,7 @@
     "official": false,
     "explanation": "מטרתו העיקרית של תרשים מיצוב היא לתאר את כלל המצבים האפשריים של המערכת והמעברים ביניהם.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

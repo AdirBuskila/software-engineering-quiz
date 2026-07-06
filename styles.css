@@ -8,23 +8,24 @@
 :root{
   /* surfaces */
   --bg:#0a0c18; --bg2:#0e1330;
-  --glow-a:rgba(56,189,248,.20); --glow-b:rgba(129,140,248,.16);
+  --glow-a:rgba(52,211,153,.20); --glow-b:rgba(34,197,94,.16);
   --card:rgba(24,30,54,.72); --card2:rgba(255,255,255,.045);
   --card-solid:#161c31;
   /* text */
   --ink:#eaf2ff; --muted:#95a4c8;
   /* lines & accents */
   --line:rgba(255,255,255,.09); --line-strong:rgba(255,255,255,.16);
-  --brand:#38bdf8; --brand2:#818cf8; --brand-ink:#0a0c18;
-  --grad:linear-gradient(135deg,#38bdf8 0%,#818cf8 100%);
+  --brand:#34d399; --brand2:#22c55e; --brand-ink:#0a0c18;
+  --grad:linear-gradient(135deg,#34d399 0%,#22c55e 100%);
   --ok:#34d399; --ok-bg:rgba(52,211,153,.13);
   --bad:#fb7185; --bad-bg:rgba(251,113,133,.13);
   --warn:#fbbf24;
+  --info:#38bdf8;   /* "verified" tier — distinct blue, never collides with the green accent */
   /* shape */
   --radius:18px; --radius-sm:12px; --radius-xs:9px;
   --shadow:0 14px 44px rgba(0,0,0,.45);
   --shadow-sm:0 4px 16px rgba(0,0,0,.28);
-  --ring:0 0 0 3px rgba(56,189,248,.30);
+  --ring:0 0 0 3px rgba(52,211,153,.30);
 
   font-family:"Segoe UI",system-ui,-apple-system,"Noto Sans Hebrew",Arial,sans-serif;
   color-scheme:dark;
@@ -33,35 +34,37 @@
 /* ---- light palette (shared by explicit toggle + system pref) ---- */
 :root[data-theme="light"]{
   --bg:#eef2fb; --bg2:#e3ebfb;
-  --glow-a:rgba(56,189,248,.22); --glow-b:rgba(129,140,248,.18);
+  --glow-a:rgba(52,211,153,.22); --glow-b:rgba(34,197,94,.18);
   --card:rgba(255,255,255,.82); --card2:rgba(20,40,80,.04);
   --card-solid:#ffffff;
   --ink:#141b2e; --muted:#566187;
   --line:rgba(20,40,80,.10); --line-strong:rgba(20,40,80,.18);
-  --brand:#0284c7; --brand2:#6366f1; --brand-ink:#ffffff;
-  --grad:linear-gradient(135deg,#0284c7 0%,#6366f1 100%);
+  --brand:#059669; --brand2:#16a34a; --brand-ink:#ffffff;
+  --grad:linear-gradient(135deg,#059669 0%,#16a34a 100%);
   --ok:#0f9d68; --ok-bg:rgba(15,157,104,.12);
   --bad:#e5484d; --bad-bg:rgba(229,72,77,.10);
+  --info:#0284c7;
   --shadow:0 14px 40px rgba(40,60,120,.16);
   --shadow-sm:0 4px 16px rgba(40,60,120,.10);
-  --ring:0 0 0 3px rgba(2,132,199,.25);
+  --ring:0 0 0 3px rgba(5,150,105,.25);
   color-scheme:light;
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme]){
     --bg:#eef2fb; --bg2:#e3ebfb;
-    --glow-a:rgba(56,189,248,.22); --glow-b:rgba(129,140,248,.18);
+    --glow-a:rgba(52,211,153,.22); --glow-b:rgba(34,197,94,.18);
     --card:rgba(255,255,255,.82); --card2:rgba(20,40,80,.04);
     --card-solid:#ffffff;
     --ink:#141b2e; --muted:#566187;
     --line:rgba(20,40,80,.10); --line-strong:rgba(20,40,80,.18);
-    --brand:#0284c7; --brand2:#6366f1; --brand-ink:#ffffff;
-    --grad:linear-gradient(135deg,#0284c7 0%,#6366f1 100%);
+    --brand:#059669; --brand2:#16a34a; --brand-ink:#ffffff;
+    --grad:linear-gradient(135deg,#059669 0%,#16a34a 100%);
     --ok:#0f9d68; --ok-bg:rgba(15,157,104,.12);
     --bad:#e5484d; --bad-bg:rgba(229,72,77,.10);
+    --info:#0284c7;
     --shadow:0 14px 40px rgba(40,60,120,.16);
     --shadow-sm:0 4px 16px rgba(40,60,120,.10);
-    --ring:0 0 0 3px rgba(2,132,199,.25);
+    --ring:0 0 0 3px rgba(5,150,105,.25);
     color-scheme:light;
   }
 }
@@ -249,6 +252,7 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 }
 .chip.soft{opacity:.9}
 .chip.official{background:var(--ok-bg);color:var(--ok);border-color:transparent}
+.chip.verified{background:color-mix(in srgb,var(--info) 16%,transparent);color:var(--info);border-color:transparent}
 .chip.unofficial{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn);border-color:transparent}
 .question-text{font-size:1.18rem;font-weight:700;line-height:1.5;margin-bottom:1.2rem;white-space:pre-wrap;letter-spacing:-.01em}
 

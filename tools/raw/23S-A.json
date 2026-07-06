@@ -11,12 +11,12 @@
       "דרישות פונקציונליות ולא פונקציונליות",
       "יש יותר מתשובה אחת נכונה"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "official": false,
-    "explanation": "מסמך ה-PRD (Product Requirements Document) מתאר את דרישות המוצר וכולל דרישות פונקציונליות ולא-פונקציונליות. אפשרות ב' חורגת בכך שהיא מייחסת למסמך זה 'דרישות מערכת' ששייכות בעיקר ל-SRS.",
+    "explanation": "PRD (written by product mgmt) captures customer requirements expanded to system requirements (ב) AND functional + non-functional requirements (ג) — both describe its content.",
     "hasImage": false,
-    "confidence": "low",
-    "flag": "מצב derive ללא פתרון. תוכן ה-PRD שנוי לפרשנות: אם הקורס רואה גם את ב' כנכונה, התשובה היא ד' ('יש יותר מתשובה אחת נכונה'). לוודא מול חומר הקורס."
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -34,7 +34,8 @@
     "official": false,
     "explanation": "ארכיטקטורת MVC מיועדת למערכות אינטראקטיביות עם ממשק משתמש (Model-View-Controller). מערכות בקרה משובצות (Embedded control systems) הן מערכות זמן-אמת ללא ממשק/View, ולכן לרוב אינן משתמשות ב-MVC.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 3,
@@ -52,7 +53,8 @@
     "official": false,
     "explanation": "לפי מפת השימוש החוזר (Sommerville), תבניות ארכיטקטורה ותבניות תיכון שייכות לרמת ההפשטה (Abstraction level) - שימוש חוזר בידע ובאבסטרקציות מוצלחות ולא בקוד עצמו.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 4,
@@ -70,7 +72,8 @@
     "official": false,
     "explanation": "דרישות משתמש מתארות מה המערכת צריכה לעשות ולא כיצד היא ממומשת. שימוש בתבניות תיכון הוא פרט מימוש, ולכן אין מקומו במסמך דרישות המשתמש (URD).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -88,7 +91,8 @@
     "official": false,
     "explanation": "הנדסת תוכנה עוסקת בכל שלבי ייצור התוכנה, מהשלבים הראשונים ועד לתחזוקה לאחר שהמערכת נכנסה לשימוש. אפשרות ד' שגויה כי היא מסתיימת בשלב הבדיקות ואינה כוללת תחזוקה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -106,7 +110,8 @@
     "official": false,
     "explanation": "ה-development view מתאר את מבנה יחידות/מודולי המערכת כפי שרואים המפתחים, וממנו נגזרות ההתמחויות הנדרשות מצוותי הפיתוח. אפשרויות א' ו-ג' משייכות תיאורים להיבטים לא נכונים (שיטת פיתוח ובחירת טכנולוגיות אינן היבטים ארכיטקטוניים).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -124,7 +129,8 @@
     "official": false,
     "explanation": "ה-Daily Scrum הוא מפגש קצר בתחילת היום שבו כל חבר מדווח מה עשה אתמול (אפשרות ג') ומה יעשה היום (אפשרות א'), ולכן שתיהן נכונות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 8,
@@ -142,7 +148,8 @@
     "official": false,
     "explanation": "ה-solid bar הוא סרגל סנכרון (fork/join). כאשר מספר זרימות מובילות אליו (join), כל הפעילויות הנכנסות חייבות להסתיים לפני שניתן להמשיך - סמנטיקת AND ולא OR.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 9,
@@ -161,7 +168,7 @@
     "explanation": "שיטת בנה ותקן (Build and Fix) חסרה אפיון ותכנון ולכן מתאימה לפרויקטים קטנים/מהירים כמו הוכחת יכולת (POC) בשלב מוקדם. אפשרות ג' שגויה כי השיטה אינה מתאימה לכל פרויקט, ואפשרות ד' מוחלטת מדי.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "מצב derive ללא פתרון; א' היא התשובה ההגיונית ביותר."
+    "verified": true
   },
   {
     "num": 10,
@@ -179,7 +186,8 @@
     "official": false,
     "explanation": "בארכיטקטורת Pipe and Filter המידע זורם דרך סדרת פילטרים (שלבים) עצמאיים המחוברים בצינורות. התהליך ניתן לפירוק לשלבים עצמאיים שיכולים לרוץ במקביל או בטור.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 11,
@@ -197,7 +205,8 @@
     "official": false,
     "explanation": "Inspection היא טכניקת בדיקה סטטית/ידנית שבה אנשים קוראים ובוחנים את הקוד או המסמכים, ולכן אינה מבוצעת באמצעות בדיקות אוטומטיות. שאר הבדיקות (יחידה, תת-מערכת, מערכת) ניתנות לאוטומציה.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 12,
@@ -234,7 +243,8 @@
     "official": false,
     "explanation": "פיתוח תוכנה מקצועי מאופיין הן בכך שהוא נעשה בדרך כלל בצוותים ולא ביחידים (ב'), והן בכך שהוא כולל לא רק תוכנה אלא גם תיעוד, קונפיגורציה ומרכיבים נוספים (ג'). לכן שני הסעיפים נכונים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 14,
@@ -252,6 +262,7 @@
     "official": false,
     "explanation": "תרחישי שימוש, ראיונות ותצפיות על סביבת העבודה, ולמידת מערכות קיימות - כולן שיטות מקובלות לגילוי דרישות (Requirements elicitation), ולכן 'כל התשובות נכונות'.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

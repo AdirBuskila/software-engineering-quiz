@@ -15,7 +15,8 @@
     "official": false,
     "explanation": "פיתוח תוכנה מקצועי מתבצע בדרך כלל בצוותים ולא ע״י יחידים, וגם מחייב אספקת תיעוד, ניהול תצורה ותהליכים מסודרים — לכן גם ב' וגם ג' נכונים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -52,7 +53,7 @@
     "explanation": "TDD מאפשר מקביליות בין פיתוח לבדיקות (כתיבת בדיקות יחד עם הקוד), ולכן השיטה האגילית משלבת אותו כדי להריץ פיתוח ובדיקות במקביל.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; א' (מקביליות פיתוח-בדיקות) הכי מבוסס, אך ד' אפשרי אם מפרשים את ב' כנכון"
+    "verified": true
   },
   {
     "num": 4,
@@ -70,7 +71,8 @@
     "official": false,
     "explanation": "כאשר קיימים use cases רבים ניתן לפצל אותם למספר תרשימים לשם בהירות; אין חובה להציגם בתרשים יחיד או להגבילם למספר קבוע.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -108,7 +110,7 @@
     "explanation": "במודל מפל המים השלבים מוגדרים היטב ורציפים ולכן קלים יותר לניהול ולתכנון; יתר הטענות שגויות בעיקר בשל השימוש ב״תמיד״.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר; ג' הוא היתרון המוכר של מודל מפל המים (שלבים מוגדרים = ניהול קל יותר)"
+    "verified": true
   },
   {
     "num": 7,
@@ -127,7 +129,7 @@
     "explanation": "חיסרון עיקרי של ארכיטקטורת Repository הוא הקושי לחלק/להפיץ את המאגר המרכזי ביעילות על פני מספר מכונות (לפי Sommerville).",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר לפי Sommerville — הקושי בהפצת המאגר המרכזי על פני מכונות"
+    "verified": true
   },
   {
     "num": 8,
@@ -145,6 +147,7 @@
     "official": false,
     "explanation": "להתמודדות עם בעיית ה-Host-Target ניתן להשתמש בשפות המבוססות מכונות וירטואליות (כמו Java) וגם בסימולטורים — לכן גם א' וגם ב' נכונים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

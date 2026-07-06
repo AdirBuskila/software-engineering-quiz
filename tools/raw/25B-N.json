@@ -16,7 +16,8 @@
     "official": false,
     "explanation": "תחזוקת מערכות תוכנה היא פעילות ליבה בהנדסת תוכנה, בעוד שאלגוריתמיקה, מודלים מתמטיים ומגבלות פיזיות של חומרה שייכים לתחומים אחרים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -35,7 +36,8 @@
     "official": false,
     "explanation": "מוצר גנרי נועד למספר לקוחות, ולכן יש לאסוף דרישות מלקוחות נוספים ולבצע שימוש חוזר בתוצר הקיים תוך הכללת (generalization) והתאמת היכולות למוצר רב-לקוחות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 3,
@@ -54,7 +56,8 @@
     "official": false,
     "explanation": "מסמך דרישות משתמש (URD) מתאר מה המשתמש צריך ולא כיצד המערכת תמומש; הכתבת תבנית מימוש כמו MVC היא החלטת עיצוב/מימוש שאין מקומה בשלב דרישות המשתמש.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 4,
@@ -74,7 +77,7 @@
     "explanation": "דרישת הצפנה (TLS) היא דרישת אבטחה — תכונת איכות/אילוץ על המערכת ולכן דרישה לא-פונקציונלית, בעוד ההתחברות והחיפוש מתארים התנהגות/שירות (פונקציונליות).",
     "hasImage": false,
     "confidence": "high",
-    "flag": "גם תשובה ג (הצגת שגיאות כ-Popup) ניתנת לטיעון כדרישת UI לא-פונקציונלית; אך א (הצפנה/אבטחה) היא הדוגמה הקלאסית והחד-משמעית ללא-פונקציונלית."
+    "verified": true
   },
   {
     "num": 5,
@@ -93,7 +96,8 @@
     "official": false,
     "explanation": "מודל המפל מתאים כשהדרישות יציבות ומוגדרות; דרישות שצפויות להשתנות הרבה הופכות את בחירת ה-waterfall לשגויה, שכן קשה וייקר לשנות שלבים שהושלמו.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 6,
@@ -112,7 +116,8 @@
     "official": false,
     "explanation": "באג'ייל הבדיקות מתוכננות ומבוצעות במקביל להתקדמות הפרויקט (בכל איטרציה), בניגוד לבדיקה בסוף, תוכנית נוקשה ותיעוד מקדים שהם מאפייני מפל.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -131,7 +136,8 @@
     "official": false,
     "explanation": "אג'ייל מבוסס על איטרציות קצרות וניתנות לניהול עם משוב תכוף מהלקוח; שאר האפשרויות מתארות מאפייני מפל (מסירה בסוף, היקף קבוע, שלבים עוקבים).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 8,
@@ -150,7 +156,8 @@
     "official": false,
     "explanation": "במודל V כל שלב פיתוח מתאים לשלב בדיקה מקביל; שלב ניתוח הדרישות מתאים לבדיקת קבלה (Acceptance Testing) המוודאת שהמערכת עונה על דרישות המשתמש.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 9,
@@ -170,7 +177,7 @@
     "explanation": "בכל ספרינט בוחרים רק תת-קבוצה של פריטים מ-Product Backlog אל ה-Sprint Backlog ומממשים אותה, והספרינטים אינם מתוכננים כולם מראש; לכן כל האפשרויות המפורטות שגויות והתשובה היא שכולן שגויות.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "אף אחת מהאפשרויות המפורטות אינה מתארת נכון את יחס backlog↔ספרינט בסקראם; נבחרה ה כשלילת כולן. אם הקורס מלמד גישה רופפת ייתכן שכוונת המרצה לתשובה אחרת."
+    "verified": true
   },
   {
     "num": 10,
@@ -189,7 +196,8 @@
     "official": false,
     "explanation": "תבנית Observer מיועדת בדיוק לעדכון אוטומטי של מספר צגים כאשר הנתונים משתנים; הצגים נרשמים כ-observers של המודל וגם משמשים כ-views במסגרת MVC.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 11,
@@ -209,7 +217,7 @@
     "explanation": "ה-Subject הוא זה שמבצע את ה-notify, ולכן בו ניתן לממש סינון סלקטיבי — לאילו observers לשלוח ואילו נתונים; ה-notify אינו מבוצע ע\"י ה-Observers ו-Detach רק מנתק observer לגמרי.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "א (סינון בצד ה-Subject) עדיף כי הוא זה שמנהל את ה-notify ויכול לבחור אילו observers מקבלים ומה; אך גם ב (מודל pull שבו כל observer בוחר בעדכון) הוא טכניקה אמיתית — נבחרה א כי היא מתאימה יותר ל'רק חלק מה-Observers'."
+    "verified": true
   },
   {
     "num": 12,
@@ -228,7 +236,8 @@
     "official": false,
     "explanation": "בתבנית Command: המקליט שמאחסן ומפעיל את הפעולות הוא ה-Invoker, כל 'פעולת טקסט' היא Command, ועורך הטקסט שמבצע בפועל את הפעולה הוא ה-Receiver.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 13,
@@ -268,7 +277,7 @@
     "explanation": "ל-Reuse יתרונות מעבר לעלות (פיתוח מהיר יותר, אמינות גבוהה, פחות סיכון); העובדה שהעלות גבוהה היא חיסרון ידוע של שימוש חוזר, אך היתרונות המשמעותיים האחרים עדיין קיימים ולא בהכרח מצדיקים ויתור עליו.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "בין א ל-ב: א (לזנוח Reuse וליישם עצמאית) מוחלט מדי; ב משקף את התפיסה המאוזנת שיתרונות ה-Reuse אינם רק עלות. נבחרה ב."
+    "verified": true
   },
   {
     "num": 15,
@@ -287,7 +296,8 @@
     "official": false,
     "explanation": "ב-pipe and filter המסננים עצמאיים וניתנים להרכבה מחדש, כך שניתן לשנות את סדר העיבוד וליצור רצפים חדשים בלי לשנות את לוגיקת המסננים; המסננים אינם תלויים זה בזה ו'נכונה תמיד' שגוי.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 16,
@@ -306,7 +316,8 @@
     "official": false,
     "explanation": "קשרי Class Diagram הם association, aggregation, composition, generalization ו-dependency; Include/Extend שייכים לתרשים Use Case ו-Exclude אינו קשר קיים, ולכן כל האפשרויות המפורטות שגויות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 17,
@@ -326,7 +337,7 @@
     "explanation": "לפי Sommerville תרשים Use Case משמש למידול אינטראקציות בין המערכת לגורמים חיצוניים (actors) ולכן שייך ל-interaction model.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "לפי טקסונומיית המידול של Sommerville (context/interaction/structure/behavioral) תרשים use case הוא interaction model; אך 'requirements' (ד) הוא מסיח מפתה מאחר ו-use cases נלמדים גם בהקשר דרישות."
+    "verified": true
   },
   {
     "num": 18,
@@ -346,7 +357,7 @@
     "explanation": "בבדיקת יחידה ה-Unit הנבדק תלוי ביחידות/אובייקטים אחרים; ה-Mock מחליף את היחידה התלויה, כך שהיחידה הנבדקת מכילה (משתמשת) ב-Mock שהוא ייצוג של יחידה נוספת.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "א נכון בהנחה ש-Mock מייצג יחידה תלויה שה-Unit הנבדק מחזיק/משתמש בה; יש לוודא ניסוח מול הגדרת המרצה ל-Mock."
+    "verified": true
   },
   {
     "num": 19,
@@ -365,7 +376,8 @@
     "official": false,
     "explanation": "סקירת קוד (code review) היא בדיקה סטטית/ידנית שמטרתה לוודא ולשפר את איכות הקוד (תקינות, קריאות, עמידה בסטנדרטים), להבדיל מבדיקות דינמיות כמו יחידה, אינטגרציה או ביצועים.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 20,
@@ -384,6 +396,7 @@
     "official": false,
     "explanation": "Continuous Integration היא הפרקטיקה שבה שינויי קוד ממוזגים תדיר למאגר מרכזי ומופעלים עליהם build ובדיקות אוטומטיות כדי לזהות בעיות מוקדם.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]

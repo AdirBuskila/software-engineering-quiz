@@ -34,7 +34,7 @@ function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.fl
 function show(id){ document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden")); $("#"+id).classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); }
 function filterMatch(q, topic, opts){
   if(topic!=="all" && q.topic!==topic) return false;
-  if(opts.officialOnly && !q.official) return false;
+  if(opts.officialOnly && !q.official && !q.verified) return false;
   if(opts.mistakesOnly){ const r=P.perQ[q.id]; if(!r || r.correct) return false; }
   return true;
 }
@@ -108,7 +108,8 @@ function updatePoolInfo(){
   const pool=filteredPool(S.topic,opts);
   const n=pool.length;
   const off=pool.filter(q=>q.official).length;
-  $("#poolInfo").textContent = `נבחרו ${n} שאלות (${off} עם מחוון רשמי, ${n-off} נגזרו).`;
+  const ver=pool.filter(q=>q.verified).length;
+  $("#poolInfo").textContent = `נבחרו ${n} שאלות (${off} מחוון רשמי · ${ver} מאומת · ${n-off-ver} לא רשמי).`;
   $("#startBtn").disabled = n===0;
 }
 function initStart(){
@@ -179,8 +180,9 @@ function renderQuestion(){
   $("#qTopic").textContent = q.topicLabel || q.topic;
   $("#qSource").textContent = q.sourceLabel || (q.source==="exam"?"מבחן":"תרגול");
   const badge=$("#qBadge");
-  badge.textContent = q.official ? "מחוון רשמי" : "תשובה לא רשמית";
-  badge.className = "chip " + (q.official?"official":"unofficial");
+  const tier = q.official ? "official" : (q.verified ? "verified" : "unofficial");
+  badge.textContent = tier==="official" ? "מחוון רשמי" : tier==="verified" ? "מאומת ✓" : "לא רשמי · לבדיקה";
+  badge.className = "chip " + tier;
 
   $("#questionText").textContent = q.question;
   $("#qExtras").innerHTML = extrasHtml(q);
@@ -258,7 +260,9 @@ function choose(disp){
   fb.className = "feedback " + (correct?"good":"bad");
   fb.innerHTML = `<div class="verdict">${correct?"✓ נכון":"✗ לא נכון"}</div>`+
     `<div class="expl">${escapeHtml(q.explanation||"")}</div>`+
-    (q.official?"":`<span class="note">⚠ תשובה לא רשמית — נגזרה מחומר הקורס.</span>`)+
+    (q.official ? "" : q.verified
+        ? `<span class="note">✓ אומת בשתי בדיקות עצמאיות (לא מתוך מחוון רשמי).</span>`
+        : `<span class="note">⚠ תשובה לא רשמית — נגזרה מחומר הקורס, כדאי לאמת.</span>`)+
     `<span class="note">מקור: ${escapeHtml(q.sourceLabel||"")}</span>`;
   $("#nextBtn").classList.remove("hidden");
   $("#nextBtn").focus();
@@ -337,7 +341,7 @@ function renderResults(correct, byTopic, review){
       ${extrasHtml(v)}
       <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${chosenTxt}</span>`+
       (r.ok?"":` · <span class="good">הנכונה: ${optionHtml(v.options[v.correctIndex])}</span>`)+
-      `<br>${escapeHtml(v.explanation||"")}${v.official?"":" (לא רשמי)"}</div></div>`;
+      `<br>${escapeHtml(v.explanation||"")}${v.official?"":(v.verified?" (מאומת ✓)":" (לא רשמי)")}</div></div>`;
   }).join("");
 }
 

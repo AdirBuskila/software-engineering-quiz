@@ -145,6 +145,9 @@ def main():
     for q in kept:
         q["topicLabel"] = TOPIC_LABEL.get(q["topic"], q["topic"])
         q["dedupKey"] = dedup_key(q)
+        # trust tier: official (from a real answer key / confirmed form-0) >
+        # verified (no key, but independently re-derived and confirmed) > derived (uncertain)
+        q["verified"] = bool(q.get("verified")) and not q["official"]
         q["options"], q["correctIndex"] = shuffle_options(q)
         for k in ("num","chapter","confidence","flag"):
             q.pop(k, None)
@@ -156,14 +159,17 @@ def main():
 
     # ---- report ----
     by_topic = collections.Counter(q["topic"] for q in kept)
-    by_official = collections.Counter("official" if q["official"] else "derived" for q in kept)
+    def tier(q): return "official" if q["official"] else ("verified" if q["verified"] else "derived")
+    by_official = collections.Counter(tier(q) for q in kept)
     by_exam = collections.Counter(q["examCode"] for q in kept if q["examCode"])
     lines = ["# Build report — SE questions dataset","",
         f"- Raw items read: **{len(raw_items)}**",
         f"- Excluded: **{sum(excl.values())}**  ({dict(excl)})",
         f"- Cross-exam duplicates (kept whole; app dedups practice pool): **{dup}**",
         f"- **Final questions: {len(kept)}**",
-        f"- Answer key: **{by_official['official']}** official · **{by_official['derived']}** derived (unofficial)","",
+        f"- Trust tiers: **{by_official['official']}** official (from key/form-0) · "
+        f"**{by_official['verified']}** verified (independently re-derived) · "
+        f"**{by_official['derived']}** derived (still uncertain)","",
         "## By topic",""]
     for t,n in by_topic.most_common():
         lines.append(f"- {TOPIC_LABEL.get(t,t)} (`{t}`): {n}")
@@ -175,7 +181,7 @@ def main():
 
     print(f"final={len(kept)} excluded={sum(excl.values())} {dict(excl)} dup_kept={dup}")
     print("by_topic:", dict(by_topic.most_common()))
-    print("by_official:", dict(by_official))
+    print("by_tier:", dict(by_official))
 
 
 if __name__ == "__main__":

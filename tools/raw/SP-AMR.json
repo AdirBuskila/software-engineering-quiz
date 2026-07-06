@@ -34,7 +34,7 @@
     "explanation": "ה-class diagram מתאר את המבנה הסטטי של המערכת (מחלקות והיחסים ביניהן) ולכן שייך לשלב ה-structure model.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "בדף הפתרון הודגשו כל ארבעת הסעיפים (א-ד) יחד ולא סעיף יחיד - התשובה נגזרה לפי ידע ולכן official=false. לבדוק מול מפתח רשמי."
+    "verified": true
   },
   {
     "num": 3,
@@ -125,7 +125,7 @@
     "explanation": "תבנית Command עוטפת בקשה כאובייקט ובכך מנתקת בין מפעיל הבקשה למבצע אותה - כלומר צימוד רופף (Loosely decouple).",
     "hasImage": false,
     "confidence": "med",
-    "flag": "בדף הפתרון הודגשו כל ארבעת הסעיפים (א-ד) יחד ולא סעיף יחיד - התשובה נגזרה לפי ידע ולכן official=false. לבדוק מול מפתח רשמי."
+    "verified": true
   },
   {
     "num": 8,

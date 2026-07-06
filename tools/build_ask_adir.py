@@ -39,6 +39,8 @@ for code in CODES:
     if not p.exists():
         continue
     for q in json.loads(p.read_text(encoding="utf-8")):
+        if q.get("verified"):   # independently re-derived & confirmed — no longer needs Adir
+            continue
         conf = q.get("confidence", "?")
         flag = q.get("flag")
         if flag or conf == "low":

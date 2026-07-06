@@ -15,7 +15,8 @@
     "official": false,
     "explanation": "המעוין המלא (composition) בצד Company מסמן ש-Company הוא ה'שלם', ולכן Department ו-Office מוכלות בתוך Company. הריבוי 1..* אומר שמספרן משתנה, ולכן הן נשמרות במבנה נתונים דינמי (רשימה).",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 2,
@@ -34,7 +35,7 @@
     "explanation": "ה-Product Owner מייצג את הלקוח ועובד עמו בשיתוף פעולה שוטף לאורך הפרויקט, וזהו המימוש הישיר של ערך 'שיתוף פעולה עם לקוחות'. צוותים מקבילים נוגעים להתארגנות ולא לשיתוף עם הלקוח.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר ללא מפתח; גם (ג) הצגות/DEMOS הן נקודת שיתוף עם הלקוח — אם המרצה ראה את שתיהן כנכונות ייתכן שהתשובה 'כל התשובות נכונות'."
+    "verified": true
   },
   {
     "num": 3,
@@ -52,7 +53,8 @@
     "official": false,
     "explanation": "תרחישי שימוש, ראיונות ותצפיות, ולמידת מערכות קיימות הן כולן טכניקות מקובלות לגילוי דרישות (elicitation), ולכן כל התשובות נכונות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 4,
@@ -70,7 +72,8 @@
     "official": false,
     "explanation": "ברמת האבסטרקציה של שימוש-חוזר משתמשים בידע/עקרונות מופשטים ולא בקוד — כגון תבניות עיצוב (design patterns), המהוות פתרונות גנריים לבעיות עיצוב חוזרות.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 5,
@@ -89,7 +92,7 @@
     "explanation": "במודל ה-V כל שלב פיתוח (בזרוע השמאלית) מקושר לשלב בדיקה מקביל: כבר בשלבי הפיתוח מתכננים את הבדיקות המתאימות, וההרצה עצמה מתבצעת בזרוע הימנית.",
     "hasImage": false,
     "confidence": "med",
-    "flag": "נגזר ללא מפתח; יש הקוראים את מודל ה-V כ'גם מתכננים וגם מבצעים' (ג). הדגש הקלאסי הוא תכנון הבדיקות במקביל לפיתוח."
+    "verified": true
   },
   {
     "num": 6,
@@ -107,7 +110,8 @@
     "official": false,
     "explanation": "Office הוא מוצר גנרי (Generic) המיועד לשוק רחב. התאמה ושיפור עבור לקוח פרימיום ספציפי הופכים אותו למוצר מותאם (Customized), כלומר מעבר Generic → Customized.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 7,
@@ -125,7 +129,8 @@
     "official": false,
     "explanation": "JUnit היא מסגרת לבדיקות דינמיות אוטומטיות (יחידה ומעלה). Inspection Test היא בדיקה סטטית/ידנית של סקירת קוד — אותה ספריית JUnit אינה מבצעת.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 8,
@@ -143,7 +148,8 @@
     "official": false,
     "explanation": "ה-Demo ב-Sprint Review נועד להציג לבעלי העניין את התוצרים (increment) שהושלמו בספרינט הנוכחי ולקבל עליהם משוב.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   },
   {
     "num": 9,
@@ -180,6 +186,7 @@
     "official": false,
     "explanation": "מערכת עיבוד שפה מקבלת קלט בשפה אחת ומתרגמת/מעבדת אותו — הדוגמה הקלאסית (Sommerville) היא מהדר (compiler) שמתרגם קוד מקור לקוד יעד.",
     "hasImage": false,
-    "confidence": "high"
+    "confidence": "high",
+    "verified": true
   }
 ]
