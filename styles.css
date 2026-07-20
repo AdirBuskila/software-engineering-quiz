@@ -326,6 +326,17 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
   display:flex;gap:.5rem;flex-wrap:wrap;align-items:center
 }
 .disclaimer{flex-basis:100%;opacity:.8}
+/* back to the study-tools deck */
+.deck-link{
+  margin-top:.2rem;
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.35rem .8rem;border:1px solid var(--line);border-radius:999px;
+  color:var(--muted);text-decoration:none;font-size:.78rem;line-height:1.4;
+  transition:color .15s ease,border-color .15s ease,background .15s ease
+}
+.deck-link:hover,.deck-link:focus-visible{color:var(--ink);border-color:var(--brand);background:var(--card2)}
+.deck-link .deck-arrow{color:var(--brand);font-weight:700}
+
 
 /* ---------------- learning section ---------------- */
 .learn-entry{font-size:.84rem;padding:.45rem .8rem;white-space:nowrap}
