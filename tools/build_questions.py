@@ -89,9 +89,22 @@ def valid(q):
     return True, None
 
 
+# Options like "תשובות א ו-ג נכונות" point at their SIBLINGS by printed letter. Shuffling
+# such a question makes the reference land on whatever happens to fall in those slots, so
+# the option stops meaning anything. Those questions keep the source's printed order — both
+# here and at render time (app.js honours the same lockOrder flag).
+LETTER_REF = re.compile(r"(תשובות|תשובה|סעיפים|סעיף)\s+[אבגדה]['׳]?\s*[,ו]")
+
+
+def locks_order(options):
+    return any(LETTER_REF.search(str(o)) for o in options)
+
+
 def shuffle_options(q):
     """Deterministic per-question permutation; remaps correctIndex. Returns (opts, ci)."""
     opts = q["options"]; ci = q["correctIndex"]
+    if locks_order(opts):
+        return opts, ci
     order = list(range(len(opts)))
     seed = int(hashlib.md5(q["id"].encode("utf-8")).hexdigest(), 16) % (2**32)
     random.Random(seed).shuffle(order)
@@ -148,6 +161,8 @@ def main():
         # trust tier: official (from a real answer key / confirmed form-0) >
         # verified (no key, but independently re-derived and confirmed) > derived (uncertain)
         q["verified"] = bool(q.get("verified")) and not q["official"]
+        if locks_order(q["options"]):
+            q["lockOrder"] = True
         q["options"], q["correctIndex"] = shuffle_options(q)
         for k in ("num","chapter","confidence","flag"):
             q.pop(k, None)

@@ -163,7 +163,10 @@ function startSession(){
 }
 
 function makeView(q){
-  const order = shuffle(q.options.map((_,i)=>i));   // Fisher–Yates: defeats "always-first"
+  // Fisher–Yates: defeats "always-first". Skipped when an option cites its siblings by
+  // printed letter ("תשובות א ו-ג נכונות") — shuffling would make that reference nonsense.
+  const idx = q.options.map((_,i)=>i);
+  const order = q.lockOrder ? idx : shuffle(idx);
   return { q, order, correctDisplay: order.indexOf(q.correctIndex), answered:false, chosen:null };
 }
 
