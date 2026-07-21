@@ -312,9 +312,9 @@
       "שאינו שומר מצב",
       "כל התשובות האחרות שגויות"
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "official": false,
-    "explanation": "'תרשים מיצוב' (positioning/structural diagram) has positions (מיצובים) rather than states — the wordplay contrast with a state machine's מצבים; term is ambiguous so low confidence.",
+    "explanation": "בגיליון הבחינה עצמו הפרק נושא את הכותרת 'תרשים מיצוב (Statechart)' — כלומר תרשים מיצוב הוא Statechart, והוא בהחלט מכיל מצבים (שאלה 18 באותו מבחן קובעת שהוא יכול לכלול מצבים, ושאלה 20 שהוא מיועד לתאר את כלל המצבים האפשריים של המערכת). ההרחבה שלו על מכונת מצבים רגילה היא המקבול — אזורים אורתוגונליים הפועלים בו-זמנית, כלומר מצבים ביחס של AND (ראו שאלה 19). לכן התשובה היא 'מקבול'.",
     "hasImage": false,
     "confidence": "high",
     "verified": false

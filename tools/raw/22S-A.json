@@ -71,7 +71,7 @@
     "correctIndex": 3,
     "official": false,
     "explanation": "בארכיטקטורת שכבות שיושמה היטב כל שכבה תלויה רק בממשק של השכבה שמתחתיה; אם השכבה החדשה חושפת את אותו API, אין צורך לשנות את שאר השכבות.",
-    "hasImage": false,
+    "hasImage": true,
     "confidence": "high",
     "verified": true
   },

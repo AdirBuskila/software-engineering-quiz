@@ -11,9 +11,9 @@
       "השלב - design & development",
       "השלב - requirements"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "official": false,
-    "explanation": "Sommerville classifies class diagrams under Structural models (structure model), alongside interaction, context and behavioral models.",
+    "explanation": "המבחן עצמו מוסיף מתחת לשאלה את ההערה 'יש לשים לב שנשאל לגבי השלב (מודגש) ולא לגבי ה-Model' — כלומר לא מבקשים את משפחת המודלים שאליה שייך תרשים המחלקות (structure model), אלא את שלב הפיתוח שבו הוא נוצר, design & development.",
     "hasImage": false,
     "confidence": "high",
     "verified": true
@@ -42,7 +42,7 @@
     "examCode": "SP-MDA",
     "year": null,
     "topic": "uml",
-    "question": "מה המשמעות של הקווים המקווקווים בדיאגרמת ה-sequence הבאה? (בדיאגרמה חץ מלא info מ-A ל-B, וחץ מקווקו info חוזר מ-B ל-A, וקווי חיים אנכיים מקווקווים)",
+    "question": "מה המשמעות של הקווים המקווקווים בדיאגרמת ה-sequence הבאה?",
     "options": [
       "בקשה מ-B ל-A",
       "תשובה מ-B ל-A",

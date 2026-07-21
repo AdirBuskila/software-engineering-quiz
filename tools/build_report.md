@@ -1,10 +1,10 @@
 # Build report — SE questions dataset
 
 - Raw items read: **372**
-- Excluded: **1**  ({'image-missing': 1})
+- Excluded: **0**  ({})
 - Cross-exam duplicates (kept whole; app dedups practice pool): **27**
-- **Final questions: 371**
-- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **12** derived (still uncertain)
+- **Final questions: 372**
+- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **13** derived (still uncertain)
 
 ## By topic
 
@@ -15,7 +15,7 @@
 - Agile · SCRUM · XP (`agile`): 39
 - עיצוב ארכיטקטוני (`architecture`): 30
 - הנדסת דרישות (`requirements`): 23
-- אספקה וקונפיגורציה (`config`): 21
+- אספקה וקונפיגורציה (`config`): 22
 - OOP ו-Java (`oop_java`): 10
 
 ## By exam
@@ -24,7 +24,7 @@
 - 19B-C — 2019 סמסטר ב׳ מועד ג׳: 11
 - 20-A — 2020 מועד א׳: 8
 - 20-B — 2020 מועד ב׳: 8
-- 21-A — 2021 מבחן מועד א׳: 9
+- 21-A — 2021 מבחן מועד א׳: 10
 - 21-B — 2021 מבחן מועד ב׳: 10
 - 21S-A — 2021 סמסטר קיץ מועד א׳: 10
 - 21S-B — 2021 סמסטר קיץ מועד ב׳: 10
