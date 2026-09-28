@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — הנדסת תוכנה</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("seq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -32,6 +32,21 @@
   <section id="screen-start" class="screen">
     <div class="card">
       <h2>בחירת אופן תרגול</h2>
+
+      <div class="scope-card">
+        <label class="chk scope-toggle"><input type="checkbox" id="scopeOct8">
+          <span><b>📅 הכנה למבחן 8.10</b> — בלי החומר שהמרצה הוציא מהמבחן</span></label>
+        <details class="scope-details">
+          <summary>מה הוצא מהמבחן?</summary>
+          <ul>
+            <li>מצגת 2 (<bdi>Introduction to Java</bdi>) — משקף 18 (<bdi>Data Types</bdi>) ועד הסוף</li>
+            <li>מצגת 7 (<bdi>Architectural Design</bdi>) — שקפים <bdi dir="ltr">25–26</bdi> (<bdi>Repository</bdi>), ומשקף 34 (<bdi>Application Architectures</bdi>) ועד הסוף</li>
+            <li>מצגת 8 (<bdi>Design &amp; Implementation</bdi>) — שקפים <bdi dir="ltr">30–33</bdi> (<bdi>Adapter</bdi>)</li>
+            <li>מצגת 11 (<bdi>CI/CD</bdi>) — משקף 8 ועד הסוף</li>
+          </ul>
+          <p id="scopeInfo"></p>
+        </details>
+      </div>
 
       <div class="modes">
         <label class="mode-card">
@@ -155,6 +170,6 @@
 
 <script src="questions.js?v=1"></script>
 <script src="learn.js?v=1"></script>
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

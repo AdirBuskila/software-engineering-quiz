@@ -468,3 +468,11 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
   .learn-content h2.learn-h{font-size:1.3rem}
   .learn-figs{grid-template-columns:1fr}
 }
+
+/* ---------- Oct-8 exam scope toggle ---------- */
+.scope-card{border:1px solid var(--line-strong);background:var(--card2);border-radius:var(--radius-sm);padding:.75rem 1rem;margin:0 0 1.2rem}
+.scope-card .scope-toggle{color:var(--ink);font-size:.95rem}
+.scope-details{margin-top:.45rem;font-size:.82rem;color:var(--muted)}
+.scope-details summary{cursor:pointer;width:max-content}
+.scope-details ul{margin:.45rem 0;padding-inline-start:1.2rem;line-height:1.6}
+.scope-details p{margin:.3rem 0 0}

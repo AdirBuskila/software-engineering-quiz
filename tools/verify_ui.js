@@ -51,6 +51,8 @@ const SHOT=p=>path.join(__dirname,"raw",p);
     await pg.click('.opt[data-disp="0"]');
     if(i<n-1){ await pg.click("#nextBtn"); await pg.waitForSelector(".opt"); }
   }
+  // the button un-hides on the last question; wait until it can take a click (was flaky)
+  await pg.waitForSelector("#submitExamBtn",{visible:true});
   await pg.click("#submitExamBtn");
   await new Promise(r=>setTimeout(r,400));
   const onResults=await pg.$eval("#screen-results",e=>!e.classList.contains("hidden")).catch(()=>false);

@@ -20,6 +20,21 @@ const TOPICS = [
   ["config","אספקה וקונפיגורציה"],
 ];
 
+/* ---------- Oct-8-2026 exam scope ----------
+   The lecturer listed slides that will NOT be on the 8.10 test. These are the bank questions
+   answerable only from those slides; dropping by dedupKey also hides their re-runs in other
+   exams. Everything else stays — only these ranges were excluded. */
+const OCT8_DROP = {
+  "19B-B-Q3":  "Architectural Design, slide 25 (Repository — when to use)",
+  "19B-B-Q13": "Design & Implementation, slides 30–33 (Adapter)",
+  "21-B-Q10":  "Architectural Design, slides 34+ (Language processing systems)",
+  "21S-B-Q10": "Architectural Design, slides 34+ (Language processing systems)",
+};
+const OCT8_KEY = "seq_scope_oct8";
+const DROP_KEYS = new Set(QS.filter(q=>q.id in OCT8_DROP).map(q=>q.dedupKey||q.id));
+let scopeOn = (()=>{ try{ return localStorage.getItem(OCT8_KEY)!=="off"; }catch(e){ return true; } })();
+function inScope(q){ return !scopeOn || !DROP_KEYS.has(q.dedupKey||q.id); }
+
 /* ---------- storage ---------- */
 function loadProgress(){
   try{ return JSON.parse(localStorage.getItem(STORE)) || {stats:{answered:0,correct:0},perQ:{}}; }
@@ -33,6 +48,7 @@ const $ = s => document.querySelector(s);
 function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 function show(id){ document.querySelectorAll(".screen").forEach(s=>s.classList.add("hidden")); $("#"+id).classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); }
 function filterMatch(q, topic, opts){
+  if(!inScope(q)) return false;
   if(topic!=="all" && q.topic!==topic) return false;
   if(opts.officialOnly && !q.official && !q.verified) return false;
   if(opts.mistakesOnly){ const r=P.perQ[q.id]; if(!r || r.correct) return false; }
@@ -62,7 +78,7 @@ function renderTopStats(){
   $("#topStats").innerHTML =
     `<div class="stat">נענו <b>${a}</b></div>`+
     `<div class="stat">דיוק <b>${pct}%</b></div>`+
-    `<div class="stat">במאגר <b>${QS.length}</b></div>`;
+    `<div class="stat">במאגר <b>${QS.filter(inScope).length}</b></div>`;
 }
 function selectedOpts(){
   return { officialOnly: $("#officialOnly").checked, mistakesOnly: $("#mistakesOnly").checked };
@@ -81,7 +97,7 @@ function renderTopicGrid(){
   });
 }
 function selectedExam(){ const el=$("#examPick"); return (S.mode==="exam" && el) ? el.value : ""; }
-function examQuestions(code){ return QS.filter(q=>q.examCode===code); }
+function examQuestions(code){ return QS.filter(q=>q.examCode===code && inScope(q)); }
 function qNum(q){ const m=String(q.id).match(/-Q(\d+)$/); return m?parseInt(m[1],10):0; }
 /* Exam-picker order: sample/practice papers first — they carry no year, so they have no
    place in the chronology — then real exams oldest→newest, newest at the bottom. */
@@ -99,11 +115,13 @@ function byExamOrder(a,b){
 }
 function populateExamPick(){
   const sel=$("#examPick"); if(!sel) return;
+  const keep=sel.value;
   const seen=new Map();                       // examCode -> sourceLabel
   QS.forEach(q=>{ if(q.examCode && !seen.has(q.examCode)) seen.set(q.examCode, q.sourceLabel||q.examCode); });
-  sel.innerHTML = `<option value="">אקראי (כל המאגר)</option>` +
+  sel.innerHTML =`<option value="">אקראי (כל המאגר)</option>` +
     [...seen.entries()].sort((a,b)=>byExamOrder(a[0],b[0]))
       .map(([code,label])=>`<option value="${code}">${escapeHtml(label)} (${examQuestions(code).length})</option>`).join("");
+  sel.value=keep;
   sel.onchange=()=>{ syncExamOpts(); updatePoolInfo(); };
 }
 function syncExamOpts(){
@@ -126,7 +144,16 @@ function updatePoolInfo(){
   $("#poolInfo").textContent = `נבחרו ${n} שאלות (${off} מחוון רשמי · ${ver} מאומת · ${n-off-ver} לא רשמי).`;
   $("#startBtn").disabled = n===0;
 }
+function renderScope(){
+  const box=$("#scopeOct8"); if(!box) return;
+  box.checked=scopeOn;
+  const hidden=QS.filter(q=>DROP_KEYS.has(q.dedupKey||q.id)).length;
+  $("#scopeInfo").textContent = scopeOn
+    ? `מוסתרות ${hidden} שאלות מהמאגר שעוסקות רק בשקפים האלה.`
+    : `כבוי — כל ${QS.length} השאלות מוצגות, כולל ${hidden} שעוסקות בשקפים שהוצאו.`;
+}
 function initStart(){
+  renderScope();
   renderTopStats();
   populateExamPick();
   renderTopicGrid();
@@ -140,6 +167,11 @@ function initStart(){
       updatePoolInfo();
     };
   });
+  $("#scopeOct8").onchange = e=>{
+    scopeOn=e.target.checked;
+    try{ localStorage.setItem(OCT8_KEY, scopeOn?"on":"off"); }catch(err){}
+    renderScope(); renderTopStats(); populateExamPick(); renderTopicGrid(); updatePoolInfo();
+  };
   $("#officialOnly").onchange = ()=>{ renderTopicGrid(); updatePoolInfo(); };
   $("#mistakesOnly").onchange = ()=>{ renderTopicGrid(); updatePoolInfo(); };
   $("#startBtn").onclick = startSession;
