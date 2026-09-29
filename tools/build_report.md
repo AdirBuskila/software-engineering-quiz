@@ -1,20 +1,20 @@
 # Build report — SE questions dataset
 
-- Raw items read: **372**
+- Raw items read: **392**
 - Excluded: **0**  ({})
-- Cross-exam duplicates (kept whole; app dedups practice pool): **27**
-- **Final questions: 372**
-- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **13** derived (still uncertain)
+- Cross-exam duplicates (kept whole; app dedups practice pool): **28**
+- **Final questions: 392**
+- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **33** derived (still uncertain)
 
 ## By topic
 
-- מידול ו-UML (`uml`): 78
-- מבוא להנדסת תוכנה (`intro`): 67
-- תבניות עיצוב (`patterns`): 56
+- מידול ו-UML (`uml`): 80
+- מבוא להנדסת תוכנה (`intro`): 72
+- תבניות עיצוב (`patterns`): 60
 - בדיקות ו-TDD (`testing`): 47
-- Agile · SCRUM · XP (`agile`): 39
-- עיצוב ארכיטקטוני (`architecture`): 30
-- הנדסת דרישות (`requirements`): 23
+- Agile · SCRUM · XP (`agile`): 43
+- עיצוב ארכיטקטוני (`architecture`): 33
+- הנדסת דרישות (`requirements`): 25
 - אספקה וקונפיגורציה (`config`): 22
 - OOP ו-Java (`oop_java`): 10
 
@@ -41,6 +41,7 @@
 - 25S-A — 2025 סמסטר קיץ מועד א׳ (טופס א׳): 20
 - 25B-N — 2025 סמסטר ב׳ מועד א׳ (ניסים): 20
 - 25-EX — 2025 מבחן לדוגמה (אקסמן): 20
+- 26B-A — 2026 סמסטר ב׳ מועד א׳ (ניסים, 24.6): 20
 - SP-DGM — מבחן דוגמה: 18
 - SP-AMR — מועד א׳ אמריקאי: 18
 - SP-MDA — מבחן מועד א׳: 3

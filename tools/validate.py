@@ -5,7 +5,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 RAW = pathlib.Path(__file__).parent / "raw"
 CODES = ["19B-B","19B-C","20-A","20-B","21-A","21-B","21S-A","21S-B","22B-A","22S-A",
-         "23-EX","23B-A","23S-A","24B-A","24B-B","24S-A","25F0a","25F0b","25S-A","25B-N","25-EX",
+         "23-EX","23B-A","23S-A","24B-A","24B-B","24S-A","25F0a","25F0b","25S-A","25B-N","25-EX","26B-A",
          "SP-SPC","SP-DGM","SP-AMR","SP-MDA"]
 TOPICS = {"intro","agile","requirements","uml","architecture","patterns","solid",
           "testing","oop_java","metrics","config"}
