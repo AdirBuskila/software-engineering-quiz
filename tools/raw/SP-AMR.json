@@ -29,9 +29,9 @@
       "שלב ה – design & development",
       "שלב ה – architecture"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "official": false,
-    "explanation": "ה-class diagram מתאר את המבנה הסטטי של המערכת (מחלקות והיחסים ביניהן) ולכן שייך לשלב ה-structure model.",
+    "explanation": "בפתרון הרשמי של המבחן הזה כל ארבע התשובות מסומנות (השאלה למעשה בוטלה). אותה שאלה מופיעה במבחנים אחרים (2020 מועד א׳ ומבחן מועד א׳ ללא תאריך) עם ההערה 'יש לשים לב שנשאל לגבי השלב ולא לגבי ה-Model', והתשובה שם היא design & development. לכן זו התשובה כאן. structure model הוא המודל שאליו תרשים המחלקות שייך, לא השלב.",
     "hasImage": false,
     "confidence": "med",
     "verified": true
