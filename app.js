@@ -452,11 +452,15 @@ function bindGlobal(){
 
 /* ---------- learning section ---------- */
 (function initLearn(){
-  const data = Array.isArray(window.LEARN) ? window.LEARN : [];
+  const docs = (Array.isArray(window.LEARN_DOCS) ? window.LEARN_DOCS : []).filter(d=>d.sections && d.sections.length);
   const entry = document.getElementById("learnEntry");
   const screen = document.getElementById("screen-learn");
   if(!entry || !screen) return;
-  if(!data.length){ entry.style.display = "none"; return; }
+  if(!docs.length){ entry.style.display = "none"; return; }
+  const DOC_KEY = "seq_learn_doc";
+  let doc = docs[0];
+  try{ doc = docs.find(d=>d.id===localStorage.getItem(DOC_KEY)) || doc; }catch(e){}
+  let data = doc.sections;
 
   const toc     = $("#learnToc");
   const content = $("#learnContent");
@@ -470,7 +474,29 @@ function bindGlobal(){
   const lb      = $("#lightbox");
   const lbImg   = $("#lightboxImg");
   const lbClose = $("#lightboxClose");
+  const tabs    = $("#learnDocTabs");
+  const dlMd    = $("#learnDlMd");
+  const dlPdf   = $("#learnDlPdf");
   let idx = 0, built = false;
+
+  function buildTabs(){
+    tabs.innerHTML = docs.map(d=>`<button type="button" role="tab" data-id="${d.id}">${escapeHtml(d.title)}</button>`).join("");
+    tabs.querySelectorAll("button").forEach(b=> b.onclick=()=> setDoc(b.dataset.id));
+    tabs.hidden = docs.length < 2;
+  }
+  function setDoc(id){
+    doc = docs.find(d=>d.id===id) || docs[0];
+    data = doc.sections; idx = 0;
+    try{ localStorage.setItem(DOC_KEY, doc.id); }catch(e){}
+    tabs.querySelectorAll("button").forEach(b=>{
+      const on = b.dataset.id===doc.id;
+      b.classList.toggle("active", on); b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    const name = doc.fullTitle || doc.title;
+    dlMd.href  = doc.md;  dlMd.setAttribute("download", name + ".md");
+    dlPdf.href = doc.pdf; dlPdf.setAttribute("download", name + ".pdf");
+    buildToc(); go(0);
+  }
 
   function buildToc(){
     toc.innerHTML = data.map((s,i)=>`<button data-i="${i}">${escapeHtml(s.title)}</button>`).join("");
@@ -491,7 +517,10 @@ function bindGlobal(){
     window.scrollTo({top:0, behavior:"smooth"});
     content.focus({preventScroll:true});
   }
-  function openLearn(){ if(!built) buildToc(); show("screen-learn"); go(idx); }
+  function openLearn(){
+    show("screen-learn");
+    if(!built){ buildTabs(); setDoc(doc.id); } else go(idx);
+  }
   function setDrawer(open){
     toc.classList.toggle("open", open);
     backdrop.classList.toggle("hidden", !open);

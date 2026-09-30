@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — הנדסת תוכנה</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("seq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -126,6 +126,13 @@
       <div class="learn-progress" aria-hidden="true"><div id="learnProgressFill"></div></div>
       <button id="learnTocToggle" class="btn ghost learn-toc-toggle" type="button" aria-expanded="false">☰ פרקים</button>
     </div>
+    <div class="learn-docs">
+      <div id="learnDocTabs" class="learn-doc-tabs" role="tablist" aria-label="בחירת סיכום"></div>
+      <div class="learn-dl">
+        <a id="learnDlMd" class="btn ghost" href="#" download>⬇ הורדה כ־MD</a>
+        <a id="learnDlPdf" class="btn ghost" href="#" download>⬇ הורדה כ־PDF</a>
+      </div>
+    </div>
     <div class="learn-layout">
       <nav id="learnToc" class="learn-toc" aria-label="ניווט פרקים"></nav>
       <article id="learnContent" class="card learn-content" tabindex="-1"></article>
@@ -170,7 +177,7 @@
 </footer>
 
 <script src="questions.js?v=1"></script>
-<script src="learn.js?v=1"></script>
-<script src="app.js?v=2"></script>
+<script src="learn.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

@@ -372,6 +372,16 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 #learnProgressFill{height:100%;width:0;background:var(--grad);border-radius:20px;transition:width .3s ease}
 .learn-toc-toggle{display:none}
 
+/* summary picker + downloads */
+.learn-docs{display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.learn-doc-tabs{display:flex;gap:.3rem;padding:.25rem;background:var(--card2);border:1px solid var(--line);border-radius:12px}
+.learn-doc-tabs button{border:none;background:transparent;color:var(--muted);font:inherit;font-size:.88rem;font-weight:600;
+  padding:.45rem .9rem;border-radius:9px;cursor:pointer;transition:background .12s,color .12s}
+.learn-doc-tabs button:hover{color:var(--ink)}
+.learn-doc-tabs button.active{background:var(--card);color:var(--ink);box-shadow:var(--shadow-sm)}
+.learn-dl{display:flex;gap:.4rem;flex-wrap:wrap}
+.learn-dl .btn{font-size:.82rem;padding:.4rem .75rem;text-decoration:none}
+
 .learn-layout{display:grid;grid-template-columns:240px 1fr;gap:1rem;align-items:start}
 
 /* chapter rail */
@@ -410,8 +420,16 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 .learn-content table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.86rem;overflow:hidden;
   border-radius:10px;border:1px solid var(--line)}
 .learn-content th,.learn-content td{border:1px solid var(--line);padding:.5rem .7rem;text-align:right}
-.learn-content thead th{background:var(--card2);color:var(--ink);font-weight:800}
+.learn-content thead th{background:var(--card2);color:var(--ink);font-weight:800;white-space:nowrap;overflow-wrap:normal;word-break:normal}
 .learn-content tbody tr:nth-child(even){background:var(--card2)}
+
+/* Obsidian callouts + pre-rendered mermaid diagrams */
+.learn-content .callout{border:1px solid var(--line);border-inline-start:4px solid var(--brand);border-radius:10px;
+  background:color-mix(in srgb,var(--brand) 7%,var(--card2));padding:.5rem 1rem;margin:1rem 0}
+.learn-content .callout-title{font-weight:800;color:var(--ink);margin:.35rem 0}
+.learn-mmd{margin:1rem 0;padding:.8rem;background:#fff;border:1px solid var(--line);border-radius:12px;
+  overflow-x:auto;text-align:center}
+.learn-mmd svg{max-width:100%;height:auto}
 
 /* figures */
 .learn-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem;margin-top:1.4rem}
