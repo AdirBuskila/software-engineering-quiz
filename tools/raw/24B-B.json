@@ -261,7 +261,7 @@
     ],
     "correctIndex": 0,
     "official": true,
-    "explanation": "תרשימי התנהגות הם למשל Sequence, Activity, State ו-Use Case; ואילו Class ו-Object הם תרשימי מבנה. כל אחד מהזוגות ב-ב'-ה' כולל לפחות תרשים מבנה אחד, ולכן כל התשובות האחרות שגויות.",
+    "explanation": "תרשימי התנהגות הם למשל Sequence, Activity, State ו-Use Case; ואילו Class ו-Object הם תרשימי מבנה. כל אחד מהזוגות האחרים כולל לפחות תרשים מבנה אחד, ולכן כל התשובות האחרות שגויות.",
     "hasImage": false,
     "confidence": "high"
   },

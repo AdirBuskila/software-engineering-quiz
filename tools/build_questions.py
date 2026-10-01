@@ -13,6 +13,8 @@ Rules:
 - BUILD-TIME OPTION SHUFFLE: deterministically permute each question's options and
   remap correctIndex, so the stored answer is NOT trivially "first" even for form-0 exams
   (Phase-3 requirement). The app ALSO shuffles at render, so answer position is never a tell.
+- LETTER REFERENCES ("תשובות א ו-ג נכונות", "(ב) שגוי") become option-index tokens "{@N}"
+  that the app renders as the displayed letter; meta options are listed in `pinned`.
 - DEDUP POLICY A: keep every exam's full set (so "whole exam" mode stays complete); the app
   de-duplicates the topic/random practice pool at runtime via `dedupKey`. We report the
   cross-exam duplicate count here.
@@ -90,28 +92,59 @@ def valid(q):
     return True, None
 
 
-# Options like "תשובות א ו-ג נכונות" point at their SIBLINGS by printed letter. Shuffling
-# such a question makes the reference land on whatever happens to fall in those slots, so
-# the option stops meaning anything. Those questions keep the source's printed order — both
-# here and at render time (app.js honours the same lockOrder flag).
+# LETTER REFERENCES. Options like "תשובות א ו-ג נכונות" and explanations like "(ב) שגוי"
+# point at sibling options by their PRINTED letter, which stops meaning anything once the
+# options are shuffled. So every such letter is replaced by a token "{@N}" (N = option
+# index), and app.js renders each token as whatever letter option N is displayed under.
+# Source letters always follow the source (raw/*.json) option order.
 LETTER_REF = re.compile(r"(תשובות|תשובה|סעיפים|סעיף)\s+[אבגדה]['׳]?\s*[,ו]")
+HE_LETTERS = "אבגדה"
+# a lone option letter: not glued to a word ("ה-Sprint", "ה-@Test") and not "ה – Scrum",
+# but "ו-ג" ("and C") counts
+LONE_LETTER = re.compile(
+    r"(?:(?<![֐-׿A-Za-z0-9\-–])|(?<=ו[-–]))([אבגדה])['׳]?"
+    r"(?![֐-׿A-Za-z0-9\-–])(?!\s*[-–]\s*[A-Za-z])")
+NOT_A_REF = re.compile(r"מועד\s*$")   # "מועד ג'" names an exam sitting, not an option
+TOKEN = re.compile(r"\{@(\d+)\}")
+# options that talk ABOUT the other options; app.js keeps them below the shuffled ones
+META_OPTION = re.compile(r"כל התשובות|יש יותר מתשובה|אף (אחת|תשובה)|אין תשובה נכונה")
 
 
-def locks_order(options):
-    return any(LETTER_REF.search(str(o)) for o in options)
+def tokenize_letters(text, n_opts):
+    def sub(m):
+        i = HE_LETTERS.index(m.group(1))
+        if i >= n_opts or NOT_A_REF.search(text[:m.start()]):
+            return m.group(0)
+        return "{@%d}" % i
+    return LONE_LETTER.sub(sub, str(text))
+
+
+def tokenize_question(q):
+    n = len(q["options"])
+    q["options"] = [tokenize_letters(o, n) if LETTER_REF.search(str(o)) else o
+                    for o in q["options"]]
+    if q.get("explanation"):
+        q["explanation"] = tokenize_letters(q["explanation"], n)
+
+
+def is_meta(opt):
+    s = str(opt)
+    return bool(TOKEN.search(s) or META_OPTION.search(s))
 
 
 def shuffle_options(q):
-    """Deterministic per-question permutation; remaps correctIndex. Returns (opts, ci)."""
+    """Deterministic per-question permutation; remaps correctIndex, letter tokens and the
+    pinned (meta-option) indices. Returns (opts, ci, explanation, pinned)."""
     opts = q["options"]; ci = q["correctIndex"]
-    if locks_order(opts):
-        return opts, ci
     order = list(range(len(opts)))
     seed = int(hashlib.md5(q["id"].encode("utf-8")).hexdigest(), 16) % (2**32)
     random.Random(seed).shuffle(order)
-    new_opts = [opts[i] for i in order]
-    new_ci = order.index(ci)
-    return new_opts, new_ci
+    remap = lambda s: TOKEN.sub(lambda m: "{@%d}" % order.index(int(m.group(1))), str(s))
+    new_opts = [remap(opts[i]) if not str(opts[i]).startswith("img:") else opts[i] for i in order]
+    # pinned keep the source's relative order (e.g. "א ו-ב נכונות" above "כל התשובות נכונות")
+    pinned = [order.index(i) for i in range(len(opts)) if is_meta(opts[i])]
+    expl = remap(q["explanation"]) if q.get("explanation") else q.get("explanation")
+    return new_opts, order.index(ci), expl, pinned
 
 
 def main():
@@ -162,9 +195,12 @@ def main():
         # trust tier: official (from a real answer key / confirmed form-0) >
         # verified (no key, but independently re-derived and confirmed) > derived (uncertain)
         q["verified"] = bool(q.get("verified")) and not q["official"]
-        if locks_order(q["options"]):
-            q["lockOrder"] = True
-        q["options"], q["correctIndex"] = shuffle_options(q)
+        tokenize_question(q)
+        q["options"], q["correctIndex"], expl, pinned = shuffle_options(q)
+        if expl is not None:
+            q["explanation"] = expl
+        if pinned:
+            q["pinned"] = pinned
         for k in ("num","chapter","confidence","flag"):
             q.pop(k, None)
     kept.sort(key=lambda q: (q["topic"], q["source"], q["id"]))

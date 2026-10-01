@@ -209,11 +209,24 @@ function startSession(){
 }
 
 function makeView(q){
-  // Fisher–Yates: defeats "always-first". Skipped when an option cites its siblings by
-  // printed letter ("תשובות א ו-ג נכונות") — shuffling would make that reference nonsense.
-  const idx = q.options.map((_,i)=>i);
-  const order = q.lockOrder ? idx : shuffle(idx);
+  // Fisher–Yates: defeats "always-first". Options that talk about their siblings
+  // ("תשובות א ו-ג נכונות", "כל התשובות נכונות") stay at the bottom like on a printed exam;
+  // their letters are {@N} tokens that refs() resolves against this view's order.
+  const pinned = q.pinned || [];
+  const free = q.options.map((_,i)=>i).filter(i=>!pinned.includes(i));
+  const order = shuffle(free).concat(pinned);
   return { q, order, correctDisplay: order.indexOf(q.correctIndex), answered:false, chosen:null };
+}
+
+/* {@N} (option index, see build_questions.py) -> the letter option N is displayed under.
+   Inside an option the letters are listed in display order ("ב ו-ד", never "ד ו-ב"). */
+function refs(text, order, sortLetters){
+  const s=String(text??""), re=/\{@(\d+)\}/g;
+  if(!s.includes("{@")) return s;
+  const disp=[...s.matchAll(re)].map(m=>order.indexOf(+m[1]));
+  if(sortLetters) disp.sort((a,b)=>a-b);
+  let k=0;
+  return s.replace(re, ()=>HE_KEYS[disp[k++]]);
 }
 
 function renderQuestion(){
@@ -239,7 +252,7 @@ function renderQuestion(){
   $("#optionsList").innerHTML = v.order.map((origIdx,disp)=>
     `<button class="opt" data-disp="${disp}">
        <span class="key">${HE_KEYS[disp]||disp+1}</span>
-       <span class="txt">${optionHtml(q.options[origIdx])}</span>
+       <span class="txt">${optionHtml(refs(q.options[origIdx], v.order, true))}</span>
      </button>`).join("");
   document.querySelectorAll(".opt").forEach(b=> b.onclick=()=>choose(parseInt(b.dataset.disp,10)));
 
@@ -308,7 +321,7 @@ function choose(disp){
   const fb=$("#feedback");
   fb.className = "feedback " + (correct?"good":"bad");
   fb.innerHTML = `<div class="verdict">${correct?"✓ נכון":"✗ לא נכון"}</div>`+
-    `<div class="expl">${escapeHtml(q.explanation||"")}</div>`+
+    `<div class="expl">${escapeHtml(refs(q.explanation, v.order))}</div>`+
     (q.official ? "" : q.verified
         ? `<span class="note">✓ אומת בשתי בדיקות עצמאיות (לא מתוך מחוון רשמי).</span>`
         : `<span class="note">⚠ תשובה לא רשמית — נגזרה מחומר הקורס, כדאי לאמת.</span>`)+
@@ -384,13 +397,15 @@ function renderResults(correct, byTopic, review){
       <span class="tbar"><i style="width:${p}%"></i></span><span>${o.c}/${o.n}</span></div>`;
   }).join("");
   $("#resultsReview").innerHTML = review.map(r=>{
-    const v=r.q; const chosenTxt = r.chosen!=null ? optionHtml(v.options[r.chosen]) : "— לא נענתה —";
+    const v=r.q, order=(S._views?.[v.id] || makeView(v)).order;
+    const opt = i => optionHtml(refs(v.options[i], order, true));
+    const chosenTxt = r.chosen!=null ? opt(r.chosen) : "— לא נענתה —";
     return `<div class="rev ${r.ok?"ok":"bad"}">
       <div class="rq">${escapeHtml(v.question)}</div>
       ${extrasHtml(v)}
       <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${chosenTxt}</span>`+
-      (r.ok?"":` · <span class="good">הנכונה: ${optionHtml(v.options[v.correctIndex])}</span>`)+
-      `<br>${escapeHtml(v.explanation||"")}${v.official?"":(v.verified?" (מאומת ✓)":" (לא רשמי)")}</div></div>`;
+      (r.ok?"":` · <span class="good">הנכונה: ${opt(v.correctIndex)}</span>`)+
+      `<br>${escapeHtml(refs(v.explanation, order))}${v.official?"":(v.verified?" (מאומת ✓)":" (לא רשמי)")}</div></div>`;
   }).join("");
 }
 

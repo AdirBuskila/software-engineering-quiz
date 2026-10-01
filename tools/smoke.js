@@ -45,6 +45,41 @@ for(let t=0;t<20000;t++){
   if(q.options.length===5){disp5[correctDisplay]++;trials5++;}
 }
 
+// letter references: "תשובות א ו-ג נכונות" / "(ב) שגוי" are stored as {@N} tokens and
+// resolved against each view's shuffled order by app.js's own makeView()/refs() (lifted
+// verbatim from app.js, so this exercises the shipped code). After resolving, every letter
+// must name the option it originally meant, and meta options must sit at the bottom.
+const appSrc=fs.readFileSync(path.join(__dirname,"..","app.js"),"utf8");
+const lift=name=>appSrc.match(new RegExp(`function ${name}\\([\\s\\S]*?\\n}`))[0];
+const HE_KEYS=["א","ב","ג","ד","ה","ו","ז","ח"];
+const app=new Function("shuffle","HE_KEYS",`${lift("makeView")}\n${lift("refs")}\nreturn {makeView,refs};`)(shuffle,HE_KEYS);
+const TOK=/\{@(\d+)\}/g, RAW_REF=/(תשובות|תשובה|סעיפים|סעיף)\s+[אבגדה]['׳]?\s*[,ו]/;
+let refBad=0, refQs=0;
+for(const q of QS){
+  const n=q.options.length, pinned=q.pinned||[];
+  if(pinned.some(i=>i<0||i>=n) || new Set(pinned).size!==pinned.length){console.log("BAD pinned",q.id);refBad++;}
+  const texts=[...q.options.map(String), q.explanation||""];
+  if(q.options.some(o=>RAW_REF.test(o))){console.log("UNTOKENIZED letter ref",q.id);refBad++;}
+  const toks=texts.flatMap(s=>[...s.matchAll(TOK)].map(m=>+m[1]));
+  if(toks.some(i=>i>=n)){console.log("BAD token",q.id);refBad++;}
+  if(!toks.length && !pinned.length) continue;
+  refQs++;
+  for(let t=0;t<50;t++){
+    const v=app.makeView(q);
+    if(pinned.length && v.order.slice(n-pinned.length).join()!==pinned.join()){console.log("PINNED not last",q.id);refBad++;break;}
+    q.options.forEach((o,i)=>{
+      const meant=[...String(o).matchAll(TOK)].map(m=>+m[1]).sort((a,b)=>a-b).join();
+      if(!meant) return;
+      const out=app.refs(o,v.order,true);
+      const got=[...out.matchAll(/[אבגדה]/g)].filter(m=>!/[֐-׿]/.test(out[m.index-1]||"")&&!/[֐-׿]/.test(out[m.index+1]||""))
+        .map(m=>v.order[HE_KEYS.indexOf(m[0])]).sort((a,b)=>a-b).join();
+      if(out.includes("{@") || got!==meant){console.log("REF mismatch",q.id,JSON.stringify(out),got,"≠",meant);refBad++;}
+    });
+    if(app.refs(q.explanation,v.order).includes("{@")){console.log("REF leaked in explanation",q.id);refBad++;}
+  }
+}
+bad+=refBad;
+
 // practice-pool dedup count
 const seen=new Set(); let dups=0;
 for(const q of QS){ if(seen.has(q.dedupKey)) dups++; else seen.add(q.dedupKey); }
@@ -79,6 +114,7 @@ console.log("cross-exam duplicates (hidden in practice pool):",dups);
 console.log("STORED correctIndex distribution (5-opt, should be ~20% each — proves build-time shuffle):",
   stored5.map(c=>n5?(c/n5*100).toFixed(1)+"%":"-").join(" / "));
 console.log("render-shuffle scoring-map mismatches:",mismatch,"(must be 0)");
+console.log("letter-reference / pinned-option problems:",refBad,`(must be 0; ${refQs} questions checked)`);
 console.log("render display-position distribution (5-opt, ~20% each):",
   disp5.map(c=>trials5?(c/trials5*100).toFixed(1)+"%":"-").join(" / "));
 const firstPct = n5? stored5[0]/n5 : 0;
