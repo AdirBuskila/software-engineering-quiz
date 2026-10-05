@@ -13,7 +13,7 @@ EXAM_LABEL = json.loads((TOOLS/"_exam_labels.json").read_text(encoding="utf-8"))
     if (TOOLS/"_exam_labels.json").exists() else {}
 
 CODES = ["19B-B","19B-C","20-A","20-B","21-A","21-B","21S-A","21S-B","22B-A","22S-A",
-         "23-EX","23B-A","23S-A","24B-A","24B-B","24S-A","25F0a","25F0b","25S-A","25B-N","25-EX","26B-A",
+         "23-EX","23B-A","23S-A","24B-A","24B-B","24S-A","25F0a","25F0b","25S-A","25B-N","25-EX","26B-A","26CL",
          "SP-SPC","SP-DGM","SP-AMR","SP-MDA"]
 
 L = []
