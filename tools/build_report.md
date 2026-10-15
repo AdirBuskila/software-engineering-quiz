@@ -1,21 +1,21 @@
 # Build report — SE questions dataset
 
-- Raw items read: **412**
+- Raw items read: **432**
 - Excluded: **0**  ({})
 - Cross-exam duplicates (kept whole; app dedups practice pool): **28**
-- **Final questions: 412**
-- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **53** derived (still uncertain)
+- **Final questions: 432**
+- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **73** derived (still uncertain)
 
 ## By topic
 
-- מידול ו-UML (`uml`): 83
-- מבוא להנדסת תוכנה (`intro`): 75
-- תבניות עיצוב (`patterns`): 63
-- בדיקות ו-TDD (`testing`): 49
-- Agile · SCRUM · XP (`agile`): 46
-- עיצוב ארכיטקטוני (`architecture`): 36
-- הנדסת דרישות (`requirements`): 27
-- אספקה וקונפיגורציה (`config`): 23
+- מידול ו-UML (`uml`): 86
+- מבוא להנדסת תוכנה (`intro`): 79
+- תבניות עיצוב (`patterns`): 65
+- Agile · SCRUM · XP (`agile`): 50
+- בדיקות ו-TDD (`testing`): 50
+- עיצוב ארכיטקטוני (`architecture`): 40
+- הנדסת דרישות (`requirements`): 28
+- אספקה וקונפיגורציה (`config`): 24
 - OOP ו-Java (`oop_java`): 10
 
 ## By exam
@@ -42,6 +42,7 @@
 - 25B-N — 2025 סמסטר ב׳ מועד א׳ (ניסים): 20
 - 25-EX — 2025 מבחן לדוגמה (אקסמן): 20
 - 26B-A — 2026 סמסטר ב׳ מועד א׳ (ניסים, 24.6): 20
+- 26S-A — 2026 סמסטר קיץ מועד א׳ (ניסים, 8.10): 20
 - 26CL — 2026 המבחן של קלוד: 20
 - SP-DGM — מבחן דוגמה: 18
 - SP-AMR — מועד א׳ אמריקאי: 18
