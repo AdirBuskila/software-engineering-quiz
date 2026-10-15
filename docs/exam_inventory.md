@@ -36,7 +36,7 @@ Legend for **Form**: `0` = טופס אפס/0 (answer = first option) · `A` = ט
 | 17 | `25B-N` | 2025 סמ׳ ב מועד א (17.7.25, ניסים) | `2025\סמסטר ב מועד א 17.7.25 ניסים ברמי.pdf` | — | pdf | ? | **= `מבחן 2025 ניסים.pdf`** (DUP) |
 | 18 | `25-EX` | 2025 מבחן לדוגמה (אקסמן) | `2025\מבחן לדוגמה אקסמן 2025.pdf` | — | pdf | ? | |
 | 18b | `26B-A` | 2026 סמ׳ ב מועד א (24.6.26, ניסים) | `HIT-BSc-SoftwareEng-Exam-Juny2026.pdf` | — | pdf | ? | not form 0 (Q5/Q16/Q18 key ≠ א); answers derived, cross-checked vs. official keys of repeat questions |
-| 18b2 | `26S-A` | 2026 סמ׳ קיץ (ג׳) מועד א (8.10.26, ניסים) | `HIT-BSc-SoftwareEng-Exam-Oct2026.pdf` | — | pdf | ? | no key; answers derived and cross-checked vs. official keys of repeat questions (Q15 = 24B-A Q26 diagram with the official answer removed → "all wrong"; Q9 = 26B-A Q9 without Scrum Master) |
+| 18b2 | `26S-A` | 2026 סמ׳ קיץ (ג׳) מועד א (8.10.26, ניסים) | `HIT-BSc-SoftwareEng-Exam-Oct2026.pdf` | — | pdf | **0** | form 0 (confirmed by Adir; not labeled on the paper). Note Q15 reuses the 24B-A Q26 diagram but its key here is "activate Server" |
 | 18c | `26CL` | 2026 המבחן של קלוד | — (written by Claude in Nissim's style, scoped to the 8.10 exam) | — | — | ? | original mock exam, not a real paper; answers derived from course material and repeat official keys |
 | 19 | `SP-SPC` | מבחן מועד מיוחד | `…או ללא תאריך\מבחן - מועד מיוחד.pdf` | `…\מועד מיוחד עם פתרון.pdf` ✓ | pdf | ? | exam+sol |
 | 20 | `SP-DGM` | מבחן דוגמא | `…או ללא תאריך\מבחן דוגמא.pdf` | `…\מבחן דוגמא פתרון.pdf` ✓ | pdf | ? | exam+sol |

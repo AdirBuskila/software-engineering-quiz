@@ -4,7 +4,7 @@
 - Excluded: **0**  ({})
 - Cross-exam duplicates (kept whole; app dedups practice pool): **28**
 - **Final questions: 432**
-- Trust tiers: **221** official (from key/form-0) · **138** verified (independently re-derived) · **73** derived (still uncertain)
+- Trust tiers: **241** official (from key/form-0) · **138** verified (independently re-derived) · **53** derived (still uncertain)
 
 ## By topic
 
@@ -42,7 +42,7 @@
 - 25B-N — 2025 סמסטר ב׳ מועד א׳ (ניסים): 20
 - 25-EX — 2025 מבחן לדוגמה (אקסמן): 20
 - 26B-A — 2026 סמסטר ב׳ מועד א׳ (ניסים, 24.6): 20
-- 26S-A — 2026 סמסטר קיץ מועד א׳ (ניסים, 8.10): 20
+- 26S-A — 2026 סמסטר קיץ מועד א׳ (ניסים, 8.10, טופס 0): 20
 - 26CL — 2026 המבחן של קלוד: 20
 - SP-DGM — מבחן דוגמה: 18
 - SP-AMR — מועד א׳ אמריקאי: 18
