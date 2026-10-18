@@ -494,3 +494,7 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 .scope-details summary{cursor:pointer;width:max-content}
 .scope-details ul{margin:.45rem 0;padding-inline-start:1.2rem;line-height:1.6}
 .scope-details p{margin:.3rem 0 0}
+
+/* bidi isolates (bidi.js): a formula inside Hebrew keeps its left-to-right order */
+bdi.ltr{unicode-bidi:isolate;overflow-wrap:anywhere}
+bdi.ltr.nw{white-space:nowrap}
