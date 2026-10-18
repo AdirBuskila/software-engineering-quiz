@@ -21,7 +21,7 @@ SE_LEVEL("pat", {
     { id: "P06-Q1", question: "בבית חכם, שלט רחוק (Remote) מפעיל מנורה (Light) דרך האובייקט TurnOnCommand שקורא ל-light.turnOn(). מהם התפקידים בתבנית Command?",
       options: ["Remote הוא Invoker, TurnOnCommand הוא Command ו-Light הוא Receiver", "Remote הוא Receiver, TurnOnCommand הוא Invoker ו-Light הוא Command", "Remote הוא Command, TurnOnCommand הוא Receiver ו-Light הוא Invoker", "Remote הוא Subject, TurnOnCommand הוא Observer ו-Light הוא Product"], answer: 0,
       recap: "מפעיל = Invoker · הפעולה = Command · מי שמבצעים עליו = Receiver",
-      explanation: "השלט **מפעיל** ← Invoker; `TurnOnCommand` הוא **הפעולה כאובייקט** ← Command; המנורה היא זו ש**הפעולה מתבצעת עליה** ← Receiver. שאר הסידורים מחליפים תפקידים, והאחרון משתמש במושגים של Observer ו-Factory." },
+      explanation: "השלט **מפעיל** ← Invoker; `TurnOnCommand` הוא **הפעולה כאובייקט** ← Command; המנורה היא זו ש**הפעולה מתבצעת עליה** ← Receiver. שאר הסידורים מחליפים תפקידים, והסידור \"Remote הוא Subject, TurnOnCommand הוא Observer ו-Light הוא Product\" משתמש במושגים של Observer ו-Factory." },
     { id: "P06-Q2", question: "מה ה-Invoker יודע על הפעולה שהוא מפעיל?",
       options: ["רק את הממשק של ה-Command (למשל execute), לא מה בדיוק היא עושה ועל מי", "את המחלקה הקונקרטית של ה-Receiver ואת כל הפונקציות שלו", "שום דבר, כולל זה שיש לו פקודה להפעיל", "את הרשימה המלאה של כל ה-Observers שרשומים אצלו"], answer: 0,
       recap: "Invoker מכיר רק את ממשק ה-Command (ניתוק)",
