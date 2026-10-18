@@ -3,3 +3,4 @@ tools/raw/pages/
 tools/raw/_pdf/
 *.pyc
 __pycache__/
+tools/raw/courseflow/
