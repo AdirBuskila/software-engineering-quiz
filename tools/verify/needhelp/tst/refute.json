@@ -1,0 +1,192 @@
+{
+ "T01-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T01-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T01-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "25F0a-Q19": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "21-A-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "T02-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T02-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T02-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "25F0b-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25B-N-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "T03-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T03-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T03-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "20-B-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-A-Q19": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "T04-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T04-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T04-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": "disagree-fixed: distractor 'the Mock is a function the unit calls' was arguably defensible; reworded to 'same class'"
+ },
+ "24S-A-Q18": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q18": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "T05-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T05-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T05-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T05-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q26": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "T06-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T06-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T06-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T06-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": "agree on key (3 paths by enumeration); lesson did not teach nested decisions -> added 2+1 explanation"
+ },
+ "24B-A-Q21": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "T06-level": {
+  "note": "level now carries explicit enrichment marker in lesson"
+ },
+ "T07-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T07-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "T07-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-A-Q22": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "19B-C-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-A-Q23": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25F0a-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "23B-A-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26S-A-Q20": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26CL-Q19": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ }
+}

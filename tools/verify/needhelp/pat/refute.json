@@ -1,0 +1,230 @@
+{
+ "19B-C-Q3": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "23B-A-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P01-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P01-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P01-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P01-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P02-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P02-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P02-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P02-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "26CL-Q16": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q9": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P03-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P03-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P03-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P03-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "21-A-Q9": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-B-Q9": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P04-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P04-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P04-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P04-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-A-Q11": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P05-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P05-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P05-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q7": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25F0a-Q10": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P06-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P06-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P06-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "25S-A-Q11": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-A-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P07-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P07-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P07-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "19B-B-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "SP-DGM-Q15": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "P08-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P08-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "P08-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": "agree; Observer not among options, so Mediator is the only fit"
+ },
+ "23-EX-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "23-EX-Q7": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25-EX-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q10": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25F0a-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26S-A-Q17": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26B-A-Q19": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-B-Q11": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-B-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ }
+}

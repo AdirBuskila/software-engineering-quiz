@@ -1,0 +1,215 @@
+{
+ "U01-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U01-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U01-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U01-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "26S-A-Q13": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U02-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U02-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U02-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U02-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "23-EX-Q11": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q16": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U03-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U03-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U03-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "25F0b-Q15": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U04-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U04-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U04-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "26S-A-Q14": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "22S-A-Q14": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U05-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U05-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U05-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U05-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-A-Q16": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U06-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": "agree; SMS-as-participant is taught in the lesson"
+ },
+ "U06-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U06-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q18": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26CL-Q10": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U07-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U07-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U07-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U07-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q15": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "U08-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U08-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U08-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "U08-Q4": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "23S-A-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25F0a-Q15": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-A-Q18": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26CL-Q11": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-B-Q16": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25B-N-Q17": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24S-A-Q12": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ }
+}

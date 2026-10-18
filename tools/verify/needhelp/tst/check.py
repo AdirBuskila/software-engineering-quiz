@@ -77,7 +77,7 @@ R.mcq(qs, "T04-Q2", [("Mock של AIService", "AIService" in DEPS["TicketService"
                      ("Mock של מסד הנתונים כולו", "Database" in DEPS["TicketService"]), ("אין צורך ב-Mock", False)])
 CONTAINS = {("unit", "mock")}
 R.mcq(qs, "T04-Q3", [("היחידה הנבדקת מכילה", ("unit", "mock") in CONTAINS), ("ה-Mock מכיל", ("mock", "unit") in CONTAINS),
-                     ("ה-Mock הוא פונקציה", False), ("יורשת מה-Mock", False)])
+                     ("ה-Mock והיחידה הנבדקת הן אותה מחלקה", False), ("יורשת מה-Mock", False)])
 
 # ---------------- T05: boundary values and equivalence classes ----------------
 def shipping_fee(total): return 0 if total >= 200 else 30

@@ -1,0 +1,210 @@
+{
+ "R01-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R01-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R01-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "25F0b-Q2": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "23B-A-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R02-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R02-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R02-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "19B-B-Q14": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25F0b-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R03-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R03-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R03-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R04-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R04-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R04-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q1": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "19B-C-Q5": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R05-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R05-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R05-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "24B-B-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-B-Q3": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R06-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R06-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R06-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "25F0a-Q7": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25S-A-Q7": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R07-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R07-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": "agree; AES encryption listed as non-functional (TLS example) in lesson"
+ },
+ "R07-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "22S-A-Q3": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "25B-N-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "R08-Q1": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R08-Q2": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "R08-Q3": {
+  "verdict": "agree",
+  "mine_text_of_key": "own solution matched key",
+  "note": ""
+ },
+ "22S-A-Q7": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "22B-A-Q7": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26S-A-Q8": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-A-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "24B-A-Q2": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26S-A-Q6": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "26S-A-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ },
+ "23S-A-Q4": {
+  "verdict": "bank-ref-ok",
+  "note": "exists in bank, topic matches level"
+ }
+}
