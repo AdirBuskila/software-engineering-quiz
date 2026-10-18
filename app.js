@@ -251,11 +251,12 @@ function renderQuestion(){
   }
   const v=S.current;
 
-  $("#qTopic").textContent = q.topicLabel || q.topic;
-  $("#qSource").textContent = q.sourceLabel || (q.source==="exam"?"מבחן":"תרגול");
+  const crs = q.course;   // a guided-course question - see course-ui.js
+  $("#qTopic").textContent = crs ? crs.badge : (q.topicLabel || q.topic);
+  $("#qSource").textContent = crs ? crs.levelTitle : (q.sourceLabel || (q.source==="exam"?"מבחן":"תרגול"));
   const badge=$("#qBadge");
-  const tier = q.official ? "official" : (q.verified ? "verified" : "unofficial");
-  badge.textContent = tier==="official" ? "מחוון רשמי" : tier==="verified" ? "מאומת ✓" : "לא רשמי · לבדיקה";
+  const tier = crs ? (q.fromExam ? "official" : "verified") : q.official ? "official" : (q.verified ? "verified" : "unofficial");
+  badge.textContent = crs ? (q.fromExam ? "📝 שאלה ממבחן" : "שאלת תרגול") : tier==="official" ? "מחוון רשמי" : tier==="verified" ? "מאומת ✓" : "לא רשמי · לבדיקה";
   badge.className = "chip " + tier;
 
   $("#questionText").innerHTML = bidiText(q.question);
@@ -286,14 +287,19 @@ function renderQuestion(){
     $("#prevBtn").disabled = S.pos===0;
     $("#streakBox").textContent = `נענו ${Object.keys(S.exam.answers).length}/${S.pool.length}`;
   } else {
-    $("#quizMeta").textContent = `שאלה ${pos+1}`;
+    $("#quizMeta").textContent = S.mode==="course" ? `שאלה ${pos+1}/${S.pool.length}` : `שאלה ${pos+1}`;
     $("#prevBtn").disabled = S.hpos===0;
     $("#nextBtn").classList.toggle("hidden", !v.answered);   // appears after answering
     $("#submitExamBtn").classList.add("hidden");
     if(v.answered) paintAnswered(v);                        // navigated back to an answered question
-    const a=P.stats.answered,c=P.stats.correct;
-    $("#streakBox").textContent = `רצף נכון: ${S.streak||0} · דיוק כולל ${a?Math.round(c/a*100):0}%`;
+    $("#streakBox").textContent = streakText();
   }
+}
+// practice footer: streak + bank accuracy (a course keeps its own score, so streak only)
+function streakText(){
+  if(S.mode==="course") return `רצף נכון: ${S.streak||0}`;
+  const a=P.stats.answered,c=P.stats.correct;
+  return `רצף נכון: ${S.streak||0} · דיוק כולל ${a?Math.round(c/a*100):0}%`;
 }
 
 function escapeHtml(s){ return String(s).replace(/[&<>]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[m])); }
@@ -327,12 +333,11 @@ function choose(disp){
   if(v.answered) return;
   v.answered=true; v.chosen=disp; v.correct = disp===v.correctDisplay;
   paintAnswered(v);
-  recordAnswer(q, v.correct);
+  if(S.mode==="course") window.COURSE.record(q, v.correct); else recordAnswer(q, v.correct);
   S.streak = v.correct ? (S.streak||0)+1 : 0;
   $("#nextBtn").focus();
   renderTopStats();
-  const a=P.stats.answered,c=P.stats.correct;
-  $("#streakBox").textContent = `רצף נכון: ${S.streak} · דיוק כולל ${a?Math.round(c/a*100):0}%`;
+  $("#streakBox").textContent = streakText();
 }
 /* Paint an answered practice question: lock the options, mark right/wrong, show the feedback.
    Runs when answering and again when navigating back to an already-answered question. */
@@ -345,6 +350,11 @@ function paintAnswered(v){
   });
   const fb=$("#feedback");
   fb.className = "feedback " + (correct?"good":"bad");
+  if(q.course){
+    fb.innerHTML = `<div class="verdict">${correct?"✓ נכון":"✗ לא נכון"}</div>`+
+      `<div class="expl">${window.crsRich(refs(q.explanation||"", v.order))}</div>`+
+      (q.fromExam ? `<span class="note">📝 מתוך ${escapeHtml(q.fromExam)} (<bdi class="ltr" dir="ltr">${escapeHtml(q.examId)}</bdi>)${q.official?"":(q.verified?" · מאומת ✓":" · תשובה לא רשמית")}</span>` : "");
+  } else
   fb.innerHTML = `<div class="verdict">${correct?"✓ נכון":"✗ לא נכון"}</div>`+
     `<div class="expl">${bidiText(refs(q.explanation, v.order))}</div>`+
     (q.official ? "" : q.verified
@@ -371,6 +381,12 @@ function next(){
     if(S.pos>=S.pool.length-1){ S.pool = shuffle(S.pool); S.pos=0; }
     else S.pos++;
     S.hpos++;
+    renderQuestion();
+  } else if(S.mode==="course"){
+    if(!S.current.answered) return;
+    if(S.hpos<S.hist.length-1){ S.hpos++; renderQuestion(); return; }
+    if(S.pos>=S.pool.length-1){ window.COURSE.finishLevel(); return; }   // level done -> summary
+    S.pos++; S.hpos++;
     renderQuestion();
   } else {
     if(S.pos<S.pool.length-1){ S.pos++; renderQuestion(); }
@@ -437,12 +453,17 @@ function renderResults(correct, byTopic, review){
 }
 
 /* ---------- controls ---------- */
-function quit(){ clearInterval(S.exam.timer); S._views=null; S.hist=[]; S.hpos=0; S.streak=0; initStart(); show("screen-start"); }
+function quit(){
+  clearInterval(S.exam.timer); S._views=null; S.hist=[]; S.hpos=0; S.streak=0;
+  if(S.mode==="course") S.mode=(document.querySelector('input[name=mode]:checked')||{}).value||"practice";
+  initStart(); show("screen-start");
+  window.dispatchEvent(new window.Event("seq:home"));   // course cards repaint their progress
+}
 function bindGlobal(){
   $("#nextBtn").onclick=next;
   $("#prevBtn").onclick=prev;
   $("#submitExamBtn").onclick=()=>submitExam(false);
-  $("#quitBtn").onclick=()=>{ if(S.mode!=="exam"||confirm("לצאת מהמבחן? ההתקדמות לא תישמר.")) quit(); };
+  $("#quitBtn").onclick=()=>{ if(S.mode==="course"){ window.COURSE.exit(); return; } if(S.mode!=="exam"||confirm("לצאת מהמבחן? ההתקדמות לא תישמר.")) quit(); };
   $("#backHomeBtn").onclick=quit;
   function goHome(){
     const inExamQuiz = S.mode==="exam" && !$("#screen-quiz").classList.contains("hidden");

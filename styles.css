@@ -498,3 +498,88 @@ main{max-width:840px;margin:1.6rem auto;padding:0 1rem}
 /* bidi isolates (bidi.js): a formula inside Hebrew keeps its left-to-right order */
 bdi.ltr{unicode-bidi:isolate;overflow-wrap:anywhere}
 bdi.ltr.nw{white-space:nowrap}
+
+/* tables scroll inside their own box so a wide one never stretches the page.
+   --cols comes from the builder, so narrow tables never scroll needlessly. */
+.tbl-wrap{overflow-x:auto;margin:1.1rem 0;border:1px solid var(--line);border-radius:10px;
+  -webkit-overflow-scrolling:touch}
+/* width:100% already fills the box; the min-width only bites when a table has enough
+   columns that wrapping would crush them (~5+), which is when scrolling beats wrapping. */
+.learn-content .tbl-wrap table{margin:0;border:none;border-radius:0;
+  min-width:calc(var(--cols,3) * 5.5rem)}
+/* .learn-content sets overflow-wrap:anywhere for long LTR tokens in prose; inside a
+   table that lets the browser crush a column to one character and split Hebrew words
+   mid-word ("שאלות" -> "שאלו/ת"). Cells break only between words; if the row still
+   doesn't fit, .tbl-wrap scrolls instead. */
+.learn-content .tbl-wrap th,.learn-content .tbl-wrap td{
+  border-inline:none;overflow-wrap:break-word;word-break:normal}
+.learn-content .tbl-wrap th{white-space:nowrap}
+.learn-content .tbl-wrap tr>*:first-child{border-inline-start:none}
+.learn-content .tbl-wrap tr>*:last-child{border-inline-end:none}
+
+/* ---------------- guided courses ("צריך עזרה?") ---------------- */
+.crs-entry{font-size:.84rem;padding:.45rem .8rem;white-space:nowrap}
+.crs-promos{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.1rem;scroll-margin-top:6rem}
+.crs-promos .crs-promo{margin-bottom:0}
+.crs-promo{display:flex;align-items:center;gap:1rem;cursor:pointer;border:1.5px dashed color-mix(in srgb,var(--brand) 55%,transparent);
+  background:color-mix(in srgb,var(--brand) 8%,var(--card));transition:transform .15s,border-color .15s;padding:1rem 1.1rem}
+.crs-promo:hover{transform:translateY(-2px);border-color:var(--brand)}
+.crs-promo .big-ico{font-size:2rem;flex:none}
+.crs-promo b{display:block;font-size:1.02rem}
+.crs-promo span{color:var(--muted);font-size:.84rem}
+.crs-promo .go{margin-inline-start:auto;flex:none;color:#fff}
+.crs-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.crs-head .grow{flex:1}
+.crs-head .sub{font-size:.88rem;line-height:1.6;margin-top:.3rem}
+.crs-overall{font-size:.85rem;color:var(--muted);font-weight:600}
+.crs-map{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.7rem;margin-top:1rem}
+.crs-lvl{position:relative;display:flex;flex-direction:column;gap:.25rem;text-align:right;font:inherit;color:var(--ink);cursor:pointer;
+  border:1.5px solid var(--line);background:var(--card2);border-radius:14px;padding:.85rem 1rem;transition:border-color .15s,transform .15s}
+.crs-lvl:hover{border-color:var(--brand);transform:translateY(-2px)}
+.crs-lvl .num{font-size:.72rem;font-weight:800;color:var(--muted)}
+.crs-lvl .ttl{font-weight:800;font-size:1rem}
+.crs-lvl .gl{font-size:.8rem;color:var(--muted);line-height:1.4}
+.crs-lvl .st{font-size:.75rem;font-weight:700;margin-top:.2rem;color:var(--muted)}
+.crs-lvl.passed{border-color:color-mix(in srgb,var(--ok) 55%,transparent);background:color-mix(in srgb,var(--ok) 8%,var(--card2))}
+.crs-lvl.passed .st{color:var(--ok)}
+.crs-lvl.next{box-shadow:var(--ring);border-color:transparent}
+.crs-lvl.next::after{content:"מומלץ הבא";position:absolute;top:.6rem;left:.7rem;font-size:.66rem;font-weight:800;
+  background:var(--grad);color:#fff;padding:.12rem .5rem;border-radius:20px}
+.crs-lvl.boss{grid-column:1/-1;background:color-mix(in srgb,var(--warn) 9%,var(--card2));border-color:color-mix(in srgb,var(--warn) 45%,transparent)}
+.crs-lesson{min-height:0}
+.crs-lesson .crs-goal{font-size:.9rem;margin:-.6rem 0 1rem}
+.crs-lesson .lesson-body{line-height:1.75}
+.lesson-rule{border-inline-start:3px solid var(--brand);background:var(--card2);border-radius:10px;padding:.6rem .9rem;margin:.8rem 0}
+.lesson-trap{border-inline-start:3px solid var(--warn);background:color-mix(in srgb,var(--warn) 8%,var(--card2));border-radius:10px;padding:.6rem .9rem;margin:.8rem 0}
+.lesson-ex{border:1px dashed color-mix(in srgb,var(--ok) 55%,transparent);background:color-mix(in srgb,var(--ok) 6%,transparent);border-radius:12px;padding:.6rem .9rem;margin:.8rem 0}
+.lesson-formula{direction:ltr;text-align:center;font-family:"Cambria Math","STIX Two Math",Cambria,"Times New Roman",serif;font-size:1.08rem;
+  background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:.55rem .8rem;margin:.6rem 0;overflow-x:auto;white-space:nowrap}
+.crs-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.1rem}
+.crs-actions .btn{flex:1 1 auto}
+.crs-sum{text-align:center}
+.crs-sum .big{font-size:2.6rem;font-weight:900;margin:.4rem 0}
+.crs-sum .msg{color:var(--muted);margin-bottom:.6rem}
+.crs-review{text-align:right;background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:.7rem 1rem;margin:.8rem 0;font-size:.9rem;line-height:1.6}
+.crs-review-t{font-weight:800;margin-bottom:.3rem}
+.question-text b,.feedback b{font-weight:800}
+.question-text code,.feedback code,.crs-review code,.q-table code{font-family:Consolas,ui-monospace,monospace;font-size:.9em;
+  background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:0 .3em;unicode-bidi:isolate}
+.feedback .qref,.crs-review .qref{font-size:.8em}
+.q-table{margin:.5rem 0;overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+.q-table table{width:100%;border-collapse:collapse;font-size:.88rem}
+.q-table th,.q-table td{border:1px solid var(--line);padding:.35rem .6rem;text-align:center;white-space:nowrap}
+.q-table tr>*:first-child{border-inline-start:none}.q-table tr>*:last-child{border-inline-end:none}
+.q-table thead tr:first-child>*{border-top:none}.q-table tbody tr:last-child>*{border-bottom:none}
+.q-table thead th{background:var(--card2);font-weight:800}
+.q-table-cap{font-size:.8rem;color:var(--muted);text-align:center;margin:-.2rem 0 .5rem}
+@media(max-width:560px){
+  /* header gets a second row: [stats … 🌙] then [🎓 צריך עזרה | 📖 מצב לימוד] */
+  .topbar-right{flex-wrap:wrap}
+  .topbar-right .topstats{order:1;flex:1 1 calc(100% - 3rem)}
+  .topbar-right .theme-toggle{order:2}
+  .topbar-right .crs-entry,.topbar-right .learn-entry{order:3;flex:1 1 calc(50% - .4rem);justify-content:center;padding:.42rem .7rem;font-size:.82rem}
+  .crs-promo .go{display:none}
+  .crs-promos{grid-template-columns:1fr}
+  .crs-map{grid-template-columns:1fr}
+  .q-table th,.q-table td{padding:.28rem .45rem}
+}

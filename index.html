@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — הנדסת תוכנה</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("seq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -23,6 +23,7 @@
   </div>
   <div class="topbar-right">
     <div class="topstats" id="topStats"></div>
+    <button id="crsHub" class="btn ghost crs-entry" type="button" title="קורסים מודרכים: תבניות עיצוב · UML · בדיקות · תהליכים, Agile ודרישות">🧭 צריך עזרה?</button>
     <button id="learnEntry" class="btn ghost learn-entry" type="button">📖 מצב לימוד</button>
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="החלפת מצב תצוגה (בהיר/כהה)" title="מצב בהיר/כהה"></button>
   </div>
@@ -31,6 +32,28 @@
 <main id="app">
   <!-- START -->
   <section id="screen-start" class="screen">
+    <div class="crs-promos">
+      <div class="card crs-promo" data-course="pat" role="button" tabindex="0">
+        <span class="big-ico">🧩</span>
+        <div><b>צריך עזרה בתבניות עיצוב?</b><span class="crs-promo-sub">קורס מודרך: איזו תבנית מתאימה לתיאור, ומי ה-Subject, ה-Invoker וה-Receiver.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+      <div class="card crs-promo" data-course="uml" role="button" tabindex="0">
+        <span class="big-ico">📐</span>
+        <div><b>צריך עזרה ב-UML ובמידול?</b><span class="crs-promo-sub">קורס מודרך: סוגי תרשימים, קשרים בתרשים מחלקות, תרשים רצף, Use Case ותרשים מצבים.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+      <div class="card crs-promo" data-course="tst" role="button" tabindex="0">
+        <span class="big-ico">🧪</span>
+        <div><b>צריך עזרה בבדיקות תוכנה?</b><span class="crs-promo-sub">קורס מודרך: מודל V, JUnit, Mock, ערכי גבול ו-TDD.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+      <div class="card crs-promo" data-course="proc" role="button" tabindex="0">
+        <span class="big-ico">🧭</span>
+        <div><b>צריך עזרה בתהליכי פיתוח, Agile ודרישות?</b><span class="crs-promo-sub">קורס מודרך: Waterfall ומודל V, Scrum, דרישות פונקציונליות ולא פונקציונליות.</span></div>
+        <span class="btn primary go">להתחיל ⟵</span>
+      </div>
+    </div>
     <div class="card">
       <h2>בחירת אופן תרגול</h2>
 
@@ -145,6 +168,31 @@
     </div>
   </section>
 
+  <!-- GUIDED COURSE ("צריך עזרה?") -->
+  <section id="screen-course" class="screen hidden">
+    <div id="crsMapView">
+      <div class="card">
+        <div class="crs-head">
+          <div class="grow"><h2 id="crsTitle"></h2><p id="crsIntro" class="sub"></p></div>
+        </div>
+        <div id="crsOverall" class="crs-overall"></div>
+      </div>
+      <div id="crsMap" class="crs-map"></div>
+      <div class="crs-actions"><button id="crsHomeBtn" class="btn ghost">⟵ חזרה לדף הבית</button>
+        <button id="crsResetBtn" class="btn ghost">איפוס התקדמות הקורס</button></div>
+    </div>
+    <div id="crsLessonView" class="hidden">
+      <article id="crsLesson" class="card learn-content crs-lesson"></article>
+      <div class="crs-actions">
+        <button id="crsLessonBack" class="btn ghost">⟵ למפת השלבים</button>
+        <button id="crsLessonGo" class="btn primary">לשאלות ▶</button>
+      </div>
+    </div>
+    <div id="crsSumView" class="hidden">
+      <div id="crsSum" class="card crs-sum"></div>
+    </div>
+  </section>
+
   <!-- RESULTS -->
   <section id="screen-results" class="screen hidden">
     <div class="card">
@@ -180,7 +228,46 @@
 <script src="questions.js?v=8"></script>
 <script src="learn.js?v=2"></script>
 <script src="bidi.js?v=1"></script>
-<script src="app.js?v=7"></script>
+<script src="app.js?v=8"></script>
 <script src="feedback.js?v=1"></script>
+<script src="courses.js?v=1"></script>
+<!-- COURSE LEVELS -->
+<script src="courses/pat/P01.js?v=1"></script>
+<script src="courses/pat/P02.js?v=1"></script>
+<script src="courses/pat/P03.js?v=1"></script>
+<script src="courses/pat/P04.js?v=1"></script>
+<script src="courses/pat/P05.js?v=1"></script>
+<script src="courses/pat/P06.js?v=1"></script>
+<script src="courses/pat/P07.js?v=1"></script>
+<script src="courses/pat/P08.js?v=1"></script>
+<script src="courses/pat/P09.js?v=1"></script>
+<script src="courses/uml/U01.js?v=1"></script>
+<script src="courses/uml/U02.js?v=1"></script>
+<script src="courses/uml/U03.js?v=1"></script>
+<script src="courses/uml/U04.js?v=1"></script>
+<script src="courses/uml/U05.js?v=1"></script>
+<script src="courses/uml/U06.js?v=1"></script>
+<script src="courses/uml/U07.js?v=1"></script>
+<script src="courses/uml/U08.js?v=1"></script>
+<script src="courses/uml/U09.js?v=1"></script>
+<script src="courses/tst/T01.js?v=1"></script>
+<script src="courses/tst/T02.js?v=1"></script>
+<script src="courses/tst/T03.js?v=1"></script>
+<script src="courses/tst/T04.js?v=1"></script>
+<script src="courses/tst/T05.js?v=1"></script>
+<script src="courses/tst/T06.js?v=1"></script>
+<script src="courses/tst/T07.js?v=1"></script>
+<script src="courses/tst/T08.js?v=1"></script>
+<script src="courses/proc/R01.js?v=1"></script>
+<script src="courses/proc/R02.js?v=1"></script>
+<script src="courses/proc/R03.js?v=1"></script>
+<script src="courses/proc/R04.js?v=1"></script>
+<script src="courses/proc/R05.js?v=1"></script>
+<script src="courses/proc/R06.js?v=1"></script>
+<script src="courses/proc/R07.js?v=1"></script>
+<script src="courses/proc/R08.js?v=1"></script>
+<script src="courses/proc/R09.js?v=1"></script>
+<!-- /COURSE LEVELS -->
+<script src="course-ui.js?v=1"></script>
 </body>
 </html>
