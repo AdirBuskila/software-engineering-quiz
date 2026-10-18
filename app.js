@@ -229,6 +229,16 @@ function refs(text, order, sortLetters){
   return s.replace(re, ()=>HE_KEYS[disp[k++]]);
 }
 
+/* feedback.js: "report a mistake" mailto link for a question (renders nothing if the helper is absent) */
+function reportData(q){
+  const c = q.course;
+  return {
+    id: c ? `${c.courseId}-${c.levelId}-Q${S.pool.indexOf(q)+1}` : q.id,
+    exam: c ? c.levelTitle : (q.examLabel || q.sourceLabel || q.examCode || ""),
+    html: q.questionHtml, text: q.question
+  };
+}
+function reportRowHtml(q){ return window.Feedback ? window.Feedback.reportRow(reportData(q)) : ""; }
 function renderQuestion(){
   let q = S.pool[S.pos];
   if(S.mode==="exam"){
@@ -250,6 +260,7 @@ function renderQuestion(){
 
   $("#questionText").textContent = q.question;
   $("#qExtras").innerHTML = extrasHtml(q);
+  if(window.Feedback) window.Feedback.slot($("#qExtras"), "q", reportData(q));
 
   $("#optionsList").innerHTML = v.order.map((origIdx,disp)=>
     `<button class="opt" data-disp="${disp}">
@@ -421,7 +432,7 @@ function renderResults(correct, byTopic, review){
       ${extrasHtml(v)}
       <div class="ra"><span class="${r.ok?"good":"miss"}">תשובתך: ${chosenTxt}</span>`+
       (r.ok?"":` · <span class="good">הנכונה: ${opt(v.correctIndex)}</span>`)+
-      `<br>${escapeHtml(refs(v.explanation, order))}${v.official?"":(v.verified?" (מאומת ✓)":" (לא רשמי)")}</div></div>`;
+      `<br>${escapeHtml(refs(v.explanation, order))}${v.official?"":(v.verified?" (מאומת ✓)":" (לא רשמי)")}</div>${reportRowHtml(v)}</div>`;
   }).join("");
 }
 
