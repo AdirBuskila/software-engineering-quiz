@@ -47,13 +47,21 @@
     a.href = mailto(footerSubject());
     a.textContent = footerText;
     box.appendChild(a);
+    mountCoffee(box.parentElement);
+  }
+  /* the coffee button gets its own row at the top of the footer (created once) */
+  function mountCoffee(foot){
+    if(!foot || foot.querySelector(".coffee-row")) return;
+    const row = document.createElement("div");
+    row.className = "coffee-row";
     const c = document.createElement("a");
     c.className = "coffee-link";
     c.href = coffeeUrl;
     c.target = "_blank";
     c.rel = "noopener";
     c.textContent = coffeeText;
-    box.appendChild(c);
+    row.appendChild(c);
+    foot.prepend(row);
   }
   function injectStyle(){
     if(document.getElementById("feedbackStyle")) return;
@@ -68,8 +76,11 @@
       ".reportrow{margin:.6rem 0 .2rem;font-size:.74rem;text-align:start;direction:rtl}" +
       ".reportlink{display:inline-block;padding:.2rem 0;font-size:.74rem}" +
       ".reportlink:hover,.reportlink:focus-visible{text-decoration:underline}" +
-      ".coffee-link{display:inline-block;margin:.4rem .5rem 0;padding:.15rem .65rem;border:1px solid currentColor;border-radius:999px;color:var(--muted,#8a8f98);text-decoration:none;opacity:.9;white-space:nowrap}" +
-      ".coffee-link:hover,.coffee-link:focus-visible{color:#fbbf24;opacity:1}" +
+      ".coffee-row{flex-basis:100%;margin:0 0 .6rem}" +
+      ".coffee-link{display:inline-block;padding:.5rem 1.2rem;font-size:.98rem;font-weight:600;line-height:1.3;border:1px solid rgba(251,191,36,.55);border-radius:999px;background:rgba(251,191,36,.1);color:#d97706;text-decoration:none;white-space:nowrap;transition:background .15s,transform .15s}" +
+      "@media (prefers-color-scheme:dark){.coffee-link{color:#fbbf24}}" +
+      "[data-theme=dark] .coffee-link{color:#fbbf24}[data-theme=light] .coffee-link{color:#b45309}" +
+      ".coffee-link:hover,.coffee-link:focus-visible{background:rgba(251,191,36,.2);transform:translateY(-1px)}" +
       ".coffee-link:focus-visible{outline:2px solid #fbbf24;outline-offset:2px}";
     document.head.appendChild(st);
   }
