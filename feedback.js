@@ -24,6 +24,8 @@
   }
   const footerSubject = () => title() + " — משוב";
   const footerText = "מצאתם טעות? יצא מבחן חדש שלא מופיע כאן? 📩 כתבו לי ואוסיף";
+  const coffeeUrl = "https://buymeacoffee.com/adirbuskila";
+  const coffeeText = "☕ עזר לכם? אפשר לקנות לי קפה";
   /* q = {id, exam, html?, text?, title?} */
   function reportParts(q){
     const t = q.title || title();
@@ -45,6 +47,13 @@
     a.href = mailto(footerSubject());
     a.textContent = footerText;
     box.appendChild(a);
+    const c = document.createElement("a");
+    c.className = "coffee-link";
+    c.href = coffeeUrl;
+    c.target = "_blank";
+    c.rel = "noopener";
+    c.textContent = coffeeText;
+    box.appendChild(c);
   }
   function injectStyle(){
     if(document.getElementById("feedbackStyle")) return;
@@ -58,7 +67,10 @@
       ".feedback-link:focus-visible,.reportlink:focus-visible{outline:2px solid var(--brand,currentColor);outline-offset:2px;border-radius:3px}" +
       ".reportrow{margin:.6rem 0 .2rem;font-size:.74rem;text-align:start;direction:rtl}" +
       ".reportlink{display:inline-block;padding:.2rem 0;font-size:.74rem}" +
-      ".reportlink:hover,.reportlink:focus-visible{text-decoration:underline}";
+      ".reportlink:hover,.reportlink:focus-visible{text-decoration:underline}" +
+      ".coffee-link{display:inline-block;margin:.4rem .5rem 0;padding:.15rem .65rem;border:1px solid currentColor;border-radius:999px;color:var(--muted,#8a8f98);text-decoration:none;opacity:.9;white-space:nowrap}" +
+      ".coffee-link:hover,.coffee-link:focus-visible{color:#fbbf24;opacity:1}" +
+      ".coffee-link:focus-visible{outline:2px solid #fbbf24;outline-offset:2px}";
     document.head.appendChild(st);
   }
   /* a ready row for a question view */
@@ -73,7 +85,7 @@
     el.innerHTML = report(q);
     return el;
   }
-  window.Feedback = { mailto, report, reportRow, slot, reportHref, reportParts, footerSubject, footerText, mountFooter, plain };
+  window.Feedback = { mailto, report, reportRow, slot, reportHref, reportParts, footerSubject, footerText, coffeeUrl, mountFooter, plain };
   injectStyle();
   mountFooter();   // the script sits at the end of <body>, so the footer already exists
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountFooter);
