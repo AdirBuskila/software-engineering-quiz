@@ -1,0 +1,99 @@
+# Render course videos in parallel on GitHub-hosted runners (free for public repos), one job per video.
+# Synced from course-factory/video/render-videos.yml — edit it there.
+# Windows runners: the videos use Segoe UI and Cambria Math, which only Windows has, so the output matches a local
+# render (checked on automata-quiz F05, 2026-10-30: same frames; ~9 min per video including the narration).
+# Run:  gh workflow run render-videos.yml -f ids="T01 T02"     (or: Actions tab -> render-videos -> Run workflow)
+#       a push to a render/** branch renders the ids listed in videos/render_ids.txt
+# Then: python tools/video/fetch_renders.py <run id>   -> videos/out/<ID>/<ID>.mp4 + frames
+name: render-videos
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Video ids, space separated (e.g. T01 T02)"
+        required: true
+      stt_only:
+        description: "Only the speech-to-text check, no render"
+        type: boolean
+        default: false
+  push:
+    branches: ["render/**"]
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      ids: ${{ steps.ids.outputs.ids }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: ids
+        shell: bash
+        run: |
+          raw="${{ github.event.inputs.ids }}"
+          [ -z "$raw" ] && raw="$(cat videos/render_ids.txt)"
+          echo "ids=$(printf '%s\n' $raw | jq -R . | jq -sc .)" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    if: ${{ github.event.inputs.stt_only != 'true' }}
+    runs-on: windows-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJson(needs.plan.outputs.ids) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Install tools
+        shell: bash
+        run: |
+          pip install edge-tts numpy sympy mpmath scipy
+          if [ -f videos/requirements.txt ]; then pip install -r videos/requirements.txt; fi
+          choco install ffmpeg -y --no-progress
+          cd tools && npm install --no-audit --no-fund --no-save hyperframes@0.8.212 katex@0.18.9 gsap@3.15.0
+      - name: Render ${{ matrix.id }}
+        shell: bash
+        env: { PYTHONUTF8: "1" }
+        run: python tools/video/vid.py ${{ matrix.id }} --workers 4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ matrix.id }}
+          path: |
+            videos/out/${{ matrix.id }}/${{ matrix.id }}.mp4
+            videos/out/${{ matrix.id }}/frames/
+            videos/out/${{ matrix.id }}/timeline.json
+            videos/out/${{ matrix.id }}/source_hash.txt
+          retention-days: 14
+
+  # speech-to-text round trip for each video, in parallel with the renders (the Whisper model needs more memory
+  # than the laptop can spare next to everything else). Report: artifact stt-<ID>/stt_report.md
+  stt:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJson(needs.plan.outputs.ids) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - name: Install tools
+        run: |
+          pip install edge-tts faster-whisper numpy sympy mpmath scipy
+          if [ -f videos/requirements.txt ]; then pip install -r videos/requirements.txt; fi
+          which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: STT ${{ matrix.id }}
+        env: { PYTHONUTF8: "1" }
+        run: python tools/video/vid.py ${{ matrix.id }} --stt-only
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stt-${{ matrix.id }}
+          path: videos/out/${{ matrix.id }}/stt_report.md
+          retention-days: 14

@@ -1,0 +1,1 @@
+These files are copies of course-factory/video/. Edit them there and run scripts/sync_video.py.

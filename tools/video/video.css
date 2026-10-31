@@ -1,0 +1,108 @@
+@font-face{font-family:"Segoe UI";src:local("Segoe UI")}
+@font-face{font-family:"Segoe UI Emoji";src:local("Segoe UI Emoji")}
+@font-face{font-family:"Cambria Math";src:local("Cambria Math")}
+/* app tokens (styles.css, dark) */
+:root{--bg:#0a0c18;--bg2:#12112b;--card:#181a33;--card2:rgba(255,255,255,.05);--ink:#eaedff;--muted:#9aa0cf;
+  --line:rgba(255,255,255,.12);--brand:#2dd4bf;--brand2:#38bdf8;--ok:#34d399;--bad:#fb7185;--warn:#fbbf24}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI","Segoe UI Emoji",Arial,sans-serif}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;
+  background:radial-gradient(900px 600px at 85% -10%,rgba(45,212,191,.13),transparent 60%),
+             radial-gradient(800px 600px at 0% 110%,rgba(56,189,248,.10),transparent 60%),var(--bg)}
+.h{opacity:0}
+math{font-family:"Cambria Math",serif;font-size:1.08em}
+.nobr{white-space:nowrap}
+.mwrap{direction:ltr;unicode-bidi:isolate}
+b,strong{color:#fff}
+
+/* scene frame */
+.scene{position:absolute;inset:0}
+.top{position:absolute;top:28px;right:60px;left:60px;height:56px;display:flex;align-items:center;gap:22px;
+  font-size:28px;color:var(--muted);border-bottom:1px solid var(--line)}
+.top .vid{font-weight:700;color:var(--brand);direction:ltr;unicode-bidi:isolate}
+.top .ttl{color:var(--ink)}
+.top .lbl{margin-inline-start:auto;background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:4px 18px;font-size:26px}
+.stage{position:absolute;left:60px;top:118px;width:1060px;height:720px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:26px;direction:ltr}
+.stage.full{width:auto;right:60px}
+.panel{position:absolute;right:60px;top:118px;width:680px;height:720px;display:flex;flex-direction:column;
+  justify-content:center;gap:18px;font-size:33px;line-height:1.45}
+.titlecard{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;text-align:center}
+.titlecard .kicker{font-size:34px;color:var(--brand);direction:ltr}
+.titlecard h1{margin:0;font-size:86px;line-height:1.15}
+.titlecard p{margin:0;font-size:36px;color:var(--muted);max-width:1400px;line-height:1.5}
+
+/* subtitles */
+.sub{position:absolute;left:0;right:0;bottom:34px;display:flex;justify-content:center;pointer-events:none}
+.sub>span{display:inline-block;max-width:1360px;background:rgba(5,6,14,.82);border:1px solid var(--line);border-radius:16px;
+  padding:12px 30px;font-size:44px;line-height:1.38;text-align:center;direction:rtl}
+
+/* cards */
+.card{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:16px 24px}
+.card.rule{border-inline-start:7px solid var(--brand)}
+.card.trap{border-inline-start:7px solid var(--warn);background:rgba(251,191,36,.07)}
+.card.ex{border-inline-start:7px solid var(--brand2)}
+.card.plain{background:none;border:none;padding:4px 6px}
+.card .k{font-weight:700}
+
+/* DFA diagram */
+svg.dfa{overflow:visible}
+svg.dfa .node{fill:var(--card);stroke:#c9cdf0;stroke-width:3}
+svg.dfa .node-in{fill:none;stroke:#c9cdf0;stroke-width:2.5}
+svg.dfa .node-hi{fill:rgba(45,212,191,.22);stroke:var(--brand);stroke-width:6}
+svg.dfa .nlabel{font-family:"Cambria Math",serif;font-style:italic;font-size:34px;fill:var(--ink);text-anchor:middle}
+svg.dfa .edge{stroke:#c9cdf0;stroke-width:2.6;fill:none}
+svg.dfa .edge-hi{stroke:var(--brand);stroke-width:7;fill:none}
+svg.dfa .elabel{font-family:"Cambria Math",serif;font-size:30px;fill:var(--ink);text-anchor:middle}
+
+/* δ table */
+table.delta{border-collapse:separate;border-spacing:0;font-size:34px;background:var(--card2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+table.delta th,table.delta td{position:relative;padding:8px 30px;text-align:center;border-bottom:1px solid var(--line)}
+table.delta thead th{color:var(--muted);font-weight:600}
+table.delta tbody tr:last-child>*{border-bottom:none}
+table.delta .mark{color:var(--brand);font-size:26px;margin-inline-end:6px}
+.cell-hi{position:absolute;inset:3px;border-radius:9px;background:rgba(45,212,191,.28);box-shadow:0 0 0 3px var(--brand) inset}
+
+/* tape / trace / verdict */
+.tape{display:flex;gap:10px}
+.tcell{position:relative;width:74px;height:84px;border:2px solid var(--line);border-radius:12px;display:flex;
+  align-items:center;justify-content:center;font-family:"Cambria Math",serif;font-size:46px;background:var(--card)}
+.tcell b{position:relative;font-weight:400;color:var(--ink)}
+.tdone{position:absolute;inset:0;border-radius:10px;background:rgba(255,255,255,.10)}
+.tcur{position:absolute;inset:-7px;border-radius:14px;border:5px solid var(--brand);box-shadow:0 0 22px rgba(45,212,191,.6)}
+.trace{font-size:40px;min-height:56px}
+.verdict{font-size:40px;font-weight:700;padding:8px 28px;border-radius:999px;direction:rtl}
+.verdict.ok{color:var(--ok);background:rgba(52,211,153,.13)}
+.verdict.bad{color:var(--bad);background:rgba(251,113,133,.13)}
+
+/* multiple-choice */
+.qstem{font-size:34px;line-height:1.5;direction:rtl;text-align:right;width:100%}
+.qid{display:block;width:fit-content;direction:ltr;font-size:24px;color:var(--brand);border:1px solid var(--brand);border-radius:999px;padding:2px 14px;margin-bottom:10px}
+.opts{display:flex;flex-direction:column;gap:12px;width:100%;direction:rtl}
+.opt{position:relative;display:flex;align-items:center;gap:16px;font-size:34px;background:var(--card2);
+  border:1px solid var(--line);border-radius:14px;padding:10px 22px}
+.opt .ol{color:var(--muted);font-weight:700}
+.onote{font-size:27px;color:var(--muted);margin-inline-start:auto}
+.ox{position:absolute;inset:0;border-radius:14px;background:rgba(251,113,133,.10);
+  background-image:linear-gradient(transparent calc(50% - 2px),var(--bad) calc(50% - 2px),var(--bad) calc(50% + 2px),transparent calc(50% + 2px));
+  background-size:calc(100% - 300px) 100%;background-repeat:no-repeat;background-position:right 20px center}
+.ook{position:absolute;left:-54px;top:50%;margin-top:-28px;font-size:46px;color:var(--ok)}
+
+/* raster exam figure */
+.raster{position:relative}
+.raster img{display:block;border-radius:12px;background:#fff}
+.ring{position:absolute;border-radius:50%;border:7px solid var(--brand);box-shadow:0 0 20px rgba(45,212,191,.7);box-sizing:border-box}
+.rtag{position:absolute;transform:translate(-50%,0);font-size:24px;font-weight:700;color:#0a0c18;background:var(--brand);
+  border-radius:999px;padding:0 10px;direction:ltr}
+.hint{font-size:30px;color:var(--muted);direction:rtl}
+
+/* two things sharing one spot on the stage (shown one after the other) */
+.swap{position:relative;width:100%;height:var(--swap-h,250px)}
+.swap>div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:18px}
+.stage .card{font-size:32px;line-height:1.45;direction:rtl;max-width:980px}
+
+/* Shosh, the presenter (tools/video/shosh.py) */
+.shosh{position:absolute;right:30px;bottom:18px;width:190px;height:224px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.45))}
+
+/* Chrome does not stretch the \overline glyph (it renders as a tiny accent): hide it and draw a rule over the base */
+mover:has(>mo[stretchy="true"]:last-child)>mo:last-child{color:transparent}
+mover:has(>mo[stretchy="true"]:last-child)>:first-child{border-top:.065em solid currentColor;padding-top:.06em}

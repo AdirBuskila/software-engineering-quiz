@@ -1,0 +1,96 @@
+/* software-testing widgets (w_tst.py), every class prefixed ts- */
+.ts-mono{font-family:Consolas,monospace;direction:ltr;unicode-bidi:isolate}
+.ts-nw{white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+.ts-stack{display:flex;flex-direction:column;align-items:center;gap:22px;width:100%}
+.ts-row{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:26px;width:100%}
+
+/* Java code panel */
+.ts-code{background:#0d1022;border:1px solid var(--line);border-radius:14px;padding:12px 26px;font-family:Consolas,monospace;
+  line-height:1.42;color:#e2e6ff;white-space:pre;text-align:left;box-sizing:border-box}
+.ts-ctitle{font-family:"Segoe UI",Arial,sans-serif;font-size:20px;color:var(--muted);margin-bottom:4px;direction:rtl;text-align:right}
+.ts-ln{position:relative}
+.ts-tx{position:relative}
+.ts-mark{position:absolute;top:0;bottom:0;left:-16px;right:-16px;border-radius:6px;background:rgba(52,211,153,.22);
+  border-left:5px solid var(--ok)}
+.ts-miss{position:absolute;top:0;bottom:0;left:-16px;right:-16px;border-radius:6px;background:rgba(251,113,133,.20);
+  border-left:5px solid var(--bad)}
+.ts-kw{color:#c084fc}
+.ts-an{color:#fbbf24}
+.ts-str{color:#86efac}
+.ts-num{color:#fbbf24}
+.ts-cm{color:#7c84b8;font-style:italic}
+
+/* chips */
+.ts-chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;direction:ltr;max-width:1000px}
+.ts-chips.col{flex-direction:column;align-items:center}
+.ts-chips.rtl{direction:rtl}
+.ts-chip{display:inline-block;font-size:27px;font-weight:700;padding:5px 18px;border-radius:999px;white-space:nowrap;
+  background:var(--card2);border:1px solid var(--line);font-family:Consolas,monospace}
+.ts-chip.heb{font-family:"Segoe UI",Arial,sans-serif;direction:rtl}
+.ts-chip.ok{color:var(--ok);background:rgba(52,211,153,.13);border-color:rgba(52,211,153,.45)}
+.ts-chip.bad{color:var(--bad);background:rgba(251,113,133,.13);border-color:rgba(251,113,133,.45)}
+.ts-chip.an{color:#fde68a;border-color:rgba(251,191,36,.5)}
+.ts-chip.te{color:#a5f3fc;border-color:rgba(56,189,248,.5)}
+.ts-swap>div{align-items:center;justify-content:center}
+
+/* number line */
+svg.ts-nl{overflow:visible}
+.ts-nl .ts-axis{stroke:#c9cdf0;stroke-width:3}
+.ts-nl .ts-axh{fill:#c9cdf0}
+.ts-nl .ts-tick{stroke:#fff;stroke-width:5}
+.ts-nl .ts-tv{font-family:Consolas,monospace;font-size:28px;font-weight:700;fill:#fff}
+.ts-nl .ts-pt{fill:#fff;stroke:#0a0c18;stroke-width:4}
+.ts-nl .ts-pv{font-family:Consolas,monospace;font-size:28px;fill:var(--warn);text-anchor:middle;font-weight:700}
+.ts-nlab{font-family:"Segoe UI",Arial,sans-serif;font-size:26px;font-weight:700;text-align:center;direction:rtl;line-height:1.2}
+
+/* path tree */
+svg.ts-tree{overflow:visible}
+.ts-tree .ts-te{stroke:#c9cdf0;stroke-width:3}
+.ts-tree .ts-tb{font-family:Consolas,monospace;font-size:22px;font-weight:700}
+.ts-tree .ts-tb.t{fill:var(--ok)}
+.ts-tree .ts-tb.f{fill:var(--bad)}
+.ts-tree .ts-tn{fill:var(--card);stroke:var(--brand2);stroke-width:3}
+.ts-tree .ts-tt{font-family:Consolas,monospace;font-size:25px;fill:var(--ink);text-anchor:middle}
+.ts-tree .ts-tl{fill:rgba(45,212,191,.18);stroke:var(--brand);stroke-width:3}
+.ts-tree .ts-tlt{font-family:"Segoe UI",Arial,sans-serif;font-size:28px;font-weight:700;fill:#fff;text-anchor:middle}
+.ts-tree .ts-thl{fill:none;stroke:rgba(251,191,36,.55);stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
+
+/* V model */
+svg.ts-v{overflow:visible}
+.ts-v .ts-vb{stroke-width:3}
+.ts-v .ts-vb.dev{fill:#16223a;stroke:var(--brand2)}
+.ts-v .ts-vb.tst{fill:#13261f;stroke:var(--ok)}
+.ts-v .ts-vb.code{fill:#2a2238;stroke:#c084fc}
+.ts-v .ts-vt{font-family:"Segoe UI",Arial,sans-serif;font-size:28px;font-weight:700;fill:var(--ink);text-anchor:middle}
+.ts-v .ts-vlink{stroke:var(--warn);stroke-width:3;stroke-dasharray:10 9}
+.ts-v .ts-varr{stroke:#c9cdf0;stroke-width:3;fill:none}
+.ts-v .ts-badge{stroke-width:3}
+.ts-v .ts-badge.pl{fill:#1e3a5f;stroke:var(--brand2)}
+.ts-v .ts-badge.ex{fill:#14432f;stroke:var(--ok)}
+.ts-v .ts-bt{font-family:"Segoe UI",Arial,sans-serif;font-size:26px;font-weight:700;fill:#fff;text-anchor:middle}
+
+/* component boxes */
+svg.ts-bx{overflow:visible}
+.ts-bx .ts-box{fill:var(--card);stroke:#c9cdf0;stroke-width:3}
+.ts-bx .ts-box.mock{fill:#2a2238;stroke:#c084fc;stroke-dasharray:9 7}
+.ts-bx .ts-box.real{fill:#3a1d27;stroke:var(--bad)}
+.ts-bx .ts-box.user{fill:#3a3218;stroke:var(--warn)}
+.ts-bx .ts-box.test{fill:#13261f;stroke:var(--ok)}
+.ts-bx .ts-bl{font-family:Consolas,monospace;font-size:27px;font-weight:700;fill:var(--ink);text-anchor:middle}
+.ts-bx .ts-bs{font-family:"Segoe UI",Arial,sans-serif;font-size:23px;fill:var(--muted);text-anchor:middle}
+.ts-bx .ts-ar{stroke:#c9cdf0;stroke-width:3}
+.ts-bx .ts-al{font-family:Consolas,monospace;font-size:22px;fill:var(--brand2);text-anchor:middle}
+.ts-bx .ts-al.heb{font-family:"Segoe UI",Arial,sans-serif;font-size:24px;fill:var(--warn)}
+.ts-bx .ts-frame{fill:rgba(45,212,191,.06);stroke:var(--brand);stroke-width:4;stroke-dasharray:14 9}
+.ts-bx .ts-frame.warn{fill:rgba(251,191,36,.06);stroke:var(--warn)}
+.ts-bx .ts-frame.blue{fill:rgba(56,189,248,.06);stroke:var(--brand2)}
+.ts-bx .ts-fl{font-family:"Segoe UI",Arial,sans-serif;font-size:27px;font-weight:700;fill:var(--brand)}
+
+/* small table (requirements x tests, inputs x results) */
+table.ts-tab{border-collapse:separate;border-spacing:0;font-size:28px;background:var(--card2);border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;direction:rtl}
+table.ts-tab th,table.ts-tab td{position:relative;padding:7px 20px;text-align:center;border-bottom:1px solid var(--line)}
+table.ts-tab thead th{color:var(--muted);font-weight:600}
+table.ts-tab tbody tr:last-child>*{border-bottom:none}
+table.ts-tab .ok{color:var(--ok);font-weight:700}
+table.ts-tab .bad{color:var(--bad);font-weight:700}

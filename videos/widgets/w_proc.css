@@ -1,0 +1,104 @@
+/* process / Agile / requirements widgets (w_proc.py), every class prefixed pr- */
+.pr-stack{display:flex;flex-direction:column;align-items:center;width:100%}
+.pr-row{display:flex;flex-direction:row;align-items:stretch;justify-content:center;width:100%}
+.pr-en{font-family:"Segoe UI",Arial,sans-serif;direction:ltr;unicode-bidi:isolate}
+.pr-chip{display:inline-block;font-size:28px;font-weight:700;padding:5px 20px;border-radius:999px;white-space:nowrap;
+  background:var(--card2);border:1px solid var(--line)}
+.pr-chip.ok{color:var(--ok);background:rgba(52,211,153,.13);border-color:rgba(52,211,153,.4)}
+.pr-chip.bad{color:var(--bad);background:rgba(251,113,133,.13);border-color:rgba(251,113,133,.4)}
+.pr-chip.info{color:#a5f3fc;border-color:rgba(56,189,248,.5)}
+.pr-chip.warn{color:var(--warn);border-color:rgba(251,191,36,.5)}
+.pr-qstem{font-size:31px}
+.pr-swap>div{align-items:center;justify-content:center}
+
+/* SVG pieces (staircase, sprint loop) */
+svg.pr-svg{overflow:visible;display:block}
+.pr-svg .pr-box{fill:var(--card);stroke:#c9cdf0;stroke-width:2.6}
+.pr-svg .pr-ring{fill:rgba(45,212,191,.12);stroke:var(--brand);stroke-width:5}
+.pr-svg .pr-sthe{font-family:"Segoe UI",Arial,sans-serif;font-size:31px;font-weight:700;fill:var(--ink)}
+.pr-svg .pr-sten{font-family:"Segoe UI",Arial,sans-serif;font-size:21px;fill:var(--muted)}
+.pr-svg .pr-sthe2{font-family:"Segoe UI",Arial,sans-serif;font-size:27px;fill:var(--muted)}
+.pr-svg .pr-sten2{font-family:"Segoe UI",Arial,sans-serif;font-size:30px;font-weight:700;fill:var(--ink)}
+.pr-svg .pr-ln{stroke:#c9cdf0;stroke-width:3;fill:none}
+.pr-svg .pr-lnb{stroke:#fb7185;stroke-width:4;fill:none;stroke-dasharray:12 9}
+.pr-svg .pr-blab{font-family:"Segoe UI",Arial,sans-serif;font-size:27px;font-weight:700;fill:#fb7185}
+.pr-svg .pr-arc{stroke:var(--brand);stroke-width:4;fill:none}
+.pr-svg .pr-loopl{font-family:"Segoe UI",Arial,sans-serif;font-size:24px;font-weight:700;fill:var(--brand)}
+.pr-svg .pr-midh{font-family:"Segoe UI",Arial,sans-serif;font-size:38px;font-weight:700;fill:var(--ink)}
+.pr-svg .pr-mids{font-family:"Segoe UI",Arial,sans-serif;font-size:27px;fill:var(--muted)}
+
+/* table */
+table.pr-tab{border-collapse:separate;border-spacing:0;background:var(--card2);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;direction:rtl;line-height:1.35}
+.pr-tab th,.pr-tab td{position:relative;padding:9px 18px;text-align:right;border-bottom:1px solid var(--line);vertical-align:middle}
+.pr-tab thead th{color:var(--muted);font-weight:600;font-size:.85em}
+.pr-tab tbody tr:last-child>*{border-bottom:none}
+.pr-tab td:first-child{font-weight:700}
+.pr-mk{position:absolute;top:3px;bottom:3px;right:3px;width:calc(100% - 6px);border-radius:9px;background:rgba(45,212,191,.16);
+  box-shadow:0 0 0 3px var(--brand) inset;pointer-events:none}
+.pr-tab tr .pr-mk{width:auto;left:3px}
+
+/* sorting board */
+.pr-board{display:flex;flex-direction:column;align-items:center;gap:16px;direction:rtl}
+.pr-poolh{font-size:.9em;color:var(--muted)}
+.pr-pool{display:grid;gap:10px 16px}
+.pr-cols{display:flex;gap:22px;direction:rtl}
+.pr-col{display:flex;flex-direction:column;gap:10px;width:var(--colw);min-height:120px;background:var(--card2);border:1px solid var(--line);
+  border-radius:16px;padding:10px 12px;box-sizing:border-box}
+.pr-col.f{border-top:6px solid #38bdf8}
+.pr-col.nf{border-top:6px solid #c084fc}
+.pr-col.ok{border-top:6px solid var(--ok)}
+.pr-col.bad{border-top:6px solid var(--bad)}
+.pr-colh{font-weight:700;text-align:center;font-size:1.05em}
+.pr-colsub{display:block;font-weight:400;font-size:.78em;color:var(--muted)}
+.pr-card{background:var(--card);border:1.5px solid #c9cdf0;border-radius:12px;padding:7px 14px;line-height:1.3;text-align:right;
+  box-sizing:border-box;width:100%}
+.pr-pool .pr-card{width:var(--cw)}
+.pr-card.f{border-color:#38bdf8}
+.pr-card.nf{border-color:#c084fc}
+.pr-card.ok{border-color:var(--ok)}
+.pr-card.bad{border-color:var(--bad)}
+.pr-why{display:block;font-size:.8em;color:var(--warn);margin-top:2px}
+
+/* backlogs */
+.pr-bl{display:flex;gap:26px;direction:rtl;align-items:flex-start}
+.pr-blcol{display:flex;flex-direction:column;gap:9px;width:470px;background:var(--card2);border:1px solid var(--line);border-radius:16px;
+  padding:10px 12px;box-sizing:border-box;min-height:200px}
+.pr-blcol.spr{border-top:6px solid var(--brand)}
+.pr-pbi{position:relative;display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid #c9cdf0;border-radius:12px;
+  padding:6px 12px;line-height:1.25}
+.pr-pbi.s{border-color:var(--brand)}
+.pr-pbi .pr-mk{left:-2px;right:-2px;top:-2px;bottom:-2px;width:auto}
+.pr-pt{position:relative;flex:none;min-width:44px;text-align:center;font-weight:700;color:#0a0c18;background:var(--warn);border-radius:999px;
+  padding:1px 8px;font-size:.92em}
+.pr-pbt{position:relative}
+.pr-cap{text-align:center;color:var(--muted);font-size:.9em}
+
+/* compact exam panel (long Hebrew options) */
+.pr-qp{display:flex;flex-direction:column;gap:14px}
+.pr-qp .qstem{font-size:28px;line-height:1.4}
+.pr-qp .opts{gap:9px}
+.pr-qp .opt{font-size:26px;line-height:1.3;padding:7px 16px;gap:10px}
+.pr-qp .onote{font-size:22px;white-space:nowrap}
+.pr-qp .ook{left:-46px;font-size:40px}
+.pr-qp bdi{white-space:nowrap}
+
+/* "case -> verdict" lines */
+.pr-need{display:flex;align-items:center;gap:18px;direction:rtl;font-size:30px;background:var(--card2);border:1px solid var(--line);
+  border-radius:14px;padding:10px 22px;width:1000px;box-sizing:border-box}
+.pr-nd{flex:1}
+.pr-ndd{display:block;font-size:24px;color:var(--muted)}
+.pr-arr{color:var(--muted);font-size:34px}
+.pr-pat{font-weight:700;color:var(--brand);min-width:300px;text-align:center}
+
+/* delivery timelines: one big delivery vs increments */
+.pr-tl{display:flex;flex-direction:column;gap:8px;direction:rtl;width:1000px}
+.pr-tlh{font-size:28px;font-weight:700}
+.pr-tlr{display:flex;gap:8px;direction:rtl;height:64px}
+.pr-seg{flex:1;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:22px;background:var(--card);
+  border:1.5px solid #c9cdf0;color:var(--muted)}
+.pr-seg.big{flex:6}
+.pr-seg.inc{border-color:var(--brand);color:var(--ink)}
+.pr-seg.end{flex:none;width:130px;border-color:var(--ok);color:var(--ok);font-weight:700}
+.pr-tab b,.pr-tab bdi,.card b{white-space:nowrap}
+.pr-en{white-space:nowrap}
