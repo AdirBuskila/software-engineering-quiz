@@ -11,6 +11,9 @@ omitted. `youtube` comes from the hand-edited videos/youtube.json ({"F01": "<11-
 the player falls back to the local MP4 (videos/out/<ID>/<ID>.mp4), then to a "not uploaded yet" note.
 A video <ID> with a lowercase suffix (K06a, K06b) is a bonus video of guided level <ID without suffix> and is listed
 right after it.
+`level` is the guided level id the video belongs to (the course is the folder the script lives in). It is the video id
+without the bonus suffix (F01 -> F01) unless app_config says otherwise: app_config.level_id(video_id) when defined, else,
+when app_config has a LETTER map (apps whose levels are C01.. in every course), "C" + the number (L03 -> C03).
 """
 import json, pathlib, re, sys
 
@@ -22,9 +25,20 @@ sys.path.insert(0, str(VIDEOS))
 import app_config  # noqa: E402
 
 COURSES = app_config.COURSES      # same order and names as course-ui.js
-DECL = re.compile(r'^VIDEO\s*=\s*Video\(\s*"([^"]+)"\s*,\s*"([^"]+)"\s*,\s*"([^"]+)"', re.M)
+_STR = r'''(?:"([^"]+)"|'([^']+)')'''           # a "double" or 'single' quoted literal (titles may hold a ")
+DECL = re.compile(r'^VIDEO\s*=\s*Video\(\s*' + _STR + r'\s*,\s*' + _STR + r'\s*,\s*' + _STR, re.M)
 ID_RE = re.compile(r"^([A-Z])(\d+)([a-z]?)$")
 YT_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+
+
+def level_id(vid):
+    """the guided level a video belongs to (see the module docstring)"""
+    if hasattr(app_config, "level_id"):
+        return app_config.level_id(vid)
+    m = ID_RE.match(vid)
+    if getattr(app_config, "LETTER", None):
+        return "C" + m.group(2).zfill(2)
+    return m.group(1) + m.group(2).zfill(2)
 
 
 def sort_key(vid):
@@ -49,14 +63,15 @@ def main():
             if not m:
                 errors.append(f"{script.relative_to(ROOT)}: no VIDEO = Video(\"ID\", \"course\", \"title\", ...) line")
                 continue
-            vid, course, vtitle = m.groups()
+            g = m.groups()
+            vid, course, vtitle = (g[i] if g[i] is not None else g[i + 1] for i in (0, 2, 4))
             if vid != script.stem or course != cid:
                 errors.append(f"{script.relative_to(ROOT)}: declares {vid}/{course}, expected {script.stem}/{cid}")
                 continue
             if not ID_RE.match(vid):
                 errors.append(f"{vid}: unexpected id shape")
                 continue
-            v = {"id": vid, "level": ID_RE.match(vid).group(1) + ID_RE.match(vid).group(2).zfill(2), "title": vtitle}
+            v = {"id": vid, "level": level_id(vid), "title": vtitle}
             if ID_RE.match(vid).group(3):
                 v["bonus"] = True
             tl = VIDEOS / "out" / vid / "timeline.json"

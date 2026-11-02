@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>משחק תרגול — הנדסת תוכנה</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 <script>
   // Apply saved theme before first paint to avoid a flash of the wrong theme.
   (function(){ try{ var t=localStorage.getItem("seq_theme"); if(t==="light"||t==="dark") document.documentElement.dataset.theme=t; }catch(e){} })();
@@ -24,6 +24,7 @@
   <div class="topbar-right">
     <div class="topstats" id="topStats"></div>
     <button id="crsHub" class="btn ghost crs-entry" type="button" title="קורסים מודרכים: תבניות עיצוב · UML · בדיקות · תהליכים, Agile ודרישות">🧭 צריך עזרה?</button>
+    <button id="vidEntry" class="btn ghost vid-entry" type="button" title="קורס וידאו: סרטון לכל שלב בקורסים המודרכים">🎬 קורס וידאו</button>
     <button id="learnEntry" class="btn ghost learn-entry" type="button">📖 מצב לימוד</button>
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="החלפת מצב תצוגה (בהיר/כהה)" title="מצב בהיר/כהה"></button>
   </div>
@@ -53,6 +54,11 @@
         <div><b>צריך עזרה בתהליכי פיתוח, Agile ודרישות?</b><span class="crs-promo-sub">קורס מודרך: Waterfall ומודל V, Scrum, דרישות פונקציונליות ולא פונקציונליות.</span></div>
         <span class="btn primary go">להתחיל ⟵</span>
       </div>
+    </div>
+    <div class="card crs-promo vid-promo vid-entry" role="button" tabindex="0">
+      <span class="big-ico">🎬</span>
+      <div><b>קורס וידאו: סרטון קצר לכל שלב</b><span class="crs-promo-sub" id="vidPromoSub">הסבר מצולם לכל שלב בקורסים המודרכים: הרעיון, דוגמאות ושאלה בסגנון המבחן.</span></div>
+      <span class="btn primary go">לסרטונים ⟵</span>
     </div>
     <div class="card">
       <h2>בחירת אופן תרגול</h2>
@@ -193,6 +199,36 @@
     </div>
   </section>
 
+  <!-- VIDEO COURSE ("🎬 קורס וידאו", video-ui.js) -->
+  <section id="screen-video" class="screen hidden">
+    <div id="vidListView">
+      <div class="card">
+        <div class="crs-head">
+          <div class="grow"><h2>🎬 קורס וידאו</h2><p class="sub">סרטון אחד לכל שלב בקורסים המודרכים, באותו סדר. כל סרטון מסביר את הרעיון, מראה דוגמאות ופותר שאלה בסגנון המבחן. אחרי הצפייה אפשר לעבור ישר לתרגול של אותו שלב.</p></div>
+        </div>
+        <div id="vidOverall" class="crs-overall"></div>
+      </div>
+      <div id="vidCourses" class="vid-courses"></div>
+      <div class="crs-actions"><button id="vidHomeBtn" class="btn ghost" type="button">⟵ חזרה לדף הבית</button></div>
+    </div>
+    <div id="vidPlayView" class="hidden">
+      <div class="card vid-player">
+        <div id="vidHead"></div>
+        <div id="vidFrame" class="vid-frame"></div>
+        <div id="vidYtLink" class="vid-ytlink"></div>
+        <div class="vid-nav">
+          <button id="vidPrev" class="btn ghost" type="button">⟶ הקודם</button>
+          <button id="vidWatchBtn" class="btn ghost vid-watch" type="button"></button>
+          <button id="vidNext" class="btn ghost" type="button">הבא ⟵</button>
+        </div>
+      </div>
+      <div class="crs-actions">
+        <button id="vidBack" class="btn ghost" type="button">⟵ לרשימת הסרטונים</button>
+        <button id="vidLevel" class="btn primary" type="button">לתרגול בשלב הזה ⟵</button>
+      </div>
+    </div>
+  </section>
+
   <!-- RESULTS -->
   <section id="screen-results" class="screen hidden">
     <div class="card">
@@ -268,6 +304,8 @@
 <script src="courses/proc/R08.js?v=1"></script>
 <script src="courses/proc/R09.js?v=1"></script>
 <!-- /COURSE LEVELS -->
-<script src="course-ui.js?v=1"></script>
+<script src="videos.js?v=1"></script>
+<script src="video-ui.js?v=1"></script>
+<script src="course-ui.js?v=2"></script>
 </body>
 </html>
