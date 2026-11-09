@@ -587,8 +587,15 @@ function bindGlobal(){
   // deep link ?learn=<docId>[&s=<section index>]
   try{
     const u=new URLSearchParams(location.search), c=u.get("learn"), s=parseInt(u.get("s"),10)||0;
-    if(c && docs.some(d=>d.id===c)) setTimeout(()=>{ doc=docs.find(d=>d.id===c); openLearn(); if(s>0) go(s); },0);
+    if(c && docs.some(d=>d.id===c)) setTimeout(()=>window.openLearnAt(c, s),0);
   }catch(e){}
+  // navurl.js back/forward: open document `c` at section `s`
+  window.openLearnAt = (c, s)=>{
+    const d=docs.find(x=>x.id===c); if(!d) return false;
+    if(!built){ doc=d; openLearn(); } else { show("screen-learn"); if(d!==doc) setDoc(d.id); }
+    if(s>0) go(s); else if(idx!==0) go(0);
+    return true;
+  };
   function setDrawer(open){
     toc.classList.toggle("open", open);
     backdrop.classList.toggle("hidden", !open);
