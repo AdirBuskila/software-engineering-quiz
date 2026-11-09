@@ -73,7 +73,7 @@
           </button>`).join("")}</div></section>`;
     }).join("");
   }
-  function openList(){ from = null; stopPlayer(); renderList(); view("list"); }
+  function openList(){ if(window.navUrl) navUrl({videos:true}); from = null; stopPlayer(); renderList(); view("list"); }
 
   /* ---------- player ---------- */
   let cur = null, from = null;          // from: {levelId, courseId} when the player was opened from a guided lesson
@@ -109,7 +109,7 @@
     return C && Array.isArray(C.levels) ? C.levels.find(L => L.id === levelId) || null : null;
   };
   const levelOf = v => findLevel(v.course.id, v.level);
-  function openVideo(id, opts){
+  function openVideo(id, opts){ if(window.navUrl&&byId(id)) navUrl({video:id});
     const v = byId(id); if (!v) return openList();
     from = opts && opts.fromLevel ? { levelId: opts.fromLevel, courseId: opts.fromCourse || v.course.id } : null;
     cur = v;

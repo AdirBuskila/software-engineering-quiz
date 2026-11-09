@@ -97,10 +97,10 @@
     }).join("");
     $("#crsMap").querySelectorAll(".crs-lvl").forEach(b => b.onclick = () => openLesson(LV.find(L => L.id === b.dataset.id)));
   }
-  function openMap(id){ if (id) C = course(id); cur = null; renderMap(); view("crsMapView"); }
+  function openMap(id){ if(window.navUrl){ const cid=id||((typeof C!=="undefined"&&C)?C.id:null); if(cid) navUrl({course:cid, level:null}); } if (id) C = course(id); cur = null; renderMap(); view("crsMapView"); }
 
   /* ---------- lesson ---------- */
-  function openLesson(L){
+  function openLesson(L){ if(window.navUrl){ const cid=(typeof C!=="undefined"&&C)?C.id:null; if(cid&&L) navUrl({course:cid, level:L.id}); }
     cur = L;
     const nReal = L.questions.filter(q => q.ref).length;
     $("#crsLesson").innerHTML =
@@ -125,7 +125,7 @@
     }
     return Object.assign(base, { course: { courseId: C.id, levelId: L.id, levelTitle, badge } });
   }
-  function startLevel(L){
+  function startLevel(L){ if(window.navUrl){ const cid=(typeof C!=="undefined"&&C)?C.id:null; if(cid&&L) navUrl({course:cid, level:L.id, play:true}); }
     cur = L; run = {};
     S.mode = "course"; S._views = null;
     S.pool = L.questions.map(q => engineQ(q, L));
